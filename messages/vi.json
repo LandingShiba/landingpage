@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "title": "SHIBA Delivery | Dịch vụ giao hàng an toàn & nhanh chóng",
+    "description": "SHIBA Delivery mang đến cho bạn những món hàng quý giá một cách an toàn và nhanh chóng. Giao hàng cùng ngày, hỗ trợ 24/7.",
+    "keywords": "dịch vụ giao hàng, giao cùng ngày, vận chuyển an toàn, delivery, SHIBA"
+  },
+  "navigation": {
+    "home": "Trang chủ",
+    "services": "Dịch vụ",
+    "about": "Giới thiệu",
+    "contact": "Liên hệ",
+    "pricing": "Bảng giá"
+  },
+  "hero": {
+    "title": "Dịch vụ giao hàng đáng tin cậy",
+    "subtitle": "An toàn • Nhanh chóng • Uy tín",
+    "description": "Chúng tôi cam kết mang đến dịch vụ giao hàng tốt nhất với giá cả hợp lý và thời gian giao hàng nhanh nhất.",
+    "getStarted": "Bắt đầu ngay",
+    "learnMore": "Tìm hiểu thêm"
+  },
+  "services": {
+    "title": "Dịch vụ của chúng tôi",
+    "express": {
+      "title": "Giao hàng nhanh",
+      "description": "Giao hàng trong ngày với tốc độ nhanh nhất"
+    },
+    "standard": {
+      "title": "Giao hàng tiêu chuẩn",
+      "description": "Dịch vụ giao hàng ổn định với giá cả hợp lý"
+    },
+    "premium": {
+      "title": "Giao hàng cao cấp",
+      "description": "Dịch vụ cao cấp với bảo hiểm toàn diện"
+    }
+  },
+  "contact": {
+    "title": "Liên hệ với chúng tôi",
+    "phone": "Điện thoại",
+    "email": "Email",
+    "address": "Địa chỉ",
+    "hours": "Giờ làm việc"
+  },
+  "common": {
+    "loading": "Đang tải...",
+    "error": "Có lỗi xảy ra",
+    "retry": "Thử lại",
+    "submit": "Gửi",
+    "cancel": "Hủy",
+    "save": "Lưu",
+    "edit": "Chỉnh sửa",
+    "delete": "Xóa",
+    "confirm": "Xác nhận",
+    "back": "Quay lại",
+    "next": "Tiếp theo",
+    "previous": "Trước đó",
+    "close": "Đóng"
+  }
+}

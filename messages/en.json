@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "title": "SHIBA Delivery | Safe & Fast Delivery Service",
+    "description": "SHIBA Delivery brings you precious items safely and quickly. Same-day delivery, 24/7 support.",
+    "keywords": "delivery service, same day delivery, safe shipping, delivery, SHIBA"
+  },
+  "navigation": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "pricing": "Pricing"
+  },
+  "hero": {
+    "title": "Reliable delivery service",
+    "subtitle": "Safe • Fast • Trusted",
+    "description": "We are committed to providing the best delivery service at reasonable prices and the fastest delivery times.",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More"
+  },
+  "services": {
+    "title": "Our Services",
+    "express": {
+      "title": "Express Delivery",
+      "description": "Same-day delivery with the fastest speed"
+    },
+    "standard": {
+      "title": "Standard Delivery",
+      "description": "Stable delivery service at reasonable prices"
+    },
+    "premium": {
+      "title": "Premium Delivery",
+      "description": "Premium service with comprehensive insurance"
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "description": "We are a team of dedicated professionals who are committed to providing the best delivery service with reasonable prices and fast delivery time.",
+    "mission": "Our Mission",
+    "vision": "Our Vision",
+    "values": "Our Values"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "hours": "Business Hours"
+  },
+  "pricing": {
+    "title": "Pricing",
+    "description": "We offer a wide range of delivery services to meet your needs.",
+    "service1": "Same Day Delivery",
+    "service2": "Next Day Delivery",
+    "service3": "Standard Delivery"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "confirm": "Confirm",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close"
+  }
+}

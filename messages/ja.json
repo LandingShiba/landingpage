@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "title": "SHIBAデリバリー | 安心・安全な宅配サービス",
+    "description": "SHIBAデリバリーは、あなたの大切な荷物を安全・迅速にお届けします。最短即日配達、24時間365日対応。",
+    "keywords": "宅配サービス, 即日配達, 安全配送, デリバリー, SHIBA"
+  },
+  "navigation": {
+    "home": "ホーム",
+    "services": "サービス",
+    "about": "会社概要",
+    "contact": "お問い合わせ",
+    "pricing": "料金表"
+  },
+  "hero": {
+    "title": "信頼できる配送サービス",
+    "subtitle": "安全 • 迅速 • 信頼",
+    "description": "私たちは最高の配送サービスを合理的な価格と最速の配達時間でお届けすることをお約束します。",
+    "getStarted": "今すぐ始める",
+    "learnMore": "詳しく見る"
+  },
+  "services": {
+    "title": "私たちのサービス",
+    "express": {
+      "title": "急速配送",
+      "description": "最速スピードで当日配達"
+    },
+    "standard": {
+      "title": "標準配送",
+      "description": "合理的な価格で安定した配送サービス"
+    },
+    "premium": {
+      "title": "プレミアム配送",
+      "description": "包括保険付きのプレミアムサービス"
+    }
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "phone": "電話番号",
+    "email": "メールアドレス",
+    "address": "住所",
+    "hours": "営業時間"
+  },
+  "common": {
+    "loading": "読み込み中...",
+    "error": "エラーが発生しました",
+    "retry": "再試行",
+    "submit": "送信",
+    "cancel": "キャンセル",
+    "save": "保存",
+    "edit": "編集",
+    "delete": "削除",
+    "confirm": "確認",
+    "back": "戻る",
+    "next": "次へ",
+    "previous": "前へ",
+    "close": "閉じる"
+  }
+}
