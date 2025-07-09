@@ -20,6 +20,8 @@
   },
   "services": {
     "title": "Dịch vụ của chúng tôi",
+    "showPrices": "Hiển thị giá",
+    "hidePrices": "Ẩn giá",
     "express": {
       "title": "Giao hàng nhanh",
       "description": "Giao hàng trong ngày với tốc độ nhanh nhất"

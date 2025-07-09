@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  # Next.js Development App
+  shiba-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: shiba-client-dev
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - NEXT_TELEMETRY_DISABLED=1
+    volumes:
+      # Mount source code for hot reloading
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    networks:
+      - shiba-network
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+
+volumes:
+  node_modules:
+
+networks:
+  shiba-network:
+    driver: bridge

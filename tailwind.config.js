@@ -11,6 +11,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["var(--font-roboto)"],
+        montserrat: ["var(--font-montserrat)"],
       },
       colors: {
         border: "var(--color-border)",

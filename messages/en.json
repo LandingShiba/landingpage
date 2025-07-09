@@ -12,14 +12,21 @@
     "pricing": "Pricing"
   },
   "hero": {
-    "title": "Reliable delivery service",
+    "title": "Fast & Reliable Delivery Service",
     "subtitle": "Safe • Fast • Trusted",
-    "description": "We are committed to providing the best delivery service at reasonable prices and the fastest delivery times.",
-    "getStarted": "Get Started",
-    "learnMore": "Learn More"
+    "description": "Experience the best delivery service with SHIBA. We provide same-day delivery, 24/7 customer support, and secure handling of your precious items.",
+    "getStarted": "Get Started Today",
+    "learnMore": "Learn More",
+    "features": {
+      "sameDay": "Same Day Delivery",
+      "support": "24/7 Support",
+      "secure": "Safe & Secure"
+    }
   },
   "services": {
     "title": "Our Services",
+    "showPrices": "Show Prices",
+    "hidePrices": "Hide Prices",
     "express": {
       "title": "Express Delivery",
       "description": "Same-day delivery with the fastest speed"

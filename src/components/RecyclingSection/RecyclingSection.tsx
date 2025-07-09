@@ -46,6 +46,11 @@ const RecyclingSection: React.FC<RecyclingSectionProps> = ({ className }) => {
   const { ref: headerRef, isInView: headerInView } = useInView();
   const { ref: illustrationRef, isInView: illustrationInView } = useInView();
   const { ref: contentRef, isInView: contentInView } = useInView();
+  const { ref: recyclingTextRef, isInView: recyclingTextInView } = useInView();
+  const { ref: firstParagraphRef, isInView: firstParagraphInView } =
+    useInView();
+  const { ref: secondParagraphRef, isInView: secondParagraphInView } =
+    useInView();
 
   return (
     <div className={cn("w-full bg-[#F7F6E8] py-16 px-4", className)}>
@@ -136,66 +141,92 @@ const RecyclingSection: React.FC<RecyclingSectionProps> = ({ className }) => {
 
             {/* White Content Area */}
             <div className="bg-white rounded-b-[20px] px-[50px] py-[50px]">
-              {/* Green Highlight Text */}
-              <div className="text-center mb-[50px]">
-                <p className="text-[#006E27] font-bold text-[30px] leading-[1.2] font-['Montserrat']">
-                  再利用により処分費用を大幅削減
-                </p>
-              </div>
-
-              {/* Two Column Layout */}
-              <div className="grid grid-cols-2 gap-[42px]">
+              {/* Row 1: Two Column Layout */}
+              <div className="grid grid-cols-2 gap-[42px] mb-[40px]">
                 {/* Left Column */}
-                <div className="space-y-[40px]">
-                  <div>
-                    <h4 className="text-black font-bold text-[30px] leading-[1.2] mb-[40px] font-['Montserrat']">
-                      積極的な再利用・再活用への取り組み
-                    </h4>
-                    <p className="text-black font-medium text-[20px] leading-[1.4] font-['Montserrat']">
-                      不用品・粗大ゴミの廃棄処分は別途料金がかかってお客様に負担をかけるうえ、処分工程でどうしても環境に悪影響が出てしまいます。そのため、アース千葉では廃棄処分量を減らし、回収品の適切な再利用に努めています。こうした廃棄処分を減らす試みで環境に配慮し、浮いた処分費を低価格の不用品・粗大ゴミ回収サービスとしてお客様に還元することで、信頼してお任せいただける回収業者を目指します。不用品・粗大ゴミの回収後は、品種ごとに仕分けるのはもちろん、廃品・家具・家電のように処分方法が定められている品種もお客様に代わり適切に対応します。
-                    </p>
-                  </div>
-
-                  {/* Additional Image */}
-                  <div className="w-[540px] h-[334px] bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg flex items-center justify-center">
-                    <span className="text-gray-500 font-medium">
-                      Additional Image
+                <div>
+                  <h4 className="text-black font-bold text-[30px] leading-[1.2] mb-[40px] font-['Montserrat']">
+                    <span className="text-[#006E27]">
+                      積極的な再利用・再活用
                     </span>
-                  </div>
+                    への取り組み
+                  </h4>
+                  <p
+                    ref={firstParagraphRef}
+                    className={cn(
+                      "text-black font-medium text-[20px] leading-[1.4] font-['Montserrat']",
+                      firstParagraphInView
+                        ? "opacity-100 transform translate-x-0"
+                        : "opacity-0 transform translate-x-[50px]"
+                    )}
+                    style={{
+                      transitionDelay: firstParagraphInView ? "500ms" : "0ms",
+                    }}
+                  >
+                    不用品・粗大ゴミの廃棄処分は別途料金がかかってお客様に負担をかけるうえ、処分工程でどうしても環境に悪影響が出てしまいます。そのため、アース千葉では廃棄処分量を減らし、回収品の適切な再利用に努めています。こうした廃棄処分を減らす試みで環境に配慮し、浮いた処分費を低価格の不用品・粗大ゴミ回収サービスとしてお客様に還元することで、信頼してお任せいただける回収業者を目指します。不用品・粗大ゴミの回収後は、品種ごとに仕分けるのはもちろん、廃品・家具・家電のように処分方法が定められている品種もお客様に代わり適切に対応します。
+                  </p>
                 </div>
 
                 {/* Right Column */}
-                <div className="space-y-[40px]">
-                  {/* Recycling Process Icons */}
-                  <div className="w-full h-[71px] border-b border-[#008144] relative">
-                    <div className="absolute bottom-0 left-0 w-full h-[71px] flex items-center">
-                      <div className="flex items-center space-x-4">
-                        <div className="w-[86px] h-[70px] bg-[#FFAC43] rounded-lg flex items-center justify-center">
-                          <div className="w-8 h-8 bg-white rounded-full"></div>
-                        </div>
-                        <div className="text-[#008144] text-2xl font-bold">
-                          →
-                        </div>
-                        <div className="w-[86px] h-[70px] bg-[#00A842] rounded-lg flex items-center justify-center">
-                          <div className="w-8 h-8 bg-white rounded-full"></div>
-                        </div>
-                        <div className="text-[#008144] text-2xl font-bold">
-                          →
-                        </div>
-                        <div className="w-[86px] h-[70px] bg-[#006E27] rounded-lg flex items-center justify-center">
-                          <div className="w-8 h-8 bg-white rounded-full"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Long Text Content */}
-                  <div>
-                    <p className="text-black font-medium text-[20px] leading-[1.4] font-['Montserrat']">
-                      アース千葉は不用品であっても安易な廃棄処分を行わず、千葉県を含む全国のリサイクルショップで再販、オークションや海外への輸出を通して収益化し、着物や家具は多少の破損であれば、リメイクを施して再活用するなど、品種に合わせた不用品の再利用を徹底しています。回収した粗大ゴミ・不用品の再利用を徹底する事は環境への配慮はもちろん、処分にかかる費用を削減する狙いもあります。作業料金から処分費を削減することで不用品回収にかかる料金の低価格化を実現、回収した不用品・廃品を適切に再利用して、次のお客様に還元するサイクルでアース千葉は千葉県内を対象に、お客様と環境の両方に優しい不用品回収を実現しています。
-                    </p>
+                <div>
+                  {/* Additional Image */}
+                  <div className="w-full h-[334px] bg-gradient-to-br from-gray-100 to-gray-200 rounded-lg flex items-center justify-center">
+                    <Image
+                      src="/images/recycling/tau.png"
+                      alt="Recycling Process"
+                      width={540}
+                      height={334}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                 </div>
+              </div>
+
+              {/* Row 2: Full Width Column */}
+              <div className="w-full">
+                <div
+                  ref={recyclingTextRef}
+                  className="w-full h-[71px] relative mb-[40px]"
+                >
+                  <div className="absolute bottom-0 -left-10 w-full h-[71px] flex items-center justify-center">
+                    <Image
+                      src="/images/recycling/recycling-process.svg"
+                      alt="Recycling Process - Package Illustration"
+                      width={1106}
+                      height={71}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div
+                    className={cn(
+                      "absolute bottom-3 left-28 w-full transition-all duration-1000 ease-out",
+                      recyclingTextInView
+                        ? "opacity-100 transform translate-x-0"
+                        : "opacity-0 transform translate-x-[50px]"
+                    )}
+                    style={{
+                      transitionDelay: recyclingTextInView ? "500ms" : "0ms",
+                    }}
+                  >
+                    <span className="text-[#006E27] font-bold text-[30px] leading-[1.4] font-['Montserrat']">
+                      再利用により処分費用を大幅削減
+                    </span>
+                  </div>
+                </div>
+                <p
+                  ref={secondParagraphRef}
+                  className={cn(
+                    "text-black font-medium text-[20px] leading-[1.4] font-['Montserrat']",
+                    secondParagraphInView
+                      ? "opacity-100 transform translate-x-0"
+                      : "opacity-0 transform translate-x-[50px]"
+                  )}
+                  style={{
+                    transitionDelay: secondParagraphInView ? "500ms" : "0ms",
+                  }}
+                >
+                  アース千葉は不用品であっても安易な廃棄処分を行わず、千葉県を含む全国のリサイクルショップで再販、オークションや海外への輸出を通して収益化し、着物や家具は多少の破損であれば、リメイクを施して再活用するなど、品種に合わせた不用品の再利用を徹底しています。回収した粗大ゴミ・不用品の再利用を徹底する事は環境への配慮はもちろん、処分にかかる費用を削減する狙いもあります。作業料金から処分費を削減することで不用品回収にかかる料金の低価格化を実現、回収した不用品・廃品を適切に再利用して、次のお客様に還元するサイクルでアース千葉は千葉県内を対象に、お客様と環境の両方に優しい不用品回収を実現しています。
+                </p>
               </div>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { Roboto } from "next/font/google";
+import { Roboto, Montserrat } from "next/font/google";
 import "./globals.css";
 
 const roboto = Roboto({
@@ -7,6 +7,13 @@ const roboto = Roboto({
   style: ["normal", "italic"],
   subsets: ["latin"],
   variable: "--font-roboto",
+});
+
+const montserrat = Montserrat({
+  weight: ["400", "500", "700", "800", "900"],
+  style: ["normal"],
+  subsets: ["latin"],
+  variable: "--font-montserrat",
 });
 
 type Props = {
@@ -18,7 +25,9 @@ type Props = {
 export default function RootLayout({ children }: Props) {
   return (
     <html>
-      <body className={`${roboto.variable} font-sans antialiased`}>
+      <body
+        className={`${roboto.variable} ${montserrat.variable} font-sans antialiased`}
+      >
         {children}
       </body>
     </html>
