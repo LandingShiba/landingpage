@@ -21,6 +21,10 @@ export function useContact() {
   return useNextIntlTranslations("contact");
 }
 
+export function useProblems() {
+  return useNextIntlTranslations("problems");
+}
+
 export function useCommon() {
   return useNextIntlTranslations("common");
 }

@@ -12,6 +12,10 @@ import { ProcessFlowExample } from "@/components/ProcessFlow";
 import { RecyclingSectionExample } from "@/components/RecyclingSection";
 import { ToTopButton } from "@/components/ToTopButton";
 import Footer from "@/components/Footer/Footer";
+import { ReasonsSection } from "@/components/ReasonsSection";
+import { ReviewsSection } from "@/components/ReviewsSection";
+import { CaseStudiesSection } from "@/components/CaseStudiesSection";
+// import ProblemsSection from "@/components/ProblemsSection/ProblemsSection";
 
 export default function Home() {
   return (
@@ -30,6 +34,10 @@ export default function Home() {
       <ProcessFlowExample />
       <RecyclingSectionExample />
 
+      <ReasonsSection />
+      <CaseStudiesSection />
+      <ReviewsSection />
+      {/* <ProblemsSection /> */}
       <RecoverableItems />
       <FAQ />
       {/* To Top Button - appears when user scrolls down */}
