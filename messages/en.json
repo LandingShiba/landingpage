@@ -9,7 +9,8 @@
     "services": "Services",
     "about": "About",
     "contact": "Contact",
-    "pricing": "Pricing"
+    "pricing": "Pricing",
+    "privacy": "Privacy Policy"
   },
   "hero": {
     "title": "Fast & Reliable Delivery Service",
@@ -75,5 +76,10 @@
     "next": "Next",
     "previous": "Previous",
     "close": "Close"
+  },
+
+  "privacy": {
+    "title": "Privacy",
+    "titleSub": "EcoGlobal Co., Ltd. (hereinafter referred to as \"the Company\") establishes the following privacy policy, makes it public, and strives to ensure the protection of personal information."
   }
 }

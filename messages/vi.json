@@ -9,7 +9,8 @@
     "services": "Dịch vụ",
     "about": "Giới thiệu",
     "contact": "Liên hệ",
-    "pricing": "Bảng giá"
+    "pricing": "Bảng giá",
+    "privacy": "Chính sách bảo mật"
   },
   "hero": {
     "title": "Dịch vụ giao hàng đáng tin cậy",
@@ -56,5 +57,10 @@
     "next": "Tiếp theo",
     "previous": "Trước đó",
     "close": "Đóng"
+  },
+
+  "privacy": {
+    "title": "Chính sách bảo mật",
+    "titleSub": "Công ty Cổ phần EcoGlobal (sau đây gọi là \"Công ty\") quy định chính sách bảo mật như dưới đây, công bố chính sách này và nỗ lực hết sức để bảo vệ thông tin cá nhân."
   }
 }
