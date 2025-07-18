@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl';
 export default function BannerSection() {
     const t = useTranslations();
     return (
-        <section className="relative bg-[#D6EEFF] h-[300px] overflow-hidden">
+        <section className="relative bg-[#D6EEFF] h-[300px] w-full overflow-hidden">
             <div className="absolute inset-0 z-1">
                 <Image
                     src="/images/banner/banner-bg.png"
