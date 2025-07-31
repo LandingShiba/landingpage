@@ -24,7 +24,7 @@ export default function PrivacyPage() {
                 <InnerHeader />
             </div>
             <MenuNav />
-            <BannerSection />
+            <BannerSection title={t('privacy.tittle')}/>
 
             <div className="container max-w-[1440px] mx-auto py-[40px]">
                 <div className="mx-[140px]">

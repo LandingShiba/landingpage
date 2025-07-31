@@ -58,11 +58,10 @@
     "previous": "Trước đó",
     "close": "Đóng"
   },
-
   "privacy": {
     "title": "Chính sách bảo mật",
     "titleSub": "Công ty Cổ phần EcoGlobal (sau đây gọi là \"Công ty\") quy định chính sách bảo mật như dưới đây, công bố chính sách này và nỗ lực hết sức để bảo vệ thông tin cá nhân.",
-   "terms": {
+    "terms": {
       "term1": {
         "label": "第1条（個人情報）",
         "content": "「個人情報」とは，個人情報保護法にいう「個人情報」を指すものとし，生存する個人に関する情報であって，当該情報に含まれる氏名，生年月日，住所，電話番号，連絡先その他の記述等により特定の個人を識別できる情報及び容貌などのデータ、当該情報単体から特定の個人を識別できる情報（個人識別情報）を指します。"
@@ -165,6 +164,45 @@
           "term1": "本ポリシーの内容は，法令その他本ポリシーに別段の定めのある事項を除いて，お客様に通知することなく，変更することができるものとします。",
           "term2": "当社が別途定める場合を除いて，変更後のプライバシーポリシーは，本ウェブサイトに掲載したときから効力を生じるものとします。"
         }
+      }
+    }
+  },
+  "company": {
+    "title": "",
+    "about": "Xin chân thành cảm ơn Quý khách hàng đã luôn dành sự ưu ái đặc biệt cho chúng tôi.",
+    "aboutSub1": "Eco Global luôn nỗ lực cung cấp các dịch vụ gắn liền với cộng đồng địa phương, hỗ trợ tạo dựng không gian sống thoải mái cho mọi người thông qua dịch vụ thu gom đồ không còn sử dụng. Chúng tôi luôn lắng nghe cẩn thận nhu cầu của từng khách hàng và ưu tiên hàng đầu việc mang lại sự tin tưởng và an tâm.",
+    "aboutSub2": "Công ty chúng tôi cũng chú trọng đến việc bảo vệ môi trường, phân loại đúng cách các tài nguyên có thể tái chế và thúc đẩy việc sử dụng hiệu quả các nguồn lực. Góp phần bảo vệ môi trường toàn cầu và hiện thực hóa một xã hội bền vững là sứ mệnh quan trọng của chúng tôi.",
+    "aboutSub3": "Trong thời gian tới, chúng tôi sẽ tiếp tục nỗ lực để cung cấp dịch vụ tốt hơn nữa với sự ủng hộ của cộng đồng địa phương. Kính mong Quý khách hàng tiếp tục dành sự yêu mến lâu dài cho Eco Global.",
+    "aboutSub4": "Mọi khó khăn của Quý khách, xin hãy để Eco Global hỗ trợ. Chúng tôi luôn sẵn sàng phục vụ Quý khách từ tận đáy lòng.",
+     "managementPhilosophy": {
+      "title": "Triết lý kinh doanh",
+      "label":"Chân thành đáp ứng mọi nhu cầu",
+      "content":"Chúng tôi luôn đặt việc thấu hiểu nhu cầu của từng khách hàng một cách chân thành và cung cấp dịch vụ bằng cả tấm lòng lên hàng đầu.Chúng tôi lắng nghe cẩn thận những yêu cầu của khách hàng và luôn nỗ lực đề xuất giải pháp tối ưu nhất."
+    },
+    "companyDetails": {
+      "detail1": {
+        "label": "Dịch vụ thu gom đồ không dùng đến",
+        "content": "Dịch vụ này thu gom các vật dụng không còn sử dụng từ hộ gia đình và văn phòng, sau đó phân loại để tái chế, tái sử dụng hoặc xử lý rác thải.<br />Chúng tôi điều phối số lượng nhân viên và xe phù hợp theo yêu cầu của khách hàng, hỗ trợ từ khâu báo giá đến thu gom. Các vật dụng thu gom được sẽ được chuyển cho cửa hàng tái chế hoặc nhà thu mua nếu còn giá trị sử dụng, còn những thứ cần vứt bỏ sẽ được ủy thác cho đơn vị xử lý rác của chính quyền địa phương."
+      },
+      "detail2": {
+        "label": "Dịch vụ mua lại đồ không dùng đến",
+        "content": "Dịch vụ này thu mua những đồ không còn dùng nhưng vẫn còn giá trị sử dụng, như đồ điện tử, nội thất, hàng hiệu...<br />Chúng tôi nổi bật ở khâu kiểm tra tại chỗ kỹ lưỡng và có kinh nghiệm dày dặn trong ngành tái sử dụng, đồng thời hiểu rõ các quy định pháp luật về môi trường."
+      },
+      "detail3": {
+        "label": "Dịch vụ vệ sinh nhà cửa",
+        "content": "Nhân viên có chuyên môn sử dụng các loại dung dịch và thiết bị chuyên dụng để làm sạch toàn diện nhà ở của khách hàng."
+      },
+      "detail4": {
+        "label": "Dịch vụ hỗ trợ chuyển nhà",
+        "content": "Dịch vụ hỗ trợ chuyển nhà và văn phòng trọn gói.<br />Chúng tôi hỗ trợ từ khâu đóng gói, vận chuyển đến lắp đặt, giúp giảm bớt áp lực cho khách hàng bằng quy trình nhanh chóng và cẩn thận.<br />Ngoài ra còn có dịch vụ thu gom đồ không dùng đến và vệ sinh trước hoặc sau khi chuyển nhà, giúp tiết kiệm thời gian và công sức.<br />Đối với dịch vụ này, chúng tôi yêu cầu nhân viên tham khảo hướng dẫn \"Chuyển nhà thân thiện môi trường\" như một tiêu chuẩn bắt buộc."
+      },
+      "detail5": {
+        "label": "Dịch vụ phá dỡ và cải tạo",
+        "content": "Dịch vụ bao gồm cả phá dỡ các công trình cũ và cải tạo lại theo yêu cầu.<br />Chúng tôi đảm bảo thi công an toàn, hiệu quả và thiết kế lại không gian đúng với mong muốn của khách hàng.<br />Các vật liệu thải ra khi phá dỡ sẽ được xử lý đúng cách bởi các đơn vị có thẩm quyền, đảm bảo chất lượng dịch vụ cao."
+      },
+      "detail6": {
+        "label": "Dịch vụ sơn ngoại thất",
+        "content": "Dịch vụ sơn ngoại thất cho nhà ở và tòa nhà.<br />Chúng tôi sử dụng sơn chất lượng cao có độ bền với thời tiết, và nhân viên chuyên môn sẽ hỗ trợ tận tình từ tư vấn màu sắc đến chăm sóc sau thi công."
       }
     }
   }

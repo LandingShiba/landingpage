@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl';
 
-export default function BannerSection() {
+export default function BannerSection({ title = '' }) {
     const t = useTranslations();
     return (
         <section className="relative bg-[#D6EEFF] h-[300px] w-full overflow-hidden">
@@ -20,7 +20,7 @@ export default function BannerSection() {
             {/* Main text content */}
             <div className="flex justify-center relative z-10">
                 <div>
-                    <h1 className='font-bold text-[40px] mt-[100px]'>{t('privacy.title')}</h1>
+                    <h1 className='font-bold text-[40px] mt-[100px]'>{title}</h1>
                 </div>
 
                 <Image
