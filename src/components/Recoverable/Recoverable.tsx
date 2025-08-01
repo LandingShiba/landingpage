@@ -125,7 +125,7 @@ const RecoverableItems: React.FC = () => {
         <CategorySection
           headerTitle="家具・インテリアなど"
           backgroundImage="/images/bg-overlay.png"
-          backgroundColor="#7BAD4F"
+          backgroundColor="#FFFFFF"
           categories={furnitureCategories}
         />
       </div>

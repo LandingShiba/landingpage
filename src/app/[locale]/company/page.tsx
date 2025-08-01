@@ -5,8 +5,9 @@ import BannerSection from "@/components/Banner/BannerSection"
 import Breadcrumb from "@/components/Breadcrumb/Breadcrumb"
 import { useTranslations } from 'next-intl';
 import Image from "next/image"
-import { log } from "console"
-
+import CategorySection from "@/components/CategorySection"
+import { CategoryItem } from "@/components/CategorySection"
+import Footer from "@/components/Footer/Footer"
 export default function Company() {
     const t = useTranslations();
 
@@ -16,6 +17,20 @@ export default function Company() {
     ]
 
     const companyDetailDatas = t.raw('company.companyDetails')
+    const companyOverviewCategoriesDatas = t.raw('company.companyOverview.categories')
+    const companyOverviewDatas: CategoryItem[] = companyOverviewCategoriesDatas.map((category: any) => ({
+        title: category.title,
+        titleColor: "#000000",
+        content: category.content,
+    }));
+    const companyLocationCategoriesDatas = t.raw('company.companyLocation.categories')
+    const companyLocationDatas: CategoryItem[] = companyLocationCategoriesDatas.map((category: any) => ({
+        title: category.title,
+        titleColor: "#000000",
+        content: category.content,
+    }));
+
+
 
     return (
         <main className="bg-white mx-auto min-h-screen">
@@ -32,6 +47,7 @@ export default function Company() {
                         <Breadcrumb items={itemsBreadcrumb} />
                     </div>
 
+                    {/* Section About */}
                     <div className="relative max-w-[1080px] h-[554px] mt-[60px] px-[40px] py-[53px] border-[8px] border-[#2B5D90] rounded-[30px]">
                         <div className="">
                             <p className="text-[30px] font-bold text-[#2B5D90] mb-[30px]">{t('company.about')}</p>
@@ -68,7 +84,7 @@ export default function Company() {
 
                     </div>
 
-
+                    {/* Section Company Management Philosophy */}
                     <div className="mt-[78px]">
                         <h2 className="text-[30px] font-bold text-center">{t('company.managementPhilosophy.title')}</h2>
 
@@ -81,7 +97,7 @@ export default function Company() {
 
                     </div>
 
-                    {/* 事業内容 Section */}
+                    {/*  Section Company Detail*/}
                     <div className="border-2 border-[#2B5D90] pt-[37px] px-[21px] pb-[11px] mt-[85px]">
                         <h2 className="text-[30px] font-bold text-center">
                             事業内容
@@ -100,8 +116,32 @@ export default function Company() {
                         ))}
 
                     </div>
+
+
+                    {/* Section Company Overview */}
+                    <div className="mt-[30px]">
+                        <CategorySection
+                            headerTitle={t('company.companyOverview.title')}
+                            backgroundColor="#FFFFFF"
+                            headerTextColor="#000000"
+                            backgroundLabelColor="#FFFFFF"
+                            categories={companyOverviewDatas}
+                        />
+                    </div>
+
+                    {/* Section Company Location */}
+                    <div className="mt-[30px]">
+                        <CategorySection
+                            headerTitle={t('company.companyOverview.title')}
+                            backgroundColor="#FFFFFF"
+                            headerTextColor="#000000"
+                            backgroundLabelColor="#FFFFFF"
+                            categories={companyLocationDatas}
+                        />
+                    </div>
                 </div>
             </div>
+            <Footer />
         </main>
     )
 }

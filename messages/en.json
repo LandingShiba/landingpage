@@ -188,42 +188,103 @@
   },
   "company": {
     "title": "",
-    "about":"We sincerely appreciate your continued support and patronage.",
-    "aboutSub1":"At Eco Global, we are committed to providing services rooted in the local community, helping to create a more comfortable living space for everyone through our unwanted item collection service. We carefully listen to the needs of each and every customer, with our top priority being to deliver trust and peace of mind.",
-    "aboutSub2":"We also place great importance on environmental protection. Recyclable resources are properly sorted and utilized effectively to promote resource efficiency. Contributing to the preservation of the global environment and realizing a sustainable society is one of our vital missions.",
-    "aboutSub3":"Going forward, with the continued support of the local community, we will strive to provide even better services. We sincerely ask for your continued trust and support of Eco Global.",
-    "aboutSub4":"Please leave your concerns to us at Eco Global — we look forward to assisting you from the bottom of our hearts.",
+    "about": "We sincerely appreciate your continued support and patronage.",
+    "aboutSub1": "At Eco Global, we are committed to providing services rooted in the local community, helping to create a more comfortable living space for everyone through our unwanted item collection service. We carefully listen to the needs of each and every customer, with our top priority being to deliver trust and peace of mind.",
+    "aboutSub2": "We also place great importance on environmental protection. Recyclable resources are properly sorted and utilized effectively to promote resource efficiency. Contributing to the preservation of the global environment and realizing a sustainable society is one of our vital missions.",
+    "aboutSub3": "Going forward, with the continued support of the local community, we will strive to provide even better services. We sincerely ask for your continued trust and support of Eco Global.",
+    "aboutSub4": "Please leave your concerns to us at Eco Global — we look forward to assisting you from the bottom of our hearts.",
     "managementPhilosophy": {
       "title": "Management Philosophy",
-      "label":"Wholeheartedly responding to customer needs",
-      "content":"We place the utmost importance on sincerely understanding each customer's needs and providing heartfelt service. We carefully listen to our customers' requests and strive to propose the most suitable solutions."
+      "label": "Wholeheartedly responding to customer needs",
+      "content": "We place the utmost importance on sincerely understanding each customer's needs and providing heartfelt service. We carefully listen to our customers' requests and strive to propose the most suitable solutions."
     },
     "companyDetails": {
-  "detail1": {
-    "label": "Unwanted Items Collection Service",
-    "content": "This service collects unwanted items from households and businesses for recycling, reuse, or disposal.<br />We dispatch the appropriate number of staff and vehicles based on customer needs and provide full support from quotation to collection. Reusable or recyclable items are sold to reuse shops or vendors, and items that need to be discarded are entrusted to municipal waste contractors."
-  },
-  "detail2": {
-    "label": "Unwanted Items Purchase Service",
-    "content": "This service involves purchasing items that are no longer used but still functional, such as electronics, furniture, and branded goods.<br />We are known for thorough on-site inspections and have extensive experience in the reuse industry with a solid understanding of environmental regulations."
-  },
-  "detail3": {
-    "label": "House Cleaning Service",
-    "content": "Staff with specialized knowledge use professional detergents and equipment to thoroughly clean customers' homes."
-  },
-  "detail4": {
-    "label": "Moving Assistance Service",
-    "content": "A comprehensive service supporting residential and office relocations.<br />We handle everything from packing and transport to installation, reducing stress with quick and careful work.<br />We also provide unwanted item collection and cleaning before or after the move, making the process more efficient.<br />This service includes a mandatory reference manual on \"Environmentally Friendly Moving\"."
-  },
-  "detail5": {
-    "label": "Demolition and Renovation Service",
-    "content": "This service handles everything from demolishing old buildings to renovation work.<br />We ensure safe and efficient demolition while carefully considering customer needs to create ideal spaces.<br />Construction waste is handled properly through certified contractors, offering high-quality services."
-  },
-  "detail6": {
-    "label": "Exterior Wall Painting Service",
-    "content": "We offer exterior wall painting services for houses and buildings.<br />Using high-quality, weather-resistant paint, our experts provide careful support from color consultation to aftercare."
-  }
-}
-
+      "detail1": {
+        "label": "Unwanted Items Collection Service",
+        "content": "This service collects unwanted items from households and businesses for recycling, reuse, or disposal.<br />We dispatch the appropriate number of staff and vehicles based on customer needs and provide full support from quotation to collection. Reusable or recyclable items are sold to reuse shops or vendors, and items that need to be discarded are entrusted to municipal waste contractors."
+      },
+      "detail2": {
+        "label": "Unwanted Items Purchase Service",
+        "content": "This service involves purchasing items that are no longer used but still functional, such as electronics, furniture, and branded goods.<br />We are known for thorough on-site inspections and have extensive experience in the reuse industry with a solid understanding of environmental regulations."
+      },
+      "detail3": {
+        "label": "House Cleaning Service",
+        "content": "Staff with specialized knowledge use professional detergents and equipment to thoroughly clean customers' homes."
+      },
+      "detail4": {
+        "label": "Moving Assistance Service",
+        "content": "A comprehensive service supporting residential and office relocations.<br />We handle everything from packing and transport to installation, reducing stress with quick and careful work.<br />We also provide unwanted item collection and cleaning before or after the move, making the process more efficient.<br />This service includes a mandatory reference manual on \"Environmentally Friendly Moving\"."
+      },
+      "detail5": {
+        "label": "Demolition and Renovation Service",
+        "content": "This service handles everything from demolishing old buildings to renovation work.<br />We ensure safe and efficient demolition while carefully considering customer needs to create ideal spaces.<br />Construction waste is handled properly through certified contractors, offering high-quality services."
+      },
+      "detail6": {
+        "label": "Exterior Wall Painting Service",
+        "content": "We offer exterior wall painting services for houses and buildings.<br />Using high-quality, weather-resistant paint, our experts provide careful support from color consultation to aftercare."
+      }
+    },
+    "companyOverview": {
+      "title": "Company Overview",
+      "categories": [
+        {
+          "title": "Company Name",
+          "content": "Ecoglobal Co., Ltd."
+        },
+        {
+          "title": "Service Name",
+          "content": "Ecoglobal Junk Removal"
+        },
+        {
+          "title": "CEO",
+          "content": "Hoang Duc Nam"
+        },
+        {
+          "title": "Capital",
+          "content": "5 million yen"
+        },
+        {
+          "title": "Address",
+          "content": "6-473-12 Sakaecho, Matsudo-shi, Chiba 271-0062"
+        },
+        {
+          "title": "TEL",
+          "content": "0477 - 234 - 143"
+        },
+        {
+          "title": "URL",
+          "content": ""
+        },
+        {
+          "title": "Contact",
+          "content": "Please contact us via the inquiry form."
+        },
+        {
+          "title": "Business Hours",
+          "content": "24 hours, 365 days"
+        },
+        {
+          "title": "Business Description",
+          "content": "• Junk removal • Purchase of used items • House cleaning • Moving assistance • Demolition and renovation • Exterior painting"
+        },
+        {
+          "title": "Licenses",
+          "content": "Secondhand Dealer License (Chiba Prefecture)"
+        }
+      ]
+    },
+    "companyLocation": {
+      "title": "Company Location",
+      "categories": [
+        {
+          "title": "Address",
+          "content": "6-473-12 Sakaecho, Matsudo-shi, Chiba 271-0062"
+        },
+        {
+          "title": "TEL",
+          "content": "0477-234-143"
+        }
+      ]
+    }
   }
 }

@@ -12,6 +12,7 @@ export interface CategorySectionProps {
   backgroundImage?: string;
   backgroundColor?: string;
   headerTextColor?: string;
+  backgroundLabelColor?: string;
   categories: CategoryItem[];
   className?: string;
 }
@@ -21,6 +22,7 @@ const CategorySection: React.FC<CategorySectionProps> = ({
   backgroundImage,
   backgroundColor = "#7BAD4F",
   headerTextColor = "#FFFFFF",
+  backgroundLabelColor = "#E9FFD6",
   categories,
   className = "",
 }) => {
@@ -62,11 +64,12 @@ const CategorySection: React.FC<CategorySectionProps> = ({
             <div key={index} className="flex">
               {/* Header section */}
               <div
-                className={`w-[310px] bg-[#E9FFD6] border-2 ${
+                className={`w-[310px] border-2 ${
                   index === 0
                     ? "border-[#ACABAB]"
                     : "border-t-0 border-[#ACABAB]"
                 } rounded-none p-5 flex items-center justify-center`}
+                style={{ backgroundColor: backgroundLabelColor }}
               >
                 <h3
                   className="text-[30px] font-bold font-montserrat"
@@ -84,7 +87,7 @@ const CategorySection: React.FC<CategorySectionProps> = ({
                     : "border-t-0 border-[#ACABAB]"
                 } rounded-none p-5 flex items-center`}
               >
-                <span className="text-black text-[30px] font-medium font-montserrat">
+                <span className="text-black text-[30px] font-normal font-montserrat">
                   {category.content}
                 </span>
               </div>

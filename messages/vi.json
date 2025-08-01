@@ -174,10 +174,10 @@
     "aboutSub2": "Công ty chúng tôi cũng chú trọng đến việc bảo vệ môi trường, phân loại đúng cách các tài nguyên có thể tái chế và thúc đẩy việc sử dụng hiệu quả các nguồn lực. Góp phần bảo vệ môi trường toàn cầu và hiện thực hóa một xã hội bền vững là sứ mệnh quan trọng của chúng tôi.",
     "aboutSub3": "Trong thời gian tới, chúng tôi sẽ tiếp tục nỗ lực để cung cấp dịch vụ tốt hơn nữa với sự ủng hộ của cộng đồng địa phương. Kính mong Quý khách hàng tiếp tục dành sự yêu mến lâu dài cho Eco Global.",
     "aboutSub4": "Mọi khó khăn của Quý khách, xin hãy để Eco Global hỗ trợ. Chúng tôi luôn sẵn sàng phục vụ Quý khách từ tận đáy lòng.",
-     "managementPhilosophy": {
+    "managementPhilosophy": {
       "title": "Triết lý kinh doanh",
-      "label":"Chân thành đáp ứng mọi nhu cầu",
-      "content":"Chúng tôi luôn đặt việc thấu hiểu nhu cầu của từng khách hàng một cách chân thành và cung cấp dịch vụ bằng cả tấm lòng lên hàng đầu.Chúng tôi lắng nghe cẩn thận những yêu cầu của khách hàng và luôn nỗ lực đề xuất giải pháp tối ưu nhất."
+      "label": "Chân thành đáp ứng mọi nhu cầu",
+      "content": "Chúng tôi luôn đặt việc thấu hiểu nhu cầu của từng khách hàng một cách chân thành và cung cấp dịch vụ bằng cả tấm lòng lên hàng đầu.Chúng tôi lắng nghe cẩn thận những yêu cầu của khách hàng và luôn nỗ lực đề xuất giải pháp tối ưu nhất."
     },
     "companyDetails": {
       "detail1": {
@@ -204,6 +204,68 @@
         "label": "Dịch vụ sơn ngoại thất",
         "content": "Dịch vụ sơn ngoại thất cho nhà ở và tòa nhà.<br />Chúng tôi sử dụng sơn chất lượng cao có độ bền với thời tiết, và nhân viên chuyên môn sẽ hỗ trợ tận tình từ tư vấn màu sắc đến chăm sóc sau thi công."
       }
+    },
+    "companyOverview": {
+      "title": "Tổng Quan Công Ty",
+      "categories": [
+        {
+          "title": "Tên Công Ty",
+          "content": "Công ty Cổ phần Ecoglobal"
+        },
+        {
+          "title": "Tên Dịch Vụ",
+          "content": "Dịch vụ thu gom đồ cũ Ecoglobal"
+        },
+        {
+          "title": "Giám Đốc",
+          "content": "Hoàng Đức Nam"
+        },
+        {
+          "title": "Vốn Điều Lệ",
+          "content": "5 triệu yên"
+        },
+        {
+          "title": "Địa Chỉ",
+          "content": "6-473-12 Sakaecho, Thành phố Matsudo, Tỉnh Chiba, 271-0062"
+        },
+        {
+          "title": "Điện Thoại",
+          "content": "0477 - 234 - 143"
+        },
+        {
+          "title": "URL",
+          "content": ""
+        },
+        {
+          "title": "Liên Hệ",
+          "content": "Vui lòng liên hệ qua mẫu liên hệ trên website."
+        },
+        {
+          "title": "Giờ Làm Việc",
+          "content": "24 giờ mỗi ngày, 365 ngày/năm"
+        },
+        {
+          "title": "Nội Dung Kinh Doanh",
+          "content": "• Thu gom đồ cũ • Thu mua đồ cũ • Vệ sinh nhà cửa • Hỗ trợ chuyển nhà • Phá dỡ và cải tạo • Sơn tường ngoại thất"
+        },
+        {
+          "title": "Giấy Phép",
+          "content": "Giấy phép kinh doanh đồ cũ (Tỉnh Chiba)"
+        }
+      ]
+    },
+    "companyLocation": {
+      "title": "Địa Chỉ Công Ty",
+      "categories": [
+        {
+          "title": "Địa Chỉ",
+          "content": "6-473-12 Sakaecho, Thành phố Matsudo, Tỉnh Chiba, 271-0062"
+        },
+        {
+          "title": "Điện Thoại",
+          "content": "0477-234-143"
+        }
+      ]
     }
   }
 }
