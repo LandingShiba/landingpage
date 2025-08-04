@@ -34,12 +34,12 @@ export default function Company() {
 
     return (
         <main className="bg-white mx-auto min-h-screen leading-[1.3]">
-            {/* <div className="h-[100px]">
+            <div className="h-[100px]">
                 <InnerHeader />
             </div>
 
             <MenuNav />
-            <BannerSection title={t('company.title')} /> */}
+            <BannerSection title={t('company.title')} />
 
             <div className="container max-w-[1440px] mx-auto px-5 sm:py-5 sm:px-0">
                 {/* <div className="sm:mx-35"> */}
