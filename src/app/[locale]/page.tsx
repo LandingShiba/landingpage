@@ -30,17 +30,20 @@ export default function Home() {
       </div>
       <ServiceCardSection />
 
+      <ReasonsSection />
+
       <ComparisonTable />
       <ProcessFlowExample />
       <RecyclingSectionExample />
 
-      <ReasonsSection />
-      <CaseStudiesSection />
       <ReviewsSection />
-      {/* <ProblemsSection /> */}
+
       <RecoverableItems />
+
+      <CaseStudiesSection />
+
       <FAQ />
-      {/* To Top Button - appears when user scrolls down */}
+
       <ToTopButton />
 
       <Footer />

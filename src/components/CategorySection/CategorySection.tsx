@@ -26,7 +26,7 @@ const CategorySection: React.FC<CategorySectionProps> = ({
 }) => {
   return (
     <div className={`w-full bg-white py-12 ${className}`}>
-      <div className="max-w-[1300px] mx-auto px-4">
+      <div className="max-w-[963px] mx-auto px-4">
         {/* Header section */}
         <div
           className="relative rounded-[20px] h-24 mb-5 overflow-hidden"
