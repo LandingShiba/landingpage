@@ -9,7 +9,8 @@
     "services": "Services",
     "about": "About",
     "contact": "Contact",
-    "pricing": "Pricing"
+    "pricing": "Pricing",
+    "privacy": "Privacy Policy"
   },
   "hero": {
     "title": "Fast & Reliable Delivery Service",
@@ -75,5 +76,215 @@
     "next": "Next",
     "previous": "Previous",
     "close": "Close"
+  },
+  "privacy": {
+    "title": "Privacy",
+    "titleSub": "EcoGlobal Co., Ltd. (hereinafter referred to as \"the Company\") establishes the following privacy policy, makes it public, and strives to ensure the protection of personal information.",
+    "terms": {
+      "term1": {
+        "label": "第1条（個人情報）",
+        "content": "「個人情報」とは，個人情報保護法にいう「個人情報」を指すものとし，生存する個人に関する情報であって，当該情報に含まれる氏名，生年月日，住所，電話番号，連絡先その他の記述等により特定の個人を識別できる情報及び容貌などのデータ、当該情報単体から特定の個人を識別できる情報（個人識別情報）を指します。"
+      },
+      "term2": {
+        "label": "第2条（個人情報の収集方法）",
+        "content": "当社は，お客様が利用登録をする際に氏名，住所，電話番号，メールアドレスなどの個人情報をお尋ねすることがあります。また，お客様と提携先などとの間でなされたお客様がの個人情報を含む取引記録や決済に関する情報を,当社の提携先（情報提供元，広告主，広告配信先などを含みます。以下，｢提携先｣といいます。）などから収集することがあります。"
+      },
+      "term3": {
+        "label": "第3条（個人情報を収集・利用する目的）",
+        "content": "当社が個人情報を収集・利用する目的は，以下のとおりです。",
+        "subTerms": {
+          "term1": "当社サービスの提供・運営のため",
+          "term2": "お客様からのお問い合わせに回答するため（本人確認を行うことを含む）",
+          "term3": "お客様が利用するサービス，更新情報，キャンペーン等及び当社が提供するサービスの案内を送付するため",
+          "term4": "重要なお知らせなど必要に応じたご連絡のため",
+          "term5": "違法・不正・不当な目的でサービスを利用しようとするお客様の特定をし，ご利用をお断りするため",
+          "term6": "有料サービスにおいて，お客様に利用料金を請求するため",
+          "term7": "上記の利用目的に付随する目的"
+        }
+      },
+      "term4": {
+        "label": "第4条（利用目的の変更）",
+        "content": "",
+        "subTerms": {
+          "term1": "当社は，利用目的が変更前と関連性を有すると合理的に認められる場合に限り，個人情報の利用目的を変更するものとします。",
+          "term2": "利用目的の変更を行った場合には，変更後の目的について，当社所定の方法により，お客様に通知し，または本ウェブサイト上に公表するものとします。"
+        }
+      },
+      "term5": {
+        "label": "第5条（個人情報の第三者提供）",
+        "content": "",
+        "subTerms": {
+          "term1": {
+            "content": "当社は，次に掲げる場合を除いて，あらかじめお客様の同意を得ることなく，第三者に個人情報を提供することはありません。ただし，個人情報保護法その他の法令で認められる場合を除きます。",
+            "subTerms": {
+              "term1": "人の生命，身体または財産の保護のために必要がある場合であって，本人の同意を得ることが困難であるとき",
+              "term2": "公衆衛生の向上または児童の健全な育成の推進のために特に必要がある場合であって，本人の同意を得ることが困難であるとき",
+              "term3": "国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合であって，本人の同意を得ることにより当該事務の遂行に支障を及ぼすおそれがあるとき",
+              "term4": {
+                "content": "予め次の事項を告知あるいは公表し，かつ当社が個人情報保護委員会に届出をしたとき",
+                "subTerms": {
+                  "term1": "利用目的に第三者への提供を含むこと",
+                  "term2": "第三者に提供されるデータの項目",
+                  "term3": "第三者への提供の手段または方法",
+                  "term4": "本人の求めに応じて個人情報の第三者への提供を停止すること",
+                  "term5": "本人の求めを受け付ける方法"
+                }
+              }
+            }
+          },
+          "term2": {
+            "content": "前項の定めにかかわらず，次に掲げる場合には，当該情報の提供先は第三者に該当しないものとします。",
+            "subTerms": {
+              "term1": "当社が利用目的の達成に必要な範囲内において個人情報の取扱いの全部または一部を委託する場合",
+              "term2": "合併その他の事由による事業の承継に伴って個人情報が提供される場合",
+              "term3": "個人情報を特定の者との間で共同して利用する場合であって，その旨並びに共同して利用される個人情報の項目，共同して利用する者の範囲，利用する者の利用目的および当該個人情報の管理について責任を有する者の氏名または名称について，あらかじめ本人に通知し，または本人が容易に知り得る状態に置いた場合"
+            }
+          }
+        }
+      },
+      "term6": {
+        "label": "第6条（個人情報の開示）",
+        "content": "",
+        "subTerms": {
+          "term1": {
+            "content": "当社は，本人から個人情報の開示を求められたときは，本人に対し，遅滞なくこれを開示します。ただし，開示することにより次のいずれかに該当する場合は，その全部または一部を開示しないこともあり，開示しない決定をした場合には，その旨を遅滞なく通知します。",
+            "subTerms": {
+              "term1": "本人または第三者の生命，身体，財産その他の権利利益を害するおそれがある場合",
+              "term2": "当社の業務の適正な実施に著しい支障を及ぼすおそれがある場合",
+              "term3": "その他法令に違反することとなる場合"
+            }
+          },
+          "term2": "前項の定めにかかわらず，履歴情報および特性情報などの個人情報以外の情報については，原則として開示いたしません。"
+        }
+      },
+      "term7": {
+        "label": "第7条（個人情報の訂正および削除",
+        "content": "",
+        "subTerms": {
+          "term1": "お客様は，当社の保有する自己の個人情報が誤った情報である場合には，当社が定める手続きにより，当社に対して個人情報の訂正，追加または削除（以下，「訂正等」といいます。）を請求することができます。",
+          "term2": "当社は，お客様から前項の請求を受けてその請求に応じる必要があると判断した場合には，遅滞なく，当該個人情報の訂正等を行うものとします。",
+          "term3": "当社は，前項の規定に基づき訂正等を行った場合，または訂正等を行わない旨の決定をしたときは遅滞なく，これをお客様に通知します。"
+        }
+      },
+      "term8": {
+        "label": "第8条（個人情報の利用停止等）",
+        "content": "",
+        "subTerms": {
+          "term1": "当社は，本人から，個人情報が，利用目的の範囲を超えて取り扱われているという理由，または不正の手段により取得されたものであるという理由により，その利用の停止または消去（以下，「利用停止等」といいます。）を求められた場合には，遅滞なく必要な調査を行います。",
+          "term2": "前項の調査結果に基づき，その請求に応じる必要があると判断した場合には，遅滞なく，当該個人情報の利用停止等を行います。",
+          "term3": "当社は，前項の規定に基づき利用停止等を行った場合，または利用停止等を行わない旨の決定をしたときは，遅滞なく，これをお客様に通知します。",
+          "term4": "前2項にかかわらず，利用停止等に多額の費用を有する場合その他利用停止等を行うことが困難な場合であって，お客様の権利利益を保護するために必要なこれに代わるべき措置をとれる場合は，この代替策を講じるものとします"
+        }
+      },
+      "term9": {
+        "label": "第9条（プライバシーポリシーの変更）",
+        "content": "",
+        "subTerms": {
+          "term1": "本ポリシーの内容は，法令その他本ポリシーに別段の定めのある事項を除いて，お客様に通知することなく，変更することができるものとします。",
+          "term2": "当社が別途定める場合を除いて，変更後のプライバシーポリシーは，本ウェブサイトに掲載したときから効力を生じるものとします。"
+        }
+      }
+    }
+  },
+  "company": {
+    "title": "",
+    "about": "We sincerely appreciate your continued support and patronage.",
+    "aboutSub1": "At Eco Global, we are committed to providing services rooted in the local community, helping to create a more comfortable living space for everyone through our unwanted item collection service. We carefully listen to the needs of each and every customer, with our top priority being to deliver trust and peace of mind.",
+    "aboutSub2": "We also place great importance on environmental protection. Recyclable resources are properly sorted and utilized effectively to promote resource efficiency. Contributing to the preservation of the global environment and realizing a sustainable society is one of our vital missions.",
+    "aboutSub3": "Going forward, with the continued support of the local community, we will strive to provide even better services. We sincerely ask for your continued trust and support of Eco Global.",
+    "aboutSub4": "Please leave your concerns to us at Eco Global — we look forward to assisting you from the bottom of our hearts.",
+    "managementPhilosophy": {
+      "title": "Management Philosophy",
+      "label": "Wholeheartedly responding to customer needs",
+      "content": "We place the utmost importance on sincerely understanding each customer's needs and providing heartfelt service. We carefully listen to our customers' requests and strive to propose the most suitable solutions."
+    },
+    "companyDetails": {
+      "detail1": {
+        "label": "Unwanted Items Collection Service",
+        "content": "This service collects unwanted items from households and businesses for recycling, reuse, or disposal.<br />We dispatch the appropriate number of staff and vehicles based on customer needs and provide full support from quotation to collection. Reusable or recyclable items are sold to reuse shops or vendors, and items that need to be discarded are entrusted to municipal waste contractors."
+      },
+      "detail2": {
+        "label": "Unwanted Items Purchase Service",
+        "content": "This service involves purchasing items that are no longer used but still functional, such as electronics, furniture, and branded goods.<br />We are known for thorough on-site inspections and have extensive experience in the reuse industry with a solid understanding of environmental regulations."
+      },
+      "detail3": {
+        "label": "House Cleaning Service",
+        "content": "Staff with specialized knowledge use professional detergents and equipment to thoroughly clean customers' homes."
+      },
+      "detail4": {
+        "label": "Moving Assistance Service",
+        "content": "A comprehensive service supporting residential and office relocations.<br />We handle everything from packing and transport to installation, reducing stress with quick and careful work.<br />We also provide unwanted item collection and cleaning before or after the move, making the process more efficient.<br />This service includes a mandatory reference manual on \"Environmentally Friendly Moving\"."
+      },
+      "detail5": {
+        "label": "Demolition and Renovation Service",
+        "content": "This service handles everything from demolishing old buildings to renovation work.<br />We ensure safe and efficient demolition while carefully considering customer needs to create ideal spaces.<br />Construction waste is handled properly through certified contractors, offering high-quality services."
+      },
+      "detail6": {
+        "label": "Exterior Wall Painting Service",
+        "content": "We offer exterior wall painting services for houses and buildings.<br />Using high-quality, weather-resistant paint, our experts provide careful support from color consultation to aftercare."
+      }
+    },
+    "companyOverview": {
+      "title": "Company Overview",
+      "categories": [
+        {
+          "title": "Company Name",
+          "content": "Ecoglobal Co., Ltd."
+        },
+        {
+          "title": "Service Name",
+          "content": "Ecoglobal Junk Removal"
+        },
+        {
+          "title": "CEO",
+          "content": "Hoang Duc Nam"
+        },
+        {
+          "title": "Capital",
+          "content": "5 million yen"
+        },
+        {
+          "title": "Address",
+          "content": "6-473-12 Sakaecho, Matsudo-shi, Chiba 271-0062"
+        },
+        {
+          "title": "TEL",
+          "content": "0477 - 234 - 143"
+        },
+        {
+          "title": "URL",
+          "content": ""
+        },
+        {
+          "title": "Contact",
+          "content": "Please contact us via the inquiry form."
+        },
+        {
+          "title": "Business Hours",
+          "content": "24 hours, 365 days"
+        },
+        {
+          "title": "Business Description",
+          "content": "• Junk removal • Purchase of used items • House cleaning • Moving assistance • Demolition and renovation • Exterior painting"
+        },
+        {
+          "title": "Licenses",
+          "content": "Secondhand Dealer License (Chiba Prefecture)"
+        }
+      ]
+    },
+    "companyLocation": {
+      "title": "Company Location",
+      "categories": [
+        {
+          "title": "Address",
+          "content": "6-473-12 Sakaecho, Matsudo-shi, Chiba 271-0062"
+        },
+        {
+          "title": "TEL",
+          "content": "0477-234-143"
+        }
+      ]
+    }
   }
 }
