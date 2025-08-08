@@ -17,10 +17,10 @@ export default function ListTerm({ termsData }) {
                     if (typeof value === 'string') {
                         return (
                             <div key={key} className="flex items-start gap-2">
-                                <span className="sm:text-[20px] font-medium min-w-[20px]">
+                                <span className="md:text-[20px] font-medium min-w-[20px]">
                                     {getNumbering(key, level)}
                                 </span>
-                                <p className="sm:text-[20px] leading-relaxed text-gray-700">
+                                <p className="md:text-[20px] leading-relaxed text-gray-700">
                                     {value}
                                 </p>
                             </div>
@@ -29,10 +29,10 @@ export default function ListTerm({ termsData }) {
                         return (
                             <div key={key} className="space-y-2">
                                 <div className="flex items-start gap-2">
-                                    <span className="sm:text-[20px] font-medium min-w-[20px]">
+                                    <span className="md:text-[20px] font-medium min-w-[20px]">
                                         {getNumbering(key, level)}
                                     </span>
-                                    <p className="sm:text-[20px] leading-relaxed text-gray-700">
+                                    <p className="md:text-[20px] leading-relaxed text-gray-700">
                                         {value.content}
                                     </p>
                                 </div>
@@ -51,13 +51,13 @@ export default function ListTerm({ termsData }) {
                     {Object.entries(termsData).map(([termKey, term]) => (
                         <div key={termKey} id={termKey} className="space-y-4">
                             {/* Term Title */}
-                            <h2 className="text-[20px] sm:text-[40px] font-bold text-center mb-6">
+                            <h2 className="text-[20px] md:text-[40px] font-bold text-center mb-6">
                                 {term.label}
                             </h2>
 
                             {/* Term Content */}
                             {term.content && (
-                                <p className="sm:text-[20px] mb-4">
+                                <p className="md:text-[20px] mb-4">
                                     {term.content}
                                 </p>
                             )}
