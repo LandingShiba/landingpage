@@ -101,34 +101,34 @@ const ReviewsSection: React.FC = () => {
     <section
       ref={containerRef}
       className={cn(
-        "bg-[#dcfbff] py-16 relative transition-all duration-1000 ease-out",
+        "bg-[#E9FFD6] py-8 md:py-12 lg:py-16 relative transition-all duration-1000 ease-out",
         containerInView
           ? "opacity-100 transform translate-y-0"
           : "opacity-0 transform translate-y-[20px]"
       )}
     >
-      <div className="max-w-[1440px] mx-auto px-[180px]">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-16 xl:px-[180px]">
         {/* Header Section */}
         <div
           ref={headerRef}
           className={cn(
-            "text-center mb-10 transition-all duration-800 ease-out",
+            "text-center mb-6 md:mb-8 lg:mb-10 transition-all duration-800 ease-out",
             headerInView
               ? "opacity-100 transform translate-y-0"
               : "opacity-0 transform translate-y-[-30px]"
           )}
         >
-          <div className="mb-5">
-            <p className="text-[#202020] text-[40px] font-bold font-['Montserrat'] leading-normal mb-5">
+          <div className="mb-3 md:mb-5">
+            <p className="text-[#202020] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[40px] font-bold font-['Montserrat'] leading-normal mb-2 md:mb-5">
               ネコの手に寄せられた
             </p>
-            <h2 className="text-[70px] font-bold font-['Montserrat'] leading-normal">
+            <h2 className="text-[36px] sm:text-[42px] md:text-[50px] lg:text-[60px] xl:text-[70px] font-bold font-['Montserrat'] leading-normal">
               <span className="text-black">お客様の</span>
-              <span className="text-[#2b5d90]">クチコミ</span>
+              <span className="text-[#02662A]">クチコミ</span>
               <span className="text-black">をご紹介</span>
             </h2>
           </div>
-          <p className="text-[#202020] text-[20px] font-medium font-['Montserrat'] max-w-[817px] mx-auto leading-normal">
+          <p className="text-[#202020] text-[16px] sm:text-[18px] md:text-[20px] font-medium font-['Montserrat'] max-w-[817px] mx-auto leading-normal">
             弊社で不用品回収をご利用いただいたお客様からたくさんの口コミを頂いております。
           </p>
         </div>
@@ -137,7 +137,7 @@ const ReviewsSection: React.FC = () => {
         <div
           ref={testimonialsRef}
           className={cn(
-            "bg-white rounded-[40px] p-[71px] transition-all duration-800 ease-out",
+            "bg-[E9FFD6] rounded-[20px] sm:rounded-[30px] md:rounded-[40px] p-4 sm:p-6 md:p-8 lg:p-[50px] xl:p-[71px] transition-all duration-800 ease-out",
             testimonialsInView
               ? "opacity-100 transform translate-y-0"
               : "opacity-0 transform translate-y-[30px]"
@@ -166,7 +166,7 @@ const ReviewsSection: React.FC = () => {
                 {index < testimonials.length - 1 && (
                   <div
                     className={cn(
-                      "w-full my-12 opacity-30 transition-all duration-800 ease-out",
+                      "w-full my-6 md:my-8 lg:my-12 opacity-30 transition-all duration-800 ease-out",
                       testimonialsInView
                         ? "transform scale-x-100"
                         : "transform scale-x-0"
@@ -176,7 +176,7 @@ const ReviewsSection: React.FC = () => {
                       transitionDelay: testimonialsInView
                         ? `${1000 + index * 300}ms`
                         : "0ms",
-                      borderTop: "3px dashed #539cd1",
+                      borderTop: "3px dashed #00A842",
                       height: "0px",
                     }}
                   />
@@ -206,7 +206,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   return (
     <div
       className={cn(
-        "flex gap-[34px] items-center transition-all duration-800 ease-out mb-8",
+        "flex gap-3 sm:gap-4 md:gap-[34px] items-center transition-all duration-800 ease-out mb-6 md:mb-8",
         isReversed ? "flex-row-reverse" : "flex-row",
         isInView
           ? "opacity-100 transform translate-x-0 translate-y-0 scale-100"
@@ -222,53 +222,48 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       }}
     >
       {/* Customer Avatar */}
-      <div className="flex flex-col items-center gap-2.5 w-[167px]">
-        <div className="w-[167px] h-[167px] rounded-full overflow-hidden bg-gray-200 transition-all duration-300 ease-out hover:scale-110 hover:shadow-xl transform">
+      <div className="flex flex-col items-center gap-2.5 w-[80px] sm:w-[120px] md:w-[167px] shrink-0">
+        <div className="w-[80px] h-[80px] sm:w-[120px] sm:h-[120px] md:w-[167px] md:h-[167px] rounded-full overflow-hidden bg-gray-200 transition-all duration-300 ease-out hover:scale-110 hover:shadow-xl transform">
           <Image
             src={testimonial.avatar}
             alt={`${testimonial.name} avatar`}
             width={167}
             height={167}
             className="w-full h-full object-cover transition-all duration-300 ease-out hover:scale-105 transform"
-            // onError={(e) => {
-            //   // Fallback to a default avatar if image doesn't exist
-            //   const target = e.target as HTMLImageElement;
-            //   target.src = "/images/default-avatar.png";
-            // }}
           />
         </div>
-        <p className="text-black text-[20px] font-bold font-['Montserrat'] text-center">
+        <p className="text-black text-[12px] sm:text-[16px] md:text-[20px] font-bold font-['Montserrat'] text-center">
           お客様
         </p>
       </div>
 
       {/* Speech Bubble */}
-      <div className="flex-1 relative">
-        <div className="bg-white border-2 border-[#539cd1] rounded-[20px] p-[45px] relative shadow-sm transition-all duration-300 ease-out hover:shadow-lg hover:border-[#2b5d90] hover:scale-[1.02] transform">
+      <div className="flex-1 relative w-full">
+        <div className="bg-white border-2 border-[#02662A] rounded-[15px] sm:rounded-[18px] md:rounded-[20px] p-3 sm:p-4 md:p-6 lg:p-[45px] relative shadow-sm transition-all duration-300 ease-out hover:shadow-lg hover:border-[#2b5d90] hover:scale-[1.02] transform">
           {/* Arrow pointing to avatar */}
           <div
             className={cn(
               "absolute top-1/2 transform -translate-y-1/2 w-0 h-0",
               isReversed
-                ? "right-[-16px] border-l-[16px] border-l-[#539cd1] border-t-[16px] border-t-transparent border-b-[16px] border-b-transparent"
-                : "left-[-16px] border-r-[16px] border-r-[#539cd1] border-t-[16px] border-t-transparent border-b-[16px] border-b-transparent"
+                ? "right-[-12px] sm:right-[-14px] md:right-[-16px] border-l-[12px] sm:border-l-[14px] md:border-l-[16px] border-l-[#539cd1] border-t-[12px] sm:border-t-[14px] md:border-t-[16px] border-t-transparent border-b-[12px] sm:border-b-[14px] md:border-b-[16px] border-b-transparent"
+                : "left-[-12px] sm:left-[-14px] md:left-[-16px] border-r-[12px] sm:border-r-[14px] md:border-r-[16px] border-r-[#539cd1] border-t-[12px] sm:border-t-[14px] md:border-t-[16px] border-t-transparent border-b-[12px] sm:border-b-[14px] md:border-b-[16px] border-b-transparent"
             )}
           />
           <div
             className={cn(
               "absolute top-1/2 transform -translate-y-1/2 w-0 h-0",
               isReversed
-                ? "right-[-14px] border-l-[14px] border-l-white border-t-[14px] border-t-transparent border-b-[14px] border-b-transparent"
-                : "left-[-14px] border-r-[14px] border-r-white border-t-[14px] border-t-transparent border-b-[14px] border-b-transparent"
+                ? "right-[-10px] sm:right-[-12px] md:right-[-14px] border-l-[10px] sm:border-l-[12px] md:border-l-[14px] border-l-white border-t-[10px] sm:border-t-[12px] md:border-t-[14px] border-t-transparent border-b-[10px] sm:border-b-[12px] md:border-b-[14px] border-b-transparent"
+                : "left-[-10px] sm:left-[-12px] md:left-[-14px] border-r-[10px] sm:border-r-[12px] md:border-r-[14px] border-r-white border-t-[10px] sm:border-t-[12px] md:border-t-[14px] border-t-transparent border-b-[10px] sm:border-b-[12px] md:border-b-[14px] border-b-transparent"
             )}
           />
 
           {/* Title */}
-          <div className="mb-6">
-            <h3 className="text-[#539cd1] text-[20px] font-bold font-['Montserrat'] leading-normal mb-2">
+          <div className="mb-2 sm:mb-3 md:mb-6">
+            <h3 className="text-[#00A842] text-[14px] sm:text-[16px] md:text-[20px] font-bold font-['Montserrat'] leading-normal mb-1 sm:mb-2">
               {testimonial.title}
             </h3>
-            <p className="text-black text-[20px] font-medium font-['Montserrat']">
+            <p className="text-black text-[12px] sm:text-[14px] md:text-[20px] font-medium font-['Montserrat']">
               （{testimonial.name}・
               {testimonial.gender === "male" ? "男性" : "女性"}・
               {testimonial.age}）
@@ -276,7 +271,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           </div>
 
           {/* Content */}
-          <p className="text-black text-[20px] font-medium font-['Montserrat'] leading-normal">
+          <p className="text-black text-[12px] sm:text-[14px] md:text-[20px] font-medium font-['Montserrat'] leading-normal">
             {testimonial.content}
           </p>
         </div>
@@ -301,7 +296,7 @@ const StaffResponse: React.FC<StaffResponseProps> = ({
   return (
     <div
       className={cn(
-        "flex gap-[34px] items-center transition-all duration-800 ease-out mb-8",
+        "flex gap-3 sm:gap-4 md:gap-[34px] items-center transition-all duration-800 ease-out mb-6 md:mb-8",
         isReversed ? "flex-row-reverse" : "flex-row",
         isInView
           ? "opacity-100 transform translate-x-0 translate-y-0 scale-100"
@@ -317,41 +312,36 @@ const StaffResponse: React.FC<StaffResponseProps> = ({
       }}
     >
       {/* Staff Avatar */}
-      <div className="flex flex-col items-center gap-2.5 w-[167px]">
-        <div className="w-[167px] h-[167px] rounded-full overflow-hidden bg-gray-100 transition-all duration-300 ease-out hover:scale-110 hover:shadow-xl transform">
+      <div className="flex flex-col items-center gap-2.5 w-[80px] sm:w-[120px] md:w-[167px] shrink-0">
+        <div className="w-[80px] h-[80px] sm:w-[120px] sm:h-[120px] md:w-[167px] md:h-[167px] rounded-full overflow-hidden bg-gray-100 transition-all duration-300 ease-out hover:scale-110 hover:shadow-xl transform">
           <Image
             src="/images/testimonials/avatar_female.png"
             alt="Staff avatar"
             width={167}
             height={167}
             className="w-full h-full object-cover transition-all duration-300 ease-out hover:scale-105 transform"
-            // onError={(e) => {
-            //   // Fallback to a default staff avatar
-            //   const target = e.target as HTMLImageElement;
-            //   target.src = "/images/avatar_female.png";
-            // }}
           />
         </div>
-        <p className="text-black text-[20px] font-bold font-['Montserrat'] text-center">
+        <p className="text-black text-[12px] sm:text-[16px] md:text-[20px] font-bold font-['Montserrat'] text-center">
           スタッフ
         </p>
       </div>
 
       {/* Response Speech Bubble */}
-      <div className="flex-1 relative">
-        <div className="bg-gray-100 rounded-[20px] p-[45px] relative shadow-sm transition-all duration-300 ease-out hover:shadow-md hover:bg-gray-50 hover:scale-[1.01] transform">
+      <div className="flex-1 relative w-full">
+        <div className="bg-gray-100 rounded-[15px] sm:rounded-[18px] md:rounded-[20px] p-3 sm:p-4 md:p-6 lg:p-[45px] relative shadow-sm transition-all duration-300 ease-out hover:shadow-md hover:bg-gray-50 hover:scale-[1.01] transform">
           {/* Arrow pointing to avatar */}
           <div
             className={cn(
               "absolute top-1/2 transform -translate-y-1/2 w-0 h-0",
               isReversed
-                ? "right-[-16px] border-l-[16px] border-l-gray-100 border-t-[16px] border-t-transparent border-b-[16px] border-b-transparent"
-                : "left-[-16px] border-r-[16px] border-r-gray-100 border-t-[16px] border-t-transparent border-b-[16px] border-b-transparent"
+                ? "right-[-12px] sm:right-[-14px] md:right-[-16px] border-l-[12px] sm:border-l-[14px] md:border-l-[16px] border-l-gray-100 border-t-[12px] sm:border-t-[14px] md:border-t-[16px] border-t-transparent border-b-[12px] sm:border-b-[14px] md:border-b-[16px] border-b-transparent"
+                : "left-[-12px] sm:left-[-14px] md:left-[-16px] border-r-[12px] sm:border-r-[14px] md:border-r-[16px] border-r-gray-100 border-t-[12px] sm:border-t-[14px] md:border-t-[16px] border-t-transparent border-b-[12px] sm:border-b-[14px] md:border-b-[16px] border-b-transparent"
             )}
           />
 
           {/* Response Content */}
-          <p className="text-black text-[20px] font-medium font-['Montserrat'] leading-normal">
+          <p className="text-black text-[12px] sm:text-[14px] md:text-[20px] font-medium font-['Montserrat'] leading-normal">
             {testimonial.response}
           </p>
         </div>

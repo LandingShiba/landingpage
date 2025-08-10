@@ -51,7 +51,8 @@ const useInView = (options?: IntersectionObserverInit) => {
   return { ref, isInView };
 };
 
-const ProcessStepCard: React.FC<{ step: ProcessStep; index: number }> = ({
+// Desktop version of the step card
+const DesktopProcessStepCard: React.FC<{ step: ProcessStep; index: number }> = ({
   step,
   index,
 }) => {
@@ -113,6 +114,91 @@ const ProcessStepCard: React.FC<{ step: ProcessStep; index: number }> = ({
   );
 };
 
+// Mobile version of the step card
+const MobileProcessStepCard: React.FC<{ step: ProcessStep; index: number }> = ({
+  step,
+  index,
+}) => {
+  const { ref, isInView } = useInView();
+
+  return (
+    <div
+      ref={ref}
+      className={cn(
+        "relative w-full transition-all duration-700 ease-out",
+        isInView
+          ? "opacity-100 transform translate-y-0"
+          : "opacity-0 transform translate-y-[20px]"
+      )}
+      style={{
+        transitionDelay: isInView ? `${index * 200}ms` : "0ms",
+      }}
+    >
+      <div className="w-full">
+        {/* Step Circle with Content Card */}
+        <div
+          className={cn(
+            "relative bg-[#E9FFD6] rounded-[40px] pl-[90px] pr-4 py-4 min-h-[78px] transition-all duration-600 ease-out",
+            isInView
+              ? "opacity-100 transform translate-x-0"
+              : "opacity-0 transform translate-x-[30px]"
+          )}
+          style={{
+            transitionDelay: isInView ? `${index * 200 + 200}ms` : "0ms",
+          }}
+        >
+          {/* Step Circle Badge (Absolute positioned) */}
+          <div
+            className={cn(
+              "absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/4 w-[87px] h-[87px] bg-white rounded-full border-[3px] border-[#00A842] z-10 transition-all duration-500 ease-out",
+              isInView
+                ? "opacity-100 transform scale-100"
+                : "opacity-0 transform scale-75"
+            )}
+            style={{
+              transitionDelay: isInView ? `${index * 200 + 100}ms` : "0ms",
+            }}
+          >
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
+              <div className="text-[#02662A] font-bold text-[10px] leading-none font-['Montserrat']">
+                Step
+              </div>
+              <div className="text-black font-bold text-[18px] leading-none font-['Montserrat'] mt-[2px]">
+                {step.stepNumber}
+              </div>
+            </div>
+          </div>
+          
+          {/* Content */}
+          <div>
+            <h3 className="text-[#02662A] font-bold text-[12px] leading-[1.2] mb-1.5 font-['Montserrat']">
+              {step.title}
+            </h3>
+            <p className="text-black font-medium text-[10px] leading-[1.2] font-['Montserrat']">
+              {step.description}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+// Responsive wrapper component that chooses between mobile and desktop versions
+const ProcessStepCard: React.FC<{ step: ProcessStep; index: number }> = (props) => {
+  return (
+    <>
+      <div className="hidden md:block">
+        <DesktopProcessStepCard {...props} />
+      </div>
+      <div className="block md:hidden">
+        <MobileProcessStepCard {...props} />
+      </div>
+    </>
+  );
+};
+
 const ProcessFlow: React.FC<ProcessFlowProps> = ({
   title = "とってもカンタン",
   subtitle = "不用品回収までの流れ",
@@ -124,52 +210,97 @@ const ProcessFlow: React.FC<ProcessFlowProps> = ({
   return (
     <div
       className={cn(
-        "w-full max-w-[1440px] mx-auto px-[74px] py-[70px]",
+        "w-full max-w-[1440px] mx-auto md:px-[74px] px-8 md:py-[70px] py-8 ",
         className
       )}
     >
       {/* Header Section */}
-      <div
-        ref={headerRef}
-        className={cn(
-          "flex flex-col items-center mb-[50px] max-w-[999px] mx-auto transition-all duration-800 ease-out",
-          headerInView
-            ? "opacity-100 transform translate-y-0"
-            : "opacity-0 transform translate-y-[-20px]"
-        )}
-      >
-        <div className="flex flex-col items-center gap-5 w-full">
-          <h2
-            className={cn(
-              "text-[#008144] font-bold text-[40px] leading-[1.2] text-center font-['Montserrat'] w-full transition-all duration-600 ease-out",
-              headerInView
-                ? "opacity-100 transform translate-y-0"
-                : "opacity-0 transform translate-y-[-10px]"
-            )}
-            style={{
-              transitionDelay: headerInView ? "200ms" : "0ms",
-            }}
-          >
-            {title}
-          </h2>
-          <h1
-            className={cn(
-              "text-black font-bold text-[70px] leading-[1.2] font-['Montserrat'] transition-all duration-600 ease-out",
-              headerInView
-                ? "opacity-100 transform translate-y-0"
-                : "opacity-0 transform translate-y-[-10px]"
-            )}
-            style={{
-              transitionDelay: headerInView ? "400ms" : "0ms",
-            }}
-          >
-            {subtitle}
-          </h1>
+      {/* Desktop Header */}
+      <div className="hidden md:block">
+        <div
+          ref={headerRef}
+          className={cn(
+            "flex flex-col items-center mb-[50px] max-w-[999px] mx-auto transition-all duration-800 ease-out",
+            headerInView
+              ? "opacity-100 transform translate-y-0"
+              : "opacity-0 transform translate-y-[-20px]"
+          )}
+        >
+          <div className="flex flex-col items-center gap-5 w-full">
+            <h2
+              className={cn(
+                "text-[#008144] font-bold text-[40px] leading-[1.2] text-center font-['Montserrat'] w-full transition-all duration-600 ease-out",
+                headerInView
+                  ? "opacity-100 transform translate-y-0"
+                  : "opacity-0 transform translate-y-[-10px]"
+              )}
+              style={{
+                transitionDelay: headerInView ? "200ms" : "0ms",
+              }}
+            >
+              {title}
+            </h2>
+            <h1
+              className={cn(
+                "text-black font-bold text-[70px] leading-[1.2] font-['Montserrat'] transition-all duration-600 ease-out",
+                headerInView
+                  ? "opacity-100 transform translate-y-0"
+                  : "opacity-0 transform translate-y-[-10px]"
+              )}
+              style={{
+                transitionDelay: headerInView ? "400ms" : "0ms",
+              }}
+            >
+              {subtitle}
+            </h1>
+          </div>
+        </div>
+      </div>
+      
+      {/* Mobile Header */}
+      <div className="block md:hidden">
+        <div
+          ref={headerRef}
+          className={cn(
+            "flex flex-col items-center mb-8 mx-auto transition-all duration-800 ease-out",
+            headerInView
+              ? "opacity-100 transform translate-y-0"
+              : "opacity-0 transform translate-y-[-20px]"
+          )}
+        >
+          <div className="flex flex-col items-center gap-[5.5px] w-full">
+            <h2
+              className={cn(
+                "text-[#02662A] font-bold text-[20px] leading-[1.2] text-center font-['Montserrat'] w-full transition-all duration-600 ease-out",
+                headerInView
+                  ? "opacity-100 transform translate-y-0"
+                  : "opacity-0 transform translate-y-[-10px]"
+              )}
+              style={{
+                transitionDelay: headerInView ? "200ms" : "0ms",
+              }}
+            >
+              {title}
+            </h2>
+            <h1
+              className={cn(
+                "text-black font-bold text-[26px] leading-[1.2] font-['Montserrat'] transition-all duration-600 ease-out",
+                headerInView
+                  ? "opacity-100 transform translate-y-0"
+                  : "opacity-0 transform translate-y-[-10px]"
+              )}
+              style={{
+                transitionDelay: headerInView ? "400ms" : "0ms",
+              }}
+            >
+              {subtitle}
+            </h1>
+          </div>
         </div>
       </div>
 
       {/* Steps Section */}
-      <div className="flex flex-col gap-[80px] max-w-[1181px] mx-auto">
+      <div className="flex flex-col md:gap-[80px] gap-4 max-w-[1181px] mx-auto">
         {steps.map((step, index) => (
           <ProcessStepCard key={index} step={step} index={index} />
         ))}

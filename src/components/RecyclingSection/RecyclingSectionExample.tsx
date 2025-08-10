@@ -3,10 +3,10 @@ import { RecyclingSection } from "./";
 
 const RecyclingSectionExample: React.FC = () => {
   return (
-    <div className="min-h-screen">
+    // <div className="min-h-screen">
       <RecyclingSection />
-    </div>
+    // </div>
   );
 };
 
-export default RecyclingSectionExample;
+export default Recycling  SectionExample;

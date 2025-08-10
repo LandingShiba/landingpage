@@ -15,7 +15,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
           <div className="flex flex-col gap-10">
             {/* Logo and Company Name */}
             <div className="flex flex-col gap-4">
-              <h2 className="text-white font-bold text-4xl leading-tight font-montserrat text-center lg:text-left">
+              <h2 className="hidden md:block text-white font-bold text-4xl leading-tight font-montserrat text-center lg:text-left">
                 不用品回収エコグローバル
               </h2>
               <div className="flex justify-center lg:justify-start">
@@ -49,6 +49,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
                 </span>
               </div>
 
+
               {/* Phone */}
               <div className="flex items-center gap-4">
                 <div className="w-[30px] h-[30px] flex-shrink-0">
@@ -66,6 +67,9 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
               </div>
             </div>
           </div>
+
+          {/* Horizontal Divider for Mobile */}
+          <div className="w-full h-[1px] bg-white my-4 lg:hidden"></div>
 
           {/* Vertical Divider */}
           <div className="hidden lg:block w-[1px] h-[293px] bg-white"></div>
@@ -87,8 +91,11 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
           </div>
         </div>
 
+        {/* Horizontal Divider */}
+        <div className="w-full h-[1px] bg-white my-6"></div>
+
         {/* Copyright */}
-        <div className="mt-16 text-center">
+        <div className="mt-10 text-center">
           <p className="text-white text-xl font-medium">
             Copyright © 不用品回収エコグローバル All Rights Reserved.
           </p>

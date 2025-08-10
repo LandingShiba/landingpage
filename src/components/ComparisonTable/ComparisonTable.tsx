@@ -87,12 +87,12 @@ export default function ComparisonTable() {
 
         {/* Mobile Accordion Table */}
         <div className="md:hidden">
-          <div className="flex justify-center mb-4 relative">
+          {/* <div className="flex justify-center mb-4 relative">
             <div className="absolute top-0 left-0 right-0 h-[2px] bg-[#00a842]"></div>
             <div className="bg-[#00a842] text-white font-bold text-base py-2 px-6 text-center border-2 border-[#00a842] font-[Montserrat] rounded-t-md w-[120px] z-10">
               ネコの手
             </div>
-          </div>
+          </div> */}
 
           <div className="rounded-md overflow-hidden shadow-sm">
             {comparisonData.map((item, index) => (

@@ -1,27 +1,24 @@
 "use client";
 
+import { CaseStudiesSection } from "@/components/CaseStudiesSection";
 import ComparisonTable from "@/components/ComparisonTable/ComparisonTable";
+import FAQ from "@/components/FAQ";
+import Footer from "@/components/Footer/Footer";
 import InnerHeader from "@/components/Header/InnerHeader";
 // Các import khác được giữ lại dưới dạng comment để dễ dàng khôi phục khi cần
 
 import HeroSection from "@/components/Hero/HeroSection";
 import ProblemsSection from "@/components/ProblemsSection/ProblemsSection";
+import { ProcessFlowExample } from "@/components/ProcessFlow";
 import { ReasonsSection } from "@/components/ReasonsSection";
+import { RecoverableItems } from "@/components/Recoverable";
+import { RecyclingSectionExample } from "@/components/RecyclingSection";
+import { ReviewsSection } from "@/components/ReviewsSection";
+import { ToTopButton } from "@/components/ToTopButton";
 import Voucher from "@/components/Voucher/Voucher";
 import MenuNav from "@/components/menu-nav/MenuNav";
 import { ServiceCardSection } from "@/components/service-card";
-// import MenuNav from "@/components/menu-nav/MenuNav";
-// import ComparisonTable from "@/components/ComparisonTable/ComparisonTable";
-// import RecoverableItems from "@/components/Recoverable/Recoverable";
-// import FAQ from "@/components/FAQ";
-// import { ProcessFlowExample } from "@/components/ProcessFlow";
-// import { RecyclingSectionExample } from "@/components/RecyclingSection";
-// import { ToTopButton } from "@/components/ToTopButton";
-// import Footer from "@/components/Footer/Footer";
-// import { ReasonsSection } from "@/components/ReasonsSection";
-// import { ReviewsSection } from "@/components/ReviewsSection";
-// import { CaseStudiesSection } from "@/components/CaseStudiesSection";
-// import ProblemsSection from "@/components/ProblemsSection/ProblemsSection";
+
 
 export default function Home() {
   return (
@@ -45,9 +42,21 @@ export default function Home() {
 
       <ComparisonTable />
 
-      {/*<ComparisonTable />
       <ProcessFlowExample />
       <RecyclingSectionExample />
+      <ReviewsSection />
+      <RecoverableItems />
+
+
+      <CaseStudiesSection />
+
+      <FAQ />
+
+
+      <ToTopButton />
+
+      <Footer />
+      {/* <RecyclingSectionExample />
 
       <ReviewsSection />
 
