@@ -8,7 +8,9 @@ interface VoucherProps {
 const Voucher: React.FC<VoucherProps> = ({ className }) => {
   return (
     <div
-      className={`relative w-full max-w-[1078px] h-[242px] ${className || ""}`}
+      className={`relative w-full max-w-[1078px] h-[200px] md:h-[242px] ${
+        className || ""
+      }`}
     >
       <Image
         src="/images/Voucher BG.png"

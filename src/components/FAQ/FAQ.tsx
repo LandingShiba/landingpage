@@ -160,21 +160,21 @@ const FAQ: React.FC = () => {
             >
               {/* Question Card */}
               <div
-                className="relative bg-[#7BAD4F] rounded-[20px] h-[140px] cursor-pointer transition-all duration-300 hover:bg-[#6A9B43] hover:shadow-lg"
+                className="relative bg-[#00A842] rounded-[20px] h-[140px] cursor-pointer transition-all duration-300 hover:bg-[#00A842] hover:shadow-lg"
                 onClick={() => toggleExpanded(item.id)}
               >
                 {/* Left accent bar - Rectangle with diagonal cut and rounded corners */}
                 <div className="absolute left-0 top-0 w-[160px] h-[140px]">
                   <svg
-                    width="160"
+                    width="134"
                     height="140"
-                    viewBox="0 0 160 140"
+                    viewBox="0 0 134 140"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M20 0H90L160 70L90 140H20C8.954 140 0 131.046 0 120V20C0 8.954 8.954 0 20 0Z"
-                      fill="#9EDD66"
+                      d="M0 19.9961C0 8.9504 8.95431 -0.00390625 20 -0.00390625H69.6746C75.4419 -0.00390625 80.9284 2.48571 84.7262 6.82601L128.476 56.826C135.074 64.3665 135.074 75.6257 128.476 83.1662L84.7262 133.166C80.9284 137.506 75.4419 139.996 69.6746 139.996H20C8.9543 139.996 0 131.042 0 119.996V19.9961Z"
+                      fill="#7BAD4F"
                     />
                   </svg>
                 </div>

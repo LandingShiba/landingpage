@@ -1,23 +1,172 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function ComparisonTable() {
+  const [activeTab, setActiveTab] = useState<number | null>(0);
+
+  const toggleTab = (index: number) => {
+    setActiveTab(activeTab === index ? null : index);
+  };
+
+  const comparisonData = [
+    {
+      id: 1,
+      title: "対応可能時間",
+      neko: "24時間365日対応",
+      companyA: "9:00～17:00",
+      government: "自治体指定",
+    },
+    {
+      id: 2,
+      title: "料金",
+      neko: "5500円～",
+      companyA: "1万5000円～",
+      government: "粗大ごみ処理手数料納付券",
+    },
+    {
+      id: 3,
+      title: "追加費用の有無",
+      neko: "なし",
+      companyA: "要相談",
+      government: "なし",
+    },
+    {
+      id: 4,
+      title: "キャンセル料",
+      neko: "なし",
+      companyA: "前日100%",
+      government: "なし",
+    },
+    {
+      id: 5,
+      title: "最短対応日",
+      neko: "即日",
+      companyA: "翌日以降",
+      government: "指定された収集日",
+    },
+    {
+      id: 6,
+      title: "時間指定",
+      neko: "可能",
+      companyA: "不可",
+      government: "不可",
+    },
+    {
+      id: 7,
+      title: "スタッフ",
+      neko: "経験値の高い\n専任スタッフ",
+      companyA: "派遣スタッフ",
+      government: "自身で搬出・持ち込み",
+    },
+    {
+      id: 8,
+      title: "対応地域",
+      neko: "千葉県全域",
+      companyA: "地域限定",
+      government: "各自治体地域",
+    },
+    {
+      id: 9,
+      title: "保険・補償制度",
+      neko: "賠償責任保険\n対物5千万円、対人1億円",
+      companyA: "賠償責任保険\n対物5千万円、対人1億円",
+      government: "なし",
+    },
+  ];
   return (
-    <section className="w-full max-w-7xl mx-auto  py-16 font-[Montserrat]">
-      <div className="max-w-6xl mx-auto p-6 bg-white">
+    <section className="w-full max-w-7xl mx-auto py-8 md:py-16 font-[Montserrat]">
+      <div className="max-w-6xl mx-auto p-3 md:p-6 bg-white">
         {/* Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-2xl text-[40px] font-bold mb-2 text-black font-[Montserrat]">
+        <div className="text-center mb-4 md:mb-8">
+          <h1 className="text-xl md:text-2xl text-[20px] md:text-[40px] font-bold mb-1 md:mb-2 text-black font-[Montserrat]">
             こんなに違う！
           </h1>
-          <h2 className="text-3xl text-[70px] font-bold text-black font-[Montserrat]">
+          <h2 className="text-2xl md:text-3xl text-[26px] md:text-[70px] font-bold text-black font-[Montserrat]">
             ネコの手と他社のサービス比較
           </h2>
         </div>
 
-        {/* Comparison Table */}
-        <div className="overflow-x-auto">
+        {/* Mobile Accordion Table */}
+        <div className="md:hidden">
+          <div className="flex justify-center mb-4 relative">
+            <div className="absolute top-0 left-0 right-0 h-[2px] bg-[#00a842]"></div>
+            <div className="bg-[#00a842] text-white font-bold text-base py-2 px-6 text-center border-2 border-[#00a842] font-[Montserrat] rounded-t-md w-[120px] z-10">
+              ネコの手
+            </div>
+          </div>
+
+          <div className="rounded-md overflow-hidden shadow-sm">
+            {comparisonData.map((item, index) => (
+              <div
+                key={item.id}
+                className="mb-2 rounded-md overflow-hidden shadow-sm border border-gray-100"
+              >
+                <div
+                  className={`flex items-center justify-between p-3 cursor-pointer ${
+                    activeTab === index ? "bg-[#e9ffd6] font-bold" : "bg-white"
+                  }`}
+                  onClick={() => toggleTab(index)}
+                >
+                  <h3 className="font-medium text-sm">{item.title}</h3>
+                  <div
+                    className={`flex items-center justify-center w-6 h-6 rounded-full ${
+                      activeTab === index
+                        ? "bg-[#00a842] text-white"
+                        : "border border-[#00a842] text-[#00a842]"
+                    }`}
+                  >
+                    <span className="text-sm font-bold">
+                      {activeTab === index ? "−" : "+"}
+                    </span>
+                  </div>
+                </div>
+
+                {activeTab === index && (
+                  <div className="p-4 bg-white border-t border-gray-100">
+                    <div className="grid grid-cols-3 gap-3">
+                      <div className="col-span-1 flex flex-col">
+                        <div className="bg-[#00a842] text-white py-2 px-1 text-xs font-bold text-center mb-2 rounded-sm">
+                          ネコの手
+                        </div>
+                        <div className="bg-white border border-[#00a842] rounded-sm p-2 flex-1 flex items-center justify-center">
+                          <p className="text-[#00a842] text-xs font-bold text-center whitespace-pre-line">
+                            {item.neko}
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="col-span-1 flex flex-col">
+                        <div className="bg-[#acabab] text-white py-2 px-1 text-xs font-bold text-center mb-2 rounded-sm">
+                          A社
+                        </div>
+                        <div className="bg-white border border-gray-200 rounded-sm p-2 flex-1 flex items-center justify-center">
+                          <p className="text-[#acacac] text-xs text-center whitespace-pre-line">
+                            {item.companyA}
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="col-span-1 flex flex-col">
+                        <div className="bg-[#acabab] text-white py-2 px-1 text-xs font-bold text-center mb-2 rounded-sm">
+                          自治体
+                        </div>
+                        <div className="bg-white border border-gray-200 rounded-sm p-2 flex-1 flex items-center justify-center">
+                          <p className="text-[#acacac] text-xs text-center whitespace-pre-line">
+                            {item.government}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Desktop Comparison Table */}
+        <div className="hidden md:block overflow-x-auto">
           <div className="relative">
-            {/* Elevated Header for ネコの手 */}
+            {/* Elevated Header for ネコの手 - Desktop */}
             <div className="absolute left-[260px] -top-4.5 w-[370px] z-10">
               <div className="bg-[#00a842] text-white font-bold text-3xl py-6 px-6 text-center border-2 border-[#00a842] font-[Montserrat]">
                 ネコの手
@@ -25,37 +174,36 @@ export default function ComparisonTable() {
             </div>
 
             <table className="w-full mt-6 table-fixed">
-              {/* <colgroup>
-                <col className="w-[260px]" />
-                <col className="w-[370px]" />
-                <col className="w-[260px]" />
-                <col className="w-[260px]" />
-              </colgroup> */}
+              <colgroup>
+                <col className="w-[70px] md:w-[260px]" />
+                <col className="w-[100px] md:w-[370px]" />
+                <col className="w-[69px] md:w-[256px]" />
+              </colgroup>
 
               {/* Header Row */}
               <thead>
                 <tr>
-                  <th className="bg-[#acabab] text-white text-3xl font-bold py-4 px-6 border border-gray-300 text-center font-[Montserrat] w-[260px]">
+                  <th className="bg-[#acabab] text-white text-xs md:text-3xl font-bold py-1 md:py-4 px-2 md:px-6 border border-gray-300 text-center font-[Montserrat]">
                     自治体
                   </th>
-                  <th className="bg-[#00a842] text-white font-bold py-2 px-6 border border-gray-300 text-center font-[Montserrat] w-[370px]">
+                  <th className="bg-[#00a842] text-white font-bold py-1 md:py-2 px-2 md:px-6 border border-gray-300 text-center font-[Montserrat]">
                     {/* Empty space since header is above */}
                   </th>
-                  <th className="bg-[#acabab] text-white text-3xl font-bold py-4 px-6 text-center font-[Montserrat] w-[256px]">
+                  <th className="bg-[#acabab] text-white text-xs md:text-3xl font-bold py-1 md:py-4 px-2 md:px-6 text-center font-[Montserrat]">
                     A社
                   </th>
                 </tr>
               </thead>
               <tbody>
                 {/* Response Time Row */}
-                <tr className="text-3xl">
-                  <td className="bg-[#e9ffd6] font-medium text-3xl py-3  border-l-2 border-y-2 border-y-gray-300 text-center text-black font-[Montserrat] w-[260px]">
+                <tr className="text-xs md:text-3xl">
+                  <td className="bg-[#e9ffd6] font-medium py-1 md:py-3 px-1 md:px-3 border-l-[0.5px] md:border-l-2 border-y-[0.5px] md:border-y-2 border-y-gray-300 text-center text-black font-[Montserrat]">
                     対応可能時間
                   </td>
-                  <td className="bg-white py-3  border-x-[#00A842] border-2 text-center font-bold text-[#00a842] text-3xl font-[Montserrat] w-[370px]">
+                  <td className="bg-white py-1 md:py-3 px-1 md:px-3 border-x-[#00A842] border-[0.5px] md:border-2 text-center font-bold text-[#00a842] text-xs md:text-3xl font-[Montserrat]">
                     24時間365日対応
                   </td>
-                  <td className="bg-white py-3  border-l-2 border-y-2 border-r-2 border-gray-300 text-center text-[#acacac] text-[20px] font-[Montserrat] w-[256px]">
+                  <td className="bg-white py-1 md:py-3 px-1 md:px-3 border-l-[0.5px] md:border-l-2 border-y-[0.5px] md:border-y-2 border-r-[0.5px] md:border-r-2 border-gray-300 text-center text-[#acacac] text-[10px] md:text-[20px] font-[Montserrat]">
                     9:00～17:00
                   </td>
                   <td className="bg-white py-3  border-l-2 border-y-2 border-r-2 border-gray-300 text-center text-[#acacac] text-[20px] font-[Montserrat] w-[256px]">
@@ -64,30 +212,30 @@ export default function ComparisonTable() {
                 </tr>
 
                 {/* Pricing Row */}
-                <tr className="text-3xl">
-                  <td className="bg-[#e9ffd6] font-medium py-3  border-l-2 border-y-2 border-gray-300 text-center text-black font-[Montserrat] w-[260px]">
+                <tr className="text-xs md:text-3xl">
+                  <td className="bg-[#e9ffd6] font-medium py-1 md:py-3 px-1 md:px-3 border-l-[0.5px] md:border-l-2 border-y-[0.5px] md:border-y-2 border-gray-300 text-center text-black font-[Montserrat]">
                     料金
                   </td>
-                  <td className="bg-white py-3  border-x-[#00A842] border-2 text-center font-bold text-[#00a842] font-[Montserrat] w-[370px]">
+                  <td className="bg-white py-1 md:py-3 px-1 md:px-3 border-x-[#00A842] border-[0.5px] md:border-2 text-center font-bold text-[#00a842] text-xs md:text-3xl font-[Montserrat]">
                     5500円～
                   </td>
-                  <td className="bg-white py-3  border-l-2 border-y-2 border-r-2 border-gray-300 text-center text-[#acacac] text-[20px] font-[Montserrat] w-[256px]">
+                  <td className="bg-white py-1 md:py-3 px-1 md:px-3 border-l-[0.5px] md:border-l-2 border-y-[0.5px] md:border-y-2 border-r-[0.5px] md:border-r-2 border-gray-300 text-center text-[#acacac] text-[10px] md:text-[20px] font-[Montserrat]">
                     1万5000円～
                   </td>
                   <td className="bg-white py-3  border-l-2 border-y-2 border-r-2 border-gray-300 text-center text-[#acacac] text-[20px] font-[Montserrat] w-[256px]">
-                    粗大ごみ処理手数料納付券
+                    指定された収集日
                   </td>
                 </tr>
 
                 {/* Additional Fees Row */}
-                <tr className="text-3xl">
-                  <td className="bg-[#e9ffd6] font-medium py-3  border-l-2 border-y-2 border-gray-300 text-center text-black font-[Montserrat] w-[260px]">
+                <tr className="text-xs md:text-3xl">
+                  <td className="bg-[#e9ffd6] font-medium py-1 md:py-3 px-1 md:px-3 border-l-[0.5px] md:border-l-2 border-y-[0.5px] md:border-y-2 border-gray-300 text-center text-black font-[Montserrat]">
                     追加費用の有無
                   </td>
-                  <td className="bg-white py-3  border-x-[#00A842] border-2 text-center font-bold text-[#00a842] font-[Montserrat] w-[370px]">
+                  <td className="bg-white py-1 md:py-3 px-1 md:px-3 border-x-[#00A842] border-[0.5px] md:border-2 text-center font-bold text-[#00a842] text-xs md:text-3xl font-[Montserrat]">
                     なし
                   </td>
-                  <td className="bg-white py-3  border-l-2 border-y-2 border-r-2 border-gray-300 text-center text-[#acacac] text-[20px] font-[Montserrat] w-[256px]">
+                  <td className="bg-white py-1 md:py-3 px-1 md:px-3 border-l-[0.5px] md:border-l-2 border-y-[0.5px] md:border-y-2 border-r-[0.5px] md:border-r-2 border-gray-300 text-center text-[#acacac] text-[10px] md:text-[20px] font-[Montserrat]">
                     要相談
                   </td>
                   <td className="bg-white py-3  border-l-2 border-y-2 border-r-2 border-gray-300 text-center text-[#acacac] text-[20px] font-[Montserrat] w-[256px]">
@@ -96,14 +244,14 @@ export default function ComparisonTable() {
                 </tr>
 
                 {/* Cancellation Fee Row */}
-                <tr className="text-3xl">
-                  <td className="bg-[#e9ffd6] font-medium py-3  border-l-2 border-y-2 border-gray-300 text-center text-black font-[Montserrat] w-[260px]">
+                <tr className="text-xs md:text-3xl">
+                  <td className="bg-[#e9ffd6] font-medium py-1 md:py-3 px-1 md:px-3 border-l-[0.5px] md:border-l-2 border-y-[0.5px] md:border-y-2 border-gray-300 text-center text-black font-[Montserrat]">
                     キャンセル料
                   </td>
-                  <td className="bg-white py-3  border-x-[#00A842] border-2 text-center font-bold text-[#00a842] font-[Montserrat] w-[370px]">
+                  <td className="bg-white py-1 md:py-3 px-1 md:px-3 border-x-[#00A842] border-[0.5px] md:border-2 text-center font-bold text-[#00a842] text-xs md:text-3xl font-[Montserrat]">
                     なし
                   </td>
-                  <td className="bg-white py-3  border-l-2 border-y-2 border-r-2 border-gray-300 text-center text-[#acacac] text-[20px] font-[Montserrat] w-[256px]">
+                  <td className="bg-white py-1 md:py-3 px-1 md:px-3 border-l-[0.5px] md:border-l-2 border-y-[0.5px] md:border-y-2 border-r-[0.5px] md:border-r-2 border-gray-300 text-center text-[#acacac] text-[10px] md:text-[20px] font-[Montserrat]">
                     前日100%
                   </td>
                   <td className="bg-white py-3  border-l-2 border-y-2 border-r-2 border-gray-300 text-center text-[#acacac] text-[20px] font-[Montserrat] w-[256px]">

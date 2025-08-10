@@ -34,16 +34,18 @@ const ServiceCardSection: React.FC = () => {
           お客様のニーズに合わせた多様なサービスをご用意しております
         </p>
 
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:w-[1100px] mx-auto md:gap-8">
           {services.map((service, index) => (
-            <ServiceCard
-              key={index}
-              title={service.title}
-              subtitle={service.subtitle}
-              vehicleType={service.vehicleType}
-              price={service.price}
-              discountPrice={service.discountPrice}
-            />
+            <div key={index} className="flex justify-center">
+              <ServiceCard
+                title={service.title}
+                subtitle={service.subtitle}
+                vehicleType={service.vehicleType}
+                price={service.price}
+                discountPrice={service.discountPrice}
+                className="w-full max-w-[180px] md:max-w-[420px] h-[300px] md:h-[648px]"
+              />
+            </div>
           ))}
         </div>
       </div>
