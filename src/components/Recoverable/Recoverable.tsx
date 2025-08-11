@@ -178,7 +178,7 @@ const RecoverableItems: React.FC = () => {
         />
       </div>
 
-      <div
+      {/* <div
         ref={section3Ref}
         data-element-id="section3"
         className={`transition-all duration-800 ease-out mb-6 md:mb-8 ${
@@ -210,7 +210,7 @@ const RecoverableItems: React.FC = () => {
           backgroundColor="#00A842"
           categories={otherCategories}
         />
-      </div>
+      </div> */}
     </>
   );
 };

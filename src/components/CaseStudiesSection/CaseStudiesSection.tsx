@@ -98,7 +98,7 @@ const CaseStudiesSection: React.FC = () => {
           }`}
         >
           {[...Array(5)].map((_, index) => (
-            <div key={index} className="w-[40] h-[40px] sm:w-[120px] sm:h-[100px] md:w-[146px] md:h-[120px] flex-shrink-0">
+            <div key={index} className="w-[40px] h-[40px] max-[321]:w-[30px] max-[321]:h-[30px] sm:w-[120px] sm:h-[100px] md:w-[146px] md:h-[120px] flex-shrink-0">
               <Image
                 src="/images/caseStudies/packages/package-icon.png"
                 alt="Package decoration"
@@ -130,7 +130,7 @@ const CaseStudiesSection: React.FC = () => {
         <div 
           ref={contentRef}
           data-element-id="content"
-          className={`bg-white rounded-b-2xl md:px-16 py-16 shadow-xl transition-all duration-800 ease-out ${
+          className={`bg-white rounded-b-2xl md:px-16 py-5 shadow-xl transition-all duration-800 ease-out ${
             visibleElements.has("content")
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-12"
@@ -140,7 +140,7 @@ const CaseStudiesSection: React.FC = () => {
           <div className="mb-2 md:mb-16">
             <div className="flex items-center gap-2 md:gap-12 mb-10">
               <h4
-                className="text-[20px] font-bold text-black"
+                className="text-[16px] max-[321]:text-[10px] md:text-[20px] font-bold text-black"
                 style={{ fontFamily: 'Montserrat, "Noto Sans JP", sans-serif' }}
               >
                 S様邸
@@ -149,10 +149,10 @@ const CaseStudiesSection: React.FC = () => {
               {/* Information Table */}
               <div className="flex gap-0 shadow-2xl">
                 {/* Column 1: 回収例 */}
-                <div className="w-[100px] md:w-[310px]">
-                  <div className="bg-[#E9FFD6] border-2 border-[#acabab] h-[25px] md:h-20 flex items-center justify-center">
+                <div className="w-[100px] max-[321]:w-[70px] md:w-[310px]">
+                  <div className="bg-[#E9FFD6] border-2 border-[#acabab] h-[25px] max-[321]:h-[15px] md:h-20 flex items-center justify-center">
                     <span
-                      className="text-[12px] md:text-2xl font-medium text-[#222222]"
+                      className="text-[12px] max-[321]:text-[10px] md:text-2xl font-medium text-[#222222]"
                       style={{
                         fontFamily: 'Montserrat, "Noto Sans JP", sans-serif',
                       }}
@@ -160,9 +160,9 @@ const CaseStudiesSection: React.FC = () => {
                       回収例
                     </span>
                   </div>
-                  <div className="bg-white border-2 border-[#acabab] border-t-0 h-[25px] md:h-20 flex items-center justify-center">
+                  <div className="bg-white border-2 border-[#acabab] border-t-0 h-[25px] max-[321]:h-[15px] md:h-20 flex items-center justify-center">
                     <span
-                      className="text-[12px] md:text-2xl font-semibold text-[#222222]"
+                      className="text-[12px] max-[321]:text-[10px] md:text-2xl font-semibold text-[#222222]"
                       style={{
                         fontFamily: 'Montserrat, "Noto Sans JP", sans-serif',
                       }}
@@ -173,10 +173,10 @@ const CaseStudiesSection: React.FC = () => {
                 </div>
 
                 {/* Column 2: 作業スタッフ */}
-                <div className="w-[100px] md:w-[310px]">
-                  <div className="bg-[#E9FFD6] border-2 border-[#acabab] border-l-0 h-[25px] md:h-20 flex items-center justify-center">
+                <div className="w-[100px] max-[321]:w-[70px] md:w-[310px]">
+                  <div className="bg-[#E9FFD6] border-2 border-[#acabab] border-l-0 h-[25px] max-[321]:h-[15px] md:h-20 flex items-center justify-center">
                     <span
-                      className="text-[12px] md:text-2xl font-medium text-[#222222]"
+                      className="text-[12px] max-[321]:text-[10px] md:text-2xl font-medium text-[#222222]"
                       style={{
                         fontFamily: 'Montserrat, "Noto Sans JP", sans-serif',
                       }}
@@ -184,9 +184,9 @@ const CaseStudiesSection: React.FC = () => {
                       作業スタッフ
                     </span>
                   </div>
-                  <div className="bg-white border-2 border-[#acabab] border-l-0 border-t-0 h-[25px] md:h-20 flex items-center justify-center">
+                  <div className="bg-white border-2 border-[#acabab] border-l-0 border-t-0 h-[25px] max-[321]:h-[15px] md:h-20 flex items-center justify-center">
                     <span
-                      className="text-[12px] md:text-2xl font-semibold text-[#222222]"
+                      className="text-[12px] max-[321]:text-[10px] md:text-2xl font-semibold text-[#222222]"
                       style={{
                         fontFamily: 'Montserrat, "Noto Sans JP", sans-serif',
                       }}
@@ -197,10 +197,10 @@ const CaseStudiesSection: React.FC = () => {
                 </div>
 
                 {/* Column 3: 料金 */}
-                <div className="w-[100px] md:w-[310px]">
-                  <div className="bg-[#E9FFD6] border-2 border-[#acabab] border-l-0 h-[25px] md:h-20 flex items-center justify-center">
+                <div className="w-[100px] max-[321]:w-[70px] md:w-[310px]">
+                  <div className="bg-[#E9FFD6] border-2 border-[#acabab] border-l-0 h-[25px] max-[321]:h-[15px] md:h-20 flex items-center justify-center">
                     <span
-                      className="text-[12px] md:text-2xl font-medium text-[#222222]"
+                      className="text-[12px] max-[321]:text-[10px] md:text-2xl font-medium text-[#222222]"
                       style={{
                         fontFamily: 'Montserrat, "Noto Sans JP", sans-serif',
                       }}
@@ -208,9 +208,9 @@ const CaseStudiesSection: React.FC = () => {
                       料金
                     </span>
                   </div>
-                  <div className="bg-white border-2 border-[#acabab] border-l-0 border-t-0 h-[25px] md:h-20 flex items-center justify-center">
+                    <div className="bg-white border-2 border-[#acabab] border-l-0 border-t-0 h-[25px] max-[321]:h-[15px] md:h-20 flex items-center justify-center">
                     <span
-                      className="text-[12px] md:text-2xl font-semibold text-[#ea2227]"
+                      className="text-[12px] max-[321]:text-[10px] md:text-2xl font-semibold text-[#ea2227]"
                       style={{
                         fontFamily: 'Montserrat, "Noto Sans JP", sans-serif',
                       }}
@@ -235,7 +235,7 @@ const CaseStudiesSection: React.FC = () => {
           >
             {/* BEFORE Image */}
             <div className="relative">
-              <div className="w-[360px] md:w-[380px] h-[259px] sm:h-[255px] md:h-[285px] bg-gray-200 rounded-xl border-[8px] border-[#d2d2d2] overflow-hidden shadow-2xl">
+              <div className="w-[360px] max-[376]:w-[325px] max-[321]:w-[280px] md:w-[380px] h-[259px] max-[376]:h-[225px] max-[321]:h-[195px] sm:h-[255px] md:h-[285px] bg-gray-200 rounded-xl border-[8px] border-[#d2d2d2] overflow-hidden shadow-2xl">
                 <Image
                   src="/images/caseStudies/before.png"
                   alt="S様邸 - Before cleanup"
@@ -274,7 +274,7 @@ const CaseStudiesSection: React.FC = () => {
 
             {/* AFTER Image */}
             <div className="relative">
-              <div className="w-[360px] md:w-[380px] h-[225px] sm:h-[255px] md:h-[285px] bg-[#00A842] rounded-2xl border-[8px] border-[#00A842] overflow-hidden shadow-2xl">
+              <div className="w-[360px] max-[376]:w-[325px] max-[321]:w-[280px] md:w-[380px] h-[259px] max-[376]:h-[225px] max-[321]:h-[195px] sm:h-[255px] md:h-[285px] bg-[#00A842] rounded-2xl border-[8px] border-[#00A842] overflow-hidden shadow-2xl">
                 <Image
                   src="/images/caseStudies/after.png"
                   alt="S様邸 - After cleanup"
@@ -340,7 +340,7 @@ const CaseStudiesSection: React.FC = () => {
               {/* Small decorative packages at bottom right of text */}
               <div className="flex justify-start md:justify-end gap-2 mt-8">
                 {[...Array(5)].map((_, index) => (
-                  <div key={index} className="w-[50px] h-[40px] sm:w-[60px] sm:h-[50px] md:w-[70px] md:h-[58px] lg:w-[79px] lg:h-[65px]">
+                  <div key={index} className="w-[50px] h-[40px] max-[321]:w-[40px] max-[321]:h-[30px] sm:w-[60px] sm:h-[50px] md:w-[70px] md:h-[58px] lg:w-[79px] lg:h-[65px]">
                     <Image
                       src="/images/recycling/package.png"
                       alt="Package decoration"

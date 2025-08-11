@@ -9,7 +9,7 @@ interface FooterProps {
 const Footer: React.FC<FooterProps> = ({ className }) => {
   return (
     <footer className={`w-full bg-[#303030] py-16 ${className || ""}`}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="max-w-7xl max-[321]:max-w-[321px] mx-auto px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row justify-center items-center gap-16 lg:gap-32">
           {/* Left Column - Company Information */}
           <div className="flex flex-col gap-10">

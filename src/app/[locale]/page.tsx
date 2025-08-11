@@ -1,12 +1,22 @@
 "use client";
 
+import { CaseStudiesSection } from "@/components/CaseStudiesSection";
+import ComparisonTable from "@/components/ComparisonTable/ComparisonTable";
+import FAQ from "@/components/FAQ";
+import Footer from "@/components/Footer/Footer";
 // import { CaseStudiesSection } from "@/components/CaseStudiesSection";
 // import ComparisonTable from "@/components/ComparisonTable/ComparisonTable";
 // import FAQ from "@/components/FAQ";
 // import Footer from "@/components/Footer/Footer";
 import InnerHeader from "@/components/Header/InnerHeader";
 import HeroSection from "@/components/Hero/HeroSection";
+import ProblemsSection from "@/components/ProblemsSection/ProblemsSection";
+import { ProcessFlowExample } from "@/components/ProcessFlow";
+import { ReasonsSection } from "@/components/ReasonsSection";
+import { RecoverableItems } from "@/components/Recoverable";
+import { ReviewsSection } from "@/components/ReviewsSection";
 import { ServiceCardSection } from "@/components/service-card";
+import { ToTopButton } from "@/components/ToTopButton";
 import Voucher from "@/components/Voucher/Voucher";
 // Các import khác được giữ lại dưới dạng comment để dễ dàng khôi phục khi cần
 
@@ -36,25 +46,17 @@ export default function Home() {
       </div>
 
       <ServiceCardSection />
-      {/* <div className="hidden md:block">
-        <MenuNav />
-      </div>
-      <HeroSection />
 
-      <div className="max-w-7xl mx-auto px-4 md:py-24 py-0">
-        <Voucher className="mx-auto" />
-      </div>
+      {/* <ProblemsSection /> */}
 
-      <ServiceCardSection />
-
-      <ProblemsSection />
       <ReasonsSection />
 
       <ComparisonTable />
 
       <ProcessFlowExample />
-      <RecyclingSectionExample />
+
       <ReviewsSection />
+
       <RecoverableItems />
 
       <CaseStudiesSection />
@@ -63,7 +65,9 @@ export default function Home() {
 
       <ToTopButton />
 
-      <Footer /> */}
+      <Footer />
+
+      
     </main>
   );
 }

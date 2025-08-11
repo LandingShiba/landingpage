@@ -29,24 +29,12 @@ const CategorySection: React.FC<CategorySectionProps> = ({
   console.log(backgroundImage);
   return (
     <div className={`w-full bg-white py-6 md:py-8 lg:py-12 ${className}`}>
-      <div className="max-w-[963px] mx-auto px-4 md:px-6">
+      <div className="md:max-w-[963px] md:mx-auto px-4 md:px-6">
         {/* Header section */}
         <div
           className="relative rounded-[20px] h-16 md:h-24 mb-3 md:mb-5 overflow-hidden"
           style={{ backgroundColor }}
         >
-          {/* Background image */}
-          {/* {backgroundImage && (
-            <div className="absolute inset-0 rounded-[20px]">
-              <Image
-                src={backgroundImage}
-                alt="Section background"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
-          )} */}
 
           {/* Title */}
           <div className="absolute inset-0 flex items-center justify-center">

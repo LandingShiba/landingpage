@@ -101,7 +101,7 @@ const ReviewsSection: React.FC = () => {
     <section
       ref={containerRef}
       className={cn(
-        "bg-[#E9FFD6] py-8 md:py-12 lg:py-16 relative transition-all duration-1000 ease-out",
+        "bg-[#E9FFD6] py-8 md:py-12 lg:py-16 relative transition-all duration-1000 ease-out overflow-x-hidden",
         containerInView
           ? "opacity-100 transform translate-y-0"
           : "opacity-0 transform translate-y-[20px]"
@@ -137,7 +137,7 @@ const ReviewsSection: React.FC = () => {
         <div
           ref={testimonialsRef}
           className={cn(
-            "bg-[E9FFD6] rounded-[20px] sm:rounded-[30px] md:rounded-[40px] p-4 sm:p-6 md:p-8 lg:p-[50px] xl:p-[71px] transition-all duration-800 ease-out",
+            "bg-[E9FFD6] rounded-[20px] sm:rounded-[30px] md:rounded-[40px] p-4 sm:p-6 md:p-8 lg:p-[50px] xl:p-[71px] transition-all duration-800 ease-out overflow-x-hidden",
             testimonialsInView
               ? "opacity-100 transform translate-y-0"
               : "opacity-0 transform translate-y-[30px]"
@@ -155,14 +155,12 @@ const ReviewsSection: React.FC = () => {
                   index={index}
                   isInView={testimonialsInView}
                 />
-                {/* Staff Response */}
                 <StaffResponse
                   testimonial={testimonial}
                   isReversed={testimonial.position === "left"}
                   index={index}
                   isInView={testimonialsInView}
                 />
-                {/* Divider line except for the last item */}
                 {index < testimonials.length - 1 && (
                   <div
                     className={cn(
@@ -206,7 +204,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   return (
     <div
       className={cn(
-        "flex gap-3 sm:gap-4 md:gap-[34px] items-center transition-all duration-800 ease-out mb-6 md:mb-8",
+        "flex gap-3 sm:gap-4 md:gap-[34px] items-center transition-all duration-800 ease-out mb-6 md:mb-8 min-w-0",
         isReversed ? "flex-row-reverse" : "flex-row",
         isInView
           ? "opacity-100 transform translate-x-0 translate-y-0 scale-100"
@@ -238,7 +236,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       </div>
 
       {/* Speech Bubble */}
-      <div className="flex-1 relative w-full">
+      <div className="flex-1 relative w-full min-w-0 break-words">
         <div className="bg-white border-2 border-[#02662A] rounded-[15px] sm:rounded-[18px] md:rounded-[20px] p-3 sm:p-4 md:p-6 lg:p-[45px] relative shadow-sm transition-all duration-300 ease-out hover:shadow-lg hover:border-[#2b5d90] hover:scale-[1.02] transform">
           {/* Arrow pointing to avatar */}
           <div
