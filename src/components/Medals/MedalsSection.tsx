@@ -31,7 +31,7 @@ export default function MedalsSection({
 
       {/* Mobile Medals - Hidden on desktop */}
       <div className="block md:hidden">
-        <div className="relative" style={{ bottom: "-65px" }}>
+        <div className="relative">
           <div className="relative">
             <Image
               src="/images/medels.svg"
@@ -39,9 +39,9 @@ export default function MedalsSection({
               width={80}
               height={74}
               priority
-              style={{ position: "relative", zIndex: 30 }}
+              className="relative z-30"
             />
-            <div className="absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-40 w-[60%]">
+            <div className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-40 w-[60%]">
               <p className="text-white font-black text-[11px] leading-tight text-center font-['Montserrat'] whitespace-pre-line break-words">
                 {text}
               </p>

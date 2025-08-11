@@ -20,42 +20,37 @@ const useInView = (options?: IntersectionObserverInit) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-          // Một khi đã hiện thì không cần observe nữa
-          if (ref.current) {
-            observer.unobserve(ref.current);
-          }
-        }
-      },
-      {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-        ...options,
-      }
-    );
+    const observerOptions = {
+      threshold: 0.2,
+      rootMargin: "0px 0px -20px 0px",
+      ...options,
+    };
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    const observer = new IntersectionObserver(([entry]) => {
+      // Update visibility based on current intersection state
+      setIsInView(entry.isIntersecting);
+    }, observerOptions);
+
+    const currentRef = ref.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
-  }, []);
+  }, [options]);
 
   return { ref, isInView };
 };
 
 // Desktop version of the step card
-const DesktopProcessStepCard: React.FC<{ step: ProcessStep; index: number }> = ({
-  step,
-  index,
-}) => {
+const DesktopProcessStepCard: React.FC<{
+  step: ProcessStep;
+  index: number;
+}> = ({ step, index }) => {
   const { ref, isInView } = useInView();
 
   return (
@@ -168,7 +163,7 @@ const MobileProcessStepCard: React.FC<{ step: ProcessStep; index: number }> = ({
               </div>
             </div>
           </div>
-          
+
           {/* Content */}
           <div>
             <h3 className="text-[#02662A] font-bold text-[12px] leading-[1.2] mb-1.5 font-['Montserrat']">
@@ -184,9 +179,10 @@ const MobileProcessStepCard: React.FC<{ step: ProcessStep; index: number }> = ({
   );
 };
 
-
 // Responsive wrapper component that chooses between mobile and desktop versions
-const ProcessStepCard: React.FC<{ step: ProcessStep; index: number }> = (props) => {
+const ProcessStepCard: React.FC<{ step: ProcessStep; index: number }> = (
+  props
+) => {
   return (
     <>
       <div className="hidden md:block">
@@ -205,7 +201,8 @@ const ProcessFlow: React.FC<ProcessFlowProps> = ({
   steps,
   className,
 }) => {
-  const { ref: headerRef, isInView: headerInView } = useInView();
+  const { ref: desktopHeaderRef, isInView: desktopHeaderInView } = useInView();
+  const { ref: mobileHeaderRef, isInView: mobileHeaderInView } = useInView();
 
   return (
     <div
@@ -218,10 +215,10 @@ const ProcessFlow: React.FC<ProcessFlowProps> = ({
       {/* Desktop Header */}
       <div className="hidden md:block">
         <div
-          ref={headerRef}
+          ref={desktopHeaderRef}
           className={cn(
             "flex flex-col items-center mb-[50px] max-w-[999px] mx-auto transition-all duration-800 ease-out",
-            headerInView
+            desktopHeaderInView
               ? "opacity-100 transform translate-y-0"
               : "opacity-0 transform translate-y-[-20px]"
           )}
@@ -230,12 +227,12 @@ const ProcessFlow: React.FC<ProcessFlowProps> = ({
             <h2
               className={cn(
                 "text-[#008144] font-bold text-[40px] leading-[1.2] text-center font-['Montserrat'] w-full transition-all duration-600 ease-out",
-                headerInView
+                desktopHeaderInView
                   ? "opacity-100 transform translate-y-0"
                   : "opacity-0 transform translate-y-[-10px]"
               )}
               style={{
-                transitionDelay: headerInView ? "200ms" : "0ms",
+                transitionDelay: desktopHeaderInView ? "200ms" : "0ms",
               }}
             >
               {title}
@@ -243,12 +240,12 @@ const ProcessFlow: React.FC<ProcessFlowProps> = ({
             <h1
               className={cn(
                 "text-black font-bold text-[70px] leading-[1.2] font-['Montserrat'] transition-all duration-600 ease-out",
-                headerInView
+                desktopHeaderInView
                   ? "opacity-100 transform translate-y-0"
                   : "opacity-0 transform translate-y-[-10px]"
               )}
               style={{
-                transitionDelay: headerInView ? "400ms" : "0ms",
+                transitionDelay: desktopHeaderInView ? "400ms" : "0ms",
               }}
             >
               {subtitle}
@@ -256,14 +253,14 @@ const ProcessFlow: React.FC<ProcessFlowProps> = ({
           </div>
         </div>
       </div>
-      
+
       {/* Mobile Header */}
       <div className="block md:hidden">
         <div
-          ref={headerRef}
+          ref={mobileHeaderRef}
           className={cn(
             "flex flex-col items-center mb-8 mx-auto transition-all duration-800 ease-out",
-            headerInView
+            mobileHeaderInView
               ? "opacity-100 transform translate-y-0"
               : "opacity-0 transform translate-y-[-20px]"
           )}
@@ -272,12 +269,12 @@ const ProcessFlow: React.FC<ProcessFlowProps> = ({
             <h2
               className={cn(
                 "text-[#02662A] font-bold text-[20px] leading-[1.2] text-center font-['Montserrat'] w-full transition-all duration-600 ease-out",
-                headerInView
+                mobileHeaderInView
                   ? "opacity-100 transform translate-y-0"
                   : "opacity-0 transform translate-y-[-10px]"
               )}
               style={{
-                transitionDelay: headerInView ? "200ms" : "0ms",
+                transitionDelay: mobileHeaderInView ? "200ms" : "0ms",
               }}
             >
               {title}
@@ -285,12 +282,12 @@ const ProcessFlow: React.FC<ProcessFlowProps> = ({
             <h1
               className={cn(
                 "text-black font-bold text-[26px] leading-[1.2] font-['Montserrat'] transition-all duration-600 ease-out",
-                headerInView
+                mobileHeaderInView
                   ? "opacity-100 transform translate-y-0"
                   : "opacity-0 transform translate-y-[-10px]"
               )}
               style={{
-                transitionDelay: headerInView ? "400ms" : "0ms",
+                transitionDelay: mobileHeaderInView ? "400ms" : "0ms",
               }}
             >
               {subtitle}

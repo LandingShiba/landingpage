@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import React from "react";
 
 export interface CategoryItem {
@@ -26,6 +26,7 @@ const CategorySection: React.FC<CategorySectionProps> = ({
   categories,
   className = "",
 }) => {
+  console.log(backgroundImage);
   return (
     <div className={`w-full bg-white py-6 md:py-8 lg:py-12 ${className}`}>
       <div className="max-w-[963px] mx-auto px-4 md:px-6">
@@ -73,7 +74,10 @@ const CategorySection: React.FC<CategorySectionProps> = ({
               >
                 <h3
                   className="text-[12px] md:text-[18px] lg:text-[30px] font-medium font-montserrat"
-                  style={{ color: category.titleColor || "#00ADF2", fontFamily: 'montserrat' }}
+                  style={{
+                    color: category.titleColor || "#00ADF2",
+                    fontFamily: "montserrat",
+                  }}
                 >
                   {category.title}
                 </h3>
@@ -87,7 +91,10 @@ const CategorySection: React.FC<CategorySectionProps> = ({
                     : "border-t-0 border-[#ACABAB]"
                 } rounded-none p-5 flex items-center`}
               >
-                <span className="text-black text-[12px] sm:text-[12px] md:text-[18px] lg:text-[30px] font-medium font-montserrat" style={{ fontFamily: 'montserrat' }}>
+                <span
+                  className="text-black text-[12px] sm:text-[12px] md:text-[18px] lg:text-[30px] font-medium font-montserrat"
+                  style={{ fontFamily: "montserrat" }}
+                >
                   {category.content}
                 </span>
               </div>

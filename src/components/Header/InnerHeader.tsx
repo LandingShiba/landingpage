@@ -27,42 +27,45 @@ export default function InnerHeader() {
       </div>
 
       {/* Mobile Header - Hidden on desktop */}
-      <div className="md:hidden flex h-full items-center justify-between px-4 w-full">
-        {/* Logo section */}
-        <div className="flex items-center gap-3">
-          <div className="flex items-end">
-            <div className="relative w-[128px] h-[25px]">
-              <Image
-                src="/images/header/logo-mb.png"
-                alt="Logo"
-                width={128}
-                height={25}
-                className="absolute top-0 left-[4px]"
-              />
+      <div className="md:hidden flex h-full items-center justify-between max-[420px]:px-2 px-2 sm:px-3 w-full">
+        <div className="flex items-center justify-between w-full gap-0 sm:gap-2">
+          {/* Logo section */}
+          <div className="flex items-center">
+            <div className="flex items-end">
+              <div className="relative max-[370px]:w-[100px] w-[134px] sm:w-[128px] h-[25px] sm:h-[25px] max-[370px]:h-[20px]">
+                <Image
+                  src="/images/header/logo-mb.png"
+                  alt="Logo"
+                  width={134}
+                  height={25}
+                  className="absolute top-0 left-[2px] sm:left-[4px] w-auto h-full"
+                />
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* Phone and discount section */}
-        <div className="flex items-center gap-3">
-          {/* Phone section */}
-          <div className="flex flex-col gap-[2.5px]">
-            <ContactInfo />
+          {/* Phone and discount section */}
+          <div className="flex items-center justify-end gap-1 sm:gap-3">
+            {/* Phone section - hide on very small screens */}
+            <div className="flex flex-col gap-[2.5px]">
+              <ContactInfo />
+            </div>
+
+            {/* Menu button */}
+            <button
+              className="p-1 sm:p-2 focus:outline-none"
+              onClick={toggleSidebar}
+              aria-label="Toggle menu"
+            >
+              <Image
+                src="/images/header/menu-icon.svg"
+                alt="Menu"
+                width={22}
+                height={18}
+                className="w-[18px] h-[15px] sm:w-[22px] sm:h-[18px]"
+              />
+            </button>
           </div>
-
-          {/* Menu button */}
-          <button
-            className="p-2 focus:outline-none"
-            onClick={toggleSidebar}
-            aria-label="Toggle menu"
-          >
-            <Image
-              src="/images/header/menu-icon.svg"
-              alt="Menu"
-              width={22}
-              height={18}
-            />
-          </button>
         </div>
       </div>
 

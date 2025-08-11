@@ -6,43 +6,83 @@ export interface RecyclingSectionProps {
   className?: string;
 }
 
-
 const RecyclingSection: React.FC<RecyclingSectionProps> = ({ className }) => {
-  const [visibleElements, setVisibleElements] = useState<Set<string>>(new Set());
+  const [visibleElements, setVisibleElements] = useState<Set<string>>(
+    new Set()
+  );
+  // Desktop refs
   const headerRef = useRef<HTMLDivElement>(null);
   const illustrationRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
   const recyclingTextRef = useRef<HTMLDivElement>(null);
   const firstParagraphRef = useRef<HTMLDivElement>(null);
   const secondParagraphRef = useRef<HTMLDivElement>(null);
-  
+
+  // Mobile refs
+  const mobileHeaderRef = useRef<HTMLDivElement>(null);
+  const mobileIllustrationRef = useRef<HTMLDivElement>(null);
+  const mobileContentRef = useRef<HTMLDivElement>(null);
+  const mobileRecyclingTextRef = useRef<HTMLDivElement>(null);
+  const mobileFirstParagraphRef = useRef<HTMLDivElement>(null);
+  const mobileSecondParagraphRef = useRef<HTMLDivElement>(null);
+  const mobileRecyclingTextContentRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
+    // Start with no elements visible - they will appear on scroll
+    setVisibleElements(new Set());
+
     const observerOptions = {
       threshold: 0.2, // Trigger when 20% of element is visible
-      rootMargin: "0px 0px -50px 0px", // Start animation 50px before element enters viewport
+      rootMargin: "0px 0px -10px 0px", // Start animation 10px before element enters viewport
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const elementId = entry.target.getAttribute("data-element-id");
-          if (elementId) {
+        const elementId = entry.target.getAttribute("data-element-id");
+        if (elementId) {
+          if (entry.isIntersecting) {
+            // Add element to visible set when it enters viewport
             setVisibleElements((prev) => new Set([...prev, elementId]));
+          } else {
+            // Remove element from visible set when it leaves viewport
+            setVisibleElements((prev) => {
+              const newSet = new Set([...prev]);
+              newSet.delete(elementId);
+              return newSet;
+            });
           }
         }
       });
     }, observerOptions);
 
     // Observe all elements
-    const elements = [headerRef, illustrationRef, contentRef, recyclingTextRef, firstParagraphRef, secondParagraphRef];
-    elements.forEach((ref) => {
+    const desktopElements = [
+      headerRef,
+      illustrationRef,
+      contentRef,
+      recyclingTextRef,
+      firstParagraphRef,
+      secondParagraphRef,
+    ];
+
+    const mobileElements = [
+      mobileHeaderRef,
+      mobileIllustrationRef,
+      mobileContentRef,
+      mobileRecyclingTextRef,
+      mobileFirstParagraphRef,
+      mobileSecondParagraphRef,
+      mobileRecyclingTextContentRef,
+    ];
+
+    [...desktopElements, ...mobileElements].forEach((ref) => {
       if (ref.current) {
         observer.observe(ref.current);
       }
     });
 
     return () => {
-      elements.forEach((ref) => {
+      [...desktopElements, ...mobileElements].forEach((ref) => {
         if (ref.current) {
           observer.unobserve(ref.current);
         }
@@ -159,7 +199,9 @@ const RecyclingSection: React.FC<RecyclingSectionProps> = ({ className }) => {
                         : "opacity-0 transform translate-x-[50px]"
                     }`}
                     style={{
-                      transitionDelay: visibleElements.has("firstParagraph") ? "500ms" : "0ms",
+                      transitionDelay: visibleElements.has("firstParagraph")
+                        ? "500ms"
+                        : "0ms",
                     }}
                   >
                     不用品・粗大ゴミの廃棄処分は別途料金がかかってお客様に負担をかけるうえ、処分工程でどうしても環境に悪影響が出てしまいます。そのため、アース千葉では廃棄処分量を減らし、回収品の適切な再利用に努めています。こうした廃棄処分を減らす試みで環境に配慮し、浮いた処分費を低価格の不用品・粗大ゴミ回収サービスとしてお客様に還元することで、信頼してお任せいただける回収業者を目指します。不用品・粗大ゴミの回収後は、品種ごとに仕分けるのはもちろん、廃品・家具・家電のように処分方法が定められている品種もお客様に代わり適切に対応します。
@@ -204,7 +246,9 @@ const RecyclingSection: React.FC<RecyclingSectionProps> = ({ className }) => {
                         : "opacity-0 transform translate-x-[50px]"
                     }`}
                     style={{
-                      transitionDelay: visibleElements.has("recyclingText") ? "500ms" : "0ms",
+                      transitionDelay: visibleElements.has("recyclingText")
+                        ? "500ms"
+                        : "0ms",
                     }}
                   >
                     <span className="text-[#006E27] font-bold text-[30px] leading-[1.4] font-['Montserrat']">
@@ -221,7 +265,9 @@ const RecyclingSection: React.FC<RecyclingSectionProps> = ({ className }) => {
                       : "opacity-0 transform translate-x-[50px]"
                   }`}
                   style={{
-                    transitionDelay: visibleElements.has("secondParagraph") ? "500ms" : "0ms",
+                    transitionDelay: visibleElements.has("secondParagraph")
+                      ? "500ms"
+                      : "0ms",
                   }}
                 >
                   アース千葉は不用品であっても安易な廃棄処分を行わず、千葉県を含む全国のリサイクルショップで再販、オークションや海外への輸出を通して収益化し、着物や家具は多少の破損であれば、リメイクを施して再活用するなど、品種に合わせた不用品の再利用を徹底しています。回収した粗大ゴミ・不用品の再利用を徹底する事は環境への配慮はもちろん、処分にかかる費用を削減する狙いもあります。作業料金から処分費を削減することで不用品回収にかかる料金の低価格化を実現、回収した不用品・廃品を適切に再利用して、次のお客様に還元するサイクルでアース千葉は千葉県内を対象に、お客様と環境の両方に優しい不用品回収を実現しています。
@@ -233,16 +279,17 @@ const RecyclingSection: React.FC<RecyclingSectionProps> = ({ className }) => {
       </div>
 
       {/* Mobile version */}
-      <div className="block md:hidden mx-auto relative h-[800px] ">
+      <div className="block md:hidden mx-auto relative min-h-[800px] pb-4">
         {/* Top Left - Illustration */}
-        <div 
-          ref={illustrationRef}
+        <div
+          ref={mobileIllustrationRef}
           data-element-id="mobile-illustration"
           className={`absolute left-[10px] transition-all duration-700 ease-out ${
             visibleElements.has("mobile-illustration")
               ? "opacity-100 transform translate-x-0"
               : "opacity-0 transform translate-x-[-50px]"
-          }`}>
+          }`}
+        >
           <Image
             src="/images/recycling/giang-giai.png"
             alt="Recycling Process Illustration - 回収した不用品のリサイクルについて"
@@ -254,7 +301,7 @@ const RecyclingSection: React.FC<RecyclingSectionProps> = ({ className }) => {
 
         {/* Center Top - Header Section */}
         <div
-          ref={headerRef}
+          ref={mobileHeaderRef}
           data-element-id="mobile-header"
           className={`absolute top-[8px] left-[68%] transform -translate-x-1/2 max-w-[300px] w-full transition-all duration-800 ease-out ${
             visibleElements.has("mobile-header")
@@ -278,7 +325,6 @@ const RecyclingSection: React.FC<RecyclingSectionProps> = ({ className }) => {
                 回収した不用品の
               </h2>
 
-
               <div className="w-[15.9px] h-[15.3px] flex items-center justify-center">
                 <Image
                   src="/images/recycling/decorative-triangle-right.svg"
@@ -288,7 +334,6 @@ const RecyclingSection: React.FC<RecyclingSectionProps> = ({ className }) => {
                 />
               </div>
             </div>
-
 
             <h1 className="text-[#00A842] font-bold text-[26px] leading-[1.2] font-['Montserrat']">
               リサイクルについて
@@ -359,7 +404,7 @@ const RecyclingSection: React.FC<RecyclingSectionProps> = ({ className }) => {
         {/* Bottom Full Width - Content Card */}
 
         <div
-          ref={contentRef}
+          ref={mobileContentRef}
           data-element-id="mobile-content"
           className={`absolute top-[120px] transition-all duration-700 ease-out z-10 ${
             visibleElements.has("mobile-content")
@@ -367,7 +412,9 @@ const RecyclingSection: React.FC<RecyclingSectionProps> = ({ className }) => {
               : "opacity-0 transform scale-95"
           }`}
           style={{
-            transitionDelay: visibleElements.has("mobile-content") ? "300ms" : "0ms",
+            transitionDelay: visibleElements.has("mobile-content")
+              ? "300ms"
+              : "0ms",
           }}
         >
           <div className="bg-white border-[2.7px] border-[#FFDA33] rounded-[10px]">
@@ -391,7 +438,7 @@ const RecyclingSection: React.FC<RecyclingSectionProps> = ({ className }) => {
                     への取り組み
                   </h4>
                   <p
-                    ref={firstParagraphRef}
+                    ref={mobileFirstParagraphRef}
                     data-element-id="mobile-firstParagraph"
                     className={`text-black font-medium text-[12px] leading-[1.2] font-['Montserrat'] transition-all duration-700 ease-out ${
                       visibleElements.has("mobile-firstParagraph")
@@ -399,7 +446,11 @@ const RecyclingSection: React.FC<RecyclingSectionProps> = ({ className }) => {
                         : "opacity-0 transform translate-x-[20px]"
                     }`}
                     style={{
-                      transitionDelay: visibleElements.has("mobile-firstParagraph") ? "500ms" : "0ms",
+                      transitionDelay: visibleElements.has(
+                        "mobile-firstParagraph"
+                      )
+                        ? "500ms"
+                        : "0ms",
                     }}
                   >
                     不用品・粗大ゴミの廃棄処分は別途料金がかかってお客様に負担をかけるうえ、処分工程でどうしても環境に悪影響が出てしまいます。そのため、アース千葉では廃棄処分量を減らし、回収品の適切な再利用に努めています。こうした廃棄処分を減らす試みで環境に配慮し、浮いた処分費を低価格の不用品・粗大ゴミ回収サービスとしてお客様に還元することで、信頼してお任せいただける回収業者を目指します。不用品・粗大ゴミの回収後は、品種ごとに仕分けるのはもちろん、廃品・家具・家電のように処分方法が定められている品種もお客様に代わり適切に対応します。
@@ -420,7 +471,7 @@ const RecyclingSection: React.FC<RecyclingSectionProps> = ({ className }) => {
                 {/* Second Section */}
                 <div>
                   <div
-                    ref={recyclingTextRef}
+                    ref={mobileRecyclingTextRef}
                     data-element-id="mobile-recyclingText"
                     className="relative h-[19px] mb-[11px]"
                   >
@@ -434,6 +485,7 @@ const RecyclingSection: React.FC<RecyclingSectionProps> = ({ className }) => {
                       />
                     </div>
                     <div
+                      ref={mobileRecyclingTextContentRef}
                       data-element-id="mobile-recyclingTextContent"
                       className={`absolute top-0 left-8 w-full transition-all duration-1000 ease-out ${
                         visibleElements.has("mobile-recyclingTextContent")
@@ -441,7 +493,11 @@ const RecyclingSection: React.FC<RecyclingSectionProps> = ({ className }) => {
                           : "opacity-0 transform translate-x-[20px]"
                       }`}
                       style={{
-                        transitionDelay: visibleElements.has("mobile-recyclingTextContent") ? "500ms" : "0ms",
+                        transitionDelay: visibleElements.has(
+                          "mobile-recyclingTextContent"
+                        )
+                          ? "500ms"
+                          : "0ms",
                       }}
                     >
                       <span className="text-[#02662A] font-bold text-[12px] leading-[1.2] font-['Montserrat']">
@@ -450,7 +506,7 @@ const RecyclingSection: React.FC<RecyclingSectionProps> = ({ className }) => {
                     </div>
                   </div>
                   <p
-                    ref={secondParagraphRef}
+                    ref={mobileSecondParagraphRef}
                     data-element-id="mobile-secondParagraph"
                     className={`text-black font-medium text-[12px] leading-[1.2] font-['Montserrat'] transition-all duration-700 ease-out ${
                       visibleElements.has("mobile-secondParagraph")
@@ -458,7 +514,11 @@ const RecyclingSection: React.FC<RecyclingSectionProps> = ({ className }) => {
                         : "opacity-0 transform translate-x-[20px]"
                     }`}
                     style={{
-                      transitionDelay: visibleElements.has("mobile-secondParagraph") ? "500ms" : "0ms",
+                      transitionDelay: visibleElements.has(
+                        "mobile-secondParagraph"
+                      )
+                        ? "500ms"
+                        : "0ms",
                     }}
                   >
                     アース千葉は不用品であっても安易な廃棄処分を行わず、千葉県を含む全国のリサイクルショップで再販、オークションや海外への輸出を通して収益化し、着物や家具は多少の破損であれば、リメイクを施して再活用するなど、品種に合わせた不用品の再利用を徹底しています。回収した粗大ゴミ・不用品の再利用を徹底する事は環境への配慮はもちろん、処分にかかる費用を削減する狙いもあります。作業料金から処分費を削減することで不用品回収にかかる料金の低価格化を実現、回収した不用品・廃品を適切に再利用して、次のお客様に還元するサイクルでアース千葉は千葉県内を対象に、お客様と環境の両方に優しい不用品回収を実現しています。

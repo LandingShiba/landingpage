@@ -67,49 +67,48 @@ export default function ContactInfo() {
       </div>
 
       {/* Mobile version - hidden on desktop */}
-      <div className="md:hidden flex items-center gap-1">
-        {/* Discount tag */}
-        <div className="bg-[#FF000C] rounded-l-[14px] py-[2.5px] pl-[12px] pr-[2.5px] flex flex-col">
-          <p className="text-white text-[6.6px] font-bold font-['Roboto'] leading-[1.17]">
+      <div className="md:hidden flex items-center gap-1 min-[420px]:gap-1 sm:gap-2">
+        {/* Discount tag - compact on small screens */}
+        <div className="bg-[#FF000C] rounded-l-[20px] max-[420px]:rounded-l-[14px] py-[5px] max-[420px]:py-[2.5px] sm:py-1 pl-[20px] max-[420px]:pl-[12px] sm:pl-3 pr-[4px] max-[420px]:pr-[2.5px] sm:pr-1 flex flex-col">
+          <p className="text-white text-[5px] min-[420px]:text-[6.6px] sm:text-xs font-bold font-['Roboto'] leading-[1.17]">
             電話問合せ限定!
           </p>
           <div className="flex justify-between items-center">
-            <p className="text-white text-[5.8px] font-bold font-['Roboto'] leading-[1.17] w-[7px]">
+            <p className="text-white text-[4.5px] min-[420px]:text-[5.8px] sm:text-[10px] font-bold font-['Roboto'] leading-[1.17] w-[5px] min-[420px]:w-[7px] sm:w-auto sm:mr-1">
               最大
             </p>
             <div className="flex items-baseline">
-              <span className="text-[#FFF236] text-[14.9px] font-bold font-['Roboto'] leading-[1.17]">
+              <span className="text-[#FFF236] text-[11px] min-[420px]:text-[14.9px] sm:text-xl font-bold font-['Roboto'] leading-[1.17]">
                 50%
               </span>
-              <span className="text-[#FFF236] text-[14.9px] font-bold font-['Roboto'] leading-[1.17]">
+              <span className="text-[#FFF236] text-[11px] min-[420px]:text-[14.9px] sm:text-xl font-bold font-['Roboto'] leading-[1.17]">
                 割引
               </span>
             </div>
           </div>
         </div>
 
-        {/* Phone section */}
-        <div className="flex flex-col gap-[2.5px]">
-          <div className="flex items-center gap-1">
+        {/* Phone section - more compact for small screens */}
+        <div className="flex flex-col gap-[1px] min-[420px]:gap-[2.5px] sm:gap-1">
+          <div className="flex items-center gap-0.5 min-[420px]:gap-1 sm:gap-2">
             <div className="flex flex-col items-center">
-              <div className="bg-[#00A842] w-[17.38px] h-[10.76px] relative">
+              <div className="bg-[#00A842] w-[18px] h-[15px] max-[420px]:w-[17.38px] max-[420px]:h-[10.76px] sm:w-6 sm:h-4 relative">
                 <Image
                   src="/images/header/hotline-icon-mobile.svg"
                   alt="Phone"
-                  width={17.38}
-                  height={7.05}
-                  className="absolute bottom-[2.07px]"
+                  fill
+                  className="absolute bottom-[1.5px] max-[420px]:bottom-[2.07px] sm:bottom-[0.1rem] w-full h-auto"
                 />
               </div>
-              <p className="text-[#00A842] text-[2.48px] font-bold font-['Roboto'] leading-[1.17]">
+              <p className="text-[#00A842] text-[2px] min-[420px]:text-[2.48px] sm:text-[7px] font-bold font-['Roboto'] leading-[1.17]">
                 フリーダイヤル
               </p>
             </div>
-            <p className="text-black text-[15.3px] font-bold font-['Roboto'] leading-[1.17]">
+            <p className="text-black text-[15px] max-[420px]:text-[13.3px] sm:text-lg font-bold font-['Roboto'] leading-[1.17]">
               0477-234-143
             </p>
           </div>
-          <p className="text-[#222222] text-[5.8px] font-bold font-['Roboto'] leading-[1.17]">
+          <p className="text-[#222222] text-[5.79px] min-[420px]:text-[5.8px] sm:text-xs font-bold font-['Roboto'] leading-[1.17]">
             ご相談お見積もり無料（24時間365日対応付中)
           </p>
         </div>

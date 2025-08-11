@@ -43,10 +43,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         </div>
 
         {/* Vehicle type and price info */}
-        <div className="mt-[15px] md:mt-[50px] flex flex-col gap-2 md:gap-5">
+        <div className="mt-[30px] md:mt-[50px] flex flex-col gap-2 md:gap-5">
           {/* Vehicle type row */}
-          <div className="flex items-center gap-2 md:gap-5 justify-center">
-            <div className="bg-[#7BAD4F] px-2 md:px-5 py-1 md:py-2.5 rounded-lg">
+          <div className="items-center gap-2 md:gap-5 justify-center flex">
+            <div className="bg-[#7BAD4F] px-2 md:px-5 py-1 md:py-2.5 rounded-lg hidden">
               <span className="text-white font-semibold text-xs md:text-xl">
                 対応車
               </span>
@@ -58,7 +58,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 
           {/* Price row */}
           <div className="flex items-center gap-2 md:gap-5 justify-center">
-            <div className="relative w-[60px] h-[43px] md:w-[121px] md:h-[87px] bg-white">
+            <div className="relative w-[55px] h-[43px] md:w-[121px] md:h-[87px] bg-white">
               <Image
                 src="/images/service-card/price-icon.svg"
                 alt="Price icon"
@@ -84,7 +84,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           </div>
 
           {/* Button with background image */}
-          <div className="mt-3 md:mt-8 relative">
+          {/* <div className="mt-3 md:mt-8 relative">
             <button className="w-full py-2 md:py-4 px-4 md:px-8 relative overflow-hidden rounded-[10px] md:rounded-[20px]">
               <Image
                 src="/images/service-card/btn-bg.png"
@@ -93,7 +93,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
                 className="object-cover"
               />
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
 
