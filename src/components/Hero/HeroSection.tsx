@@ -41,7 +41,7 @@ export default function HeroSection() {
 
           <div className="flex items-end gap-4 mt-8">
             <h1 className="text-[78px] font-black text-[#006E27] leading-[1.45]">
-              アース千葉
+              エコグローバル
             </h1>
             <h2 className="text-[60px] font-bold text-[#3C3C3C] leading-tight">
               におまかせ！
@@ -121,7 +121,7 @@ export default function HeroSection() {
           {/* Sub heading */}
           <div className="flex items-end gap-[6px] mt-[6px]">
             <h1 className="max-[321px]:text-[25px] text-[30px] font-black text-[#02662A] leading-[1.45]">
-              アース千葉
+              エコグローバル
             </h1>
             <h2 className="max-[321px]:text-[16px] text-[20px] font-bold text-[#3C3C3C] leading-[1.45]">
               におまかせ！
