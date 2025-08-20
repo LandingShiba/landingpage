@@ -1,1 +1,2 @@
-export { default as CaseStudiesSection } from './CaseStudiesSection'; 
+
+export { default } from './CaseStudiesSection';

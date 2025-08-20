@@ -1,7 +1,6 @@
 import type { ReactNode } from "react";
 import { Roboto, Montserrat } from "next/font/google";
 import "./globals.css";
-
 const roboto = Roboto({
   weight: ["400", "500", "700"],
   style: ["normal", "italic"],

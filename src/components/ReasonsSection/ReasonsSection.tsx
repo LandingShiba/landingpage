@@ -10,7 +10,6 @@ interface ReasonCard {
   imageAlt: string;
 }
 
-
 const ReasonsSection: React.FC = () => {
   const { ref: headerRef, isInView: headerInView } = useInView();
   const { ref: cardsRef, isInView: cardsInView } = useInView();
@@ -126,7 +125,7 @@ const ReasonsSection: React.FC = () => {
       {/* Full-width banner section at the top */}
       <div className="w-full relative">
         {/* Background image */}
-        <div className="h-[91px] w-full">
+        <div className="h-[91px] md:h-[200px] w-full">
           <Image
             src="/images/reason/BG.png"
             alt="Top banner background"
@@ -137,13 +136,26 @@ const ReasonsSection: React.FC = () => {
         </div>
 
         {/* Banner content - centered text */}
-        <div className="absolute inset-0 flex items-center justify-center mb-[15px]">
+        <div className="absolute inset-0 flex items-center justify-center mb-[15px] md:hidden">
           <div className="flex items-center justify-center transform ">
             <div className="flex flex-col items-center">
               <span className="text-white font-bold text-[26px] font-['Montserrat'] leading-[1.219]">
                 不用品回収アース千葉
               </span>
               <span className="text-[#222222] font-bold text-[26px] font-['Montserrat'] leading-[1.219]">
+                にお任せください！？
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div className="absolute inset-0  items-center justify-center mb-[15px] hidden md:flex">
+          <div className="flex items-center justify-center transform ">
+            <div className="text-center mb-8">
+              <span className="text-white font-bold text-[60px] font-['Montserrat'] leading-[1.219]">
+                不用品回収アース千葉
+              </span>
+              <span className="text-[#222222] font-bold text-[60px] font-['Montserrat'] leading-[1.219]">
                 にお任せください！？
               </span>
             </div>
@@ -157,7 +169,7 @@ const ReasonsSection: React.FC = () => {
         <div
           ref={decorativeRef}
           className={cn(
-            "hidden md:block absolute top-[92px] left-[185px] w-[374px] h-[481px] transition-all duration-1000 ease-out",
+            "hidden md:block absolute top-[92px] left-[185px] md:left-[300px] w-[374px] h-[481px] transition-all duration-1000 ease-out",
             decorativeInView
               ? "opacity-100 transform translate-x-0 scale-100"
               : "opacity-0 transform translate-x-[-50px] scale-95"
@@ -177,14 +189,14 @@ const ReasonsSection: React.FC = () => {
           <div
             ref={headerRef}
             className={cn(
-              "text-center mb-[30px] md:mb-[50px] relative transition-all duration-800 ease-out mx-auto max-w-[354px] md:max-w-[800px]",
+              "text-right md:left-[130px] mb-[30px] md:mb-[50px] relative transition-all duration-800 ease-out mx-auto max-w-[354px] md:max-w-[800px]",
               headerInView
                 ? "opacity-100 transform translate-y-0"
                 : "opacity-0 transform translate-y-[-30px]"
             )}
           >
             {/* Main title */}
-            <div className="pt-2 md:pt-16 mb-4">
+            <div className="pt-2 md:pt-16 mb-4 ">
               {/* First row - アース千葉が */}
               <div className="flex items-center justify-center gap-[7.4px] md:gap-4 mb-[7.4px] md:mb-4">
                 <div className="w-[30.9px] h-[29.5px] md:w-[59px] md:h-[57px] flex items-center justify-center transform rotate-12">
@@ -315,9 +327,9 @@ const ReasonsSection: React.FC = () => {
               </div>
 
               {/* Desktop view */}
-              <div className="hidden md:block bg-white rounded-[20px] shadow-[0px_8px_4px_0px_rgba(0,0,0,0.15)] relative overflow-hidden h-[419px] w-[1300px]">
+              <div className="hidden md:block bg-white mt-10 rounded-[20px] shadow-[0px_8px_4px_0px_rgba(0,0,0,0.15)] relative overflow-hidden h-[419px] w-[1300px]">
                 {/* Number badge */}
-                <div className="absolute top-0 left-0 z-10">
+                <div className="absolute top-0 left-0 z-10 ">
                   <div className="w-[123.5px] h-[129px] relative">
                     <Image
                       src="/images/reason/Rectangle_67.png"
