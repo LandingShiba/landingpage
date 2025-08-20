@@ -30,7 +30,13 @@ const RecoverableItems: React.FC = () => {
     }, observerOptions);
 
     // Observe all elements
-    const elements = [headerRef, section1Ref, section2Ref, section3Ref, section4Ref];
+    const elements = [
+      headerRef,
+      section1Ref,
+      section2Ref,
+      section3Ref,
+      section4Ref,
+    ];
     elements.forEach((ref) => {
       if (ref.current) {
         observer.observe(ref.current);
@@ -87,41 +93,41 @@ const RecoverableItems: React.FC = () => {
     },
   ];
 
-  const lifestyleCategories: CategoryItem[] = [
-    {
-      title: "生活用品",
-      titleColor: "#222222",
-      content: "大型家具類",
-    },
-    {
-      title: "趣味・子ども",
-      titleColor: "#222222",
-      content: "大型家具類",
-    },
-    {
-      title: "アウトドア・健康",
-      titleColor: "#222222",
-      content: "大型家具類",
-    },
-  ];
+  // const lifestyleCategories: CategoryItem[] = [
+  //   {
+  //     title: "生活用品",
+  //     titleColor: "#222222",
+  //     content: "大型家具類",
+  //   },
+  //   {
+  //     title: "趣味・子ども",
+  //     titleColor: "#222222",
+  //     content: "大型家具類",
+  //   },
+  //   {
+  //     title: "アウトドア・健康",
+  //     titleColor: "#222222",
+  //     content: "大型家具類",
+  //   },
+  // ];
 
-  const otherCategories: CategoryItem[] = [
-    {
-      title: "車両",
-      titleColor: "#222222",
-      content: "大型家具類",
-    },
-    {
-      title: "農機具",
-      titleColor: "#222222",
-      content: "大型家具類",
-    },
-    {
-      title: "その他",
-      titleColor: "#222222",
-      content: "大型家具類",
-    },
-  ];
+  // const otherCategories: CategoryItem[] = [
+  //   {
+  //     title: "車両",
+  //     titleColor: "#222222",
+  //     content: "大型家具類",
+  //   },
+  //   {
+  //     title: "農機具",
+  //     titleColor: "#222222",
+  //     content: "大型家具類",
+  //   },
+  //   {
+  //     title: "その他",
+  //     titleColor: "#222222",
+  //     content: "大型家具類",
+  //   },
+  // ];
 
   return (
     <>

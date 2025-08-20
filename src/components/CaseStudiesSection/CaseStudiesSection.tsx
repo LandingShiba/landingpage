@@ -7,15 +7,23 @@ import ContentTable from "./Component/ContentTable";
 interface CaseStudiesSectionProps {
   isWorkPage?: boolean;
   // TODO: add listItem to show how many items in the list
-  listItem: number;
+
+  dataCaseStudies: {
+    table: {
+      example: string;
+      workStaff: string;
+      fee: string;
+    }[];
+    content: string;
+  }[];
 }
 
 const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({
   isWorkPage = false,
-  listItem,
+  dataCaseStudies,
 }) => {
   const [visibleElements, setVisibleElements] = useState<Set<string>>(
-    new Set()
+    new Set(["title", "content", "beforeAfter", "staff"]) // Pre-load all main sections
   );
   const titleRef = useRef<HTMLDivElement>(null);
   const mascotRef = useRef<HTMLDivElement>(null);
@@ -26,8 +34,8 @@ const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({
 
   useEffect(() => {
     const observerOptions = {
-      threshold: 0.2, // Trigger when 20% of element is visible
-      rootMargin: "0px 0px -50px 0px", // Start animation 50px before element enters viewport
+      threshold: 0.05, // Trigger when just 5% of element is visible
+      rootMargin: "0px 0px -10px 0px", // Start animation earlier when element approaches viewport
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -139,13 +147,16 @@ const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({
         </div>
 
         {/* Content Table */}
-        {listItem > 0 &&
-          Array.from({ length: listItem }).map((_, index) => (
+        {dataCaseStudies.length > 0 &&
+          dataCaseStudies.map((item, index) => (
             <div
               key={index}
-              className={index < listItem - 1 ? "mb-16 md:mb-24" : ""}
+              className={
+                index < dataCaseStudies.length - 1 ? "mb-16 md:mb-24" : ""
+              }
             >
               <ContentTable
+                dataCaseStudies={item}
                 visibleElements={visibleElements}
                 contentRef={contentRef}
                 beforeAfterRef={beforeAfterRef}

@@ -1,4 +1,3 @@
-"use client";
 import BannerSection from "@/components/Banner/BannerSection";
 import Breadcrumb from "@/components/Breadcrumb/Breadcrumb";
 import ListTittleTerm from "@/components/Table/ListTittleTerm";
@@ -6,6 +5,23 @@ import ListTerm from "@/components/Table/ListTerm";
 import { ToTopButton } from "@/components/ToTopButton";
 import { useTranslations } from "next-intl";
 import { BreadcrumbItem } from "../company/page";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "プライバシーポリシー | 不用品回収エコグローバル",
+  description:
+    "不用品回収エコグローバルのプライバシーポリシーについてご案内します。お客様の個人情報の取り扱いについての方針をご確認いただけます。",
+  keywords:
+    "プライバシーポリシー, 個人情報保護方針, 不用品回収, エコグローバル, 個人情報",
+  openGraph: {
+    title: "プライバシーポリシー | 不用品回収エコグローバル",
+    description:
+      "不用品回収エコグローバルのプライバシーポリシーについてご案内します。お客様の個人情報の取り扱いについての方針をご確認いただけます。",
+    siteName: "不用品回収エコグローバル",
+    locale: "ja_JP",
+    type: "website",
+  },
+};
 
 export default function PrivacyPage() {
   const t = useTranslations();

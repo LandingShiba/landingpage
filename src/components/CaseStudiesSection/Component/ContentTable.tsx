@@ -6,6 +6,14 @@ interface ContentTableProps {
   contentRef: React.RefObject<HTMLDivElement | null>;
   beforeAfterRef: React.RefObject<HTMLDivElement | null>;
   staffRef: React.RefObject<HTMLDivElement | null>;
+  dataCaseStudies: {
+    table: {
+      example: string;
+      workStaff: string;
+      fee: string;
+    }[];
+    content: string;
+  };
 }
 
 const ContentTable = ({
@@ -13,7 +21,9 @@ const ContentTable = ({
   contentRef,
   beforeAfterRef,
   staffRef,
+  dataCaseStudies,
 }: ContentTableProps) => {
+  const { table, content } = dataCaseStudies;
   return (
     <>
       {/* Yellow Header Bar */}
@@ -73,7 +83,7 @@ const ContentTable = ({
                       fontFamily: 'Montserrat, "Noto Sans JP", sans-serif',
                     }}
                   >
-                    回収例
+                    {table[0].example}
                   </span>
                 </div>
               </div>
@@ -97,7 +107,7 @@ const ContentTable = ({
                       fontFamily: 'Montserrat, "Noto Sans JP", sans-serif',
                     }}
                   >
-                    3名
+                    {table[0].workStaff}
                   </span>
                 </div>
               </div>
@@ -121,7 +131,7 @@ const ContentTable = ({
                       fontFamily: 'Montserrat, "Noto Sans JP", sans-serif',
                     }}
                   >
-                    55,000円
+                    {table[0].fee}
                   </span>
                 </div>
               </div>
@@ -235,12 +245,7 @@ const ContentTable = ({
               className="text-[12px] md:text-[20px] text-black leading-relaxed space-y-4"
               style={{ fontFamily: 'Montserrat, "Noto Sans JP", sans-serif' }}
             >
-              <p>
-                実家の遺品整理を依頼された案件がありました。お客様のお父様の部屋で、長年手を付けられていなかったため、物が溢れている状態でした。このような場合、私たちにとって最も大切なのは、故人の品々を丁寧に扱いながら、効率的に作業を進めることです。
-              </p>
-              <p>
-                作業を始める前に、部屋の状態をしっかりと確認し、どのように進めるか計画を立てました。故人の思い出が詰まった品々には特に注意を払い、お客様と相談しながら、どの品を保持し、どの品を処分するか決定しました。
-              </p>
+              <p>{content}</p>
             </div>
 
             {/* Small decorative packages at bottom right of text */}

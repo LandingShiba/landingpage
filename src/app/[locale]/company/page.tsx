@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import BannerSection from "@/components/Banner/BannerSection";
 import Breadcrumb from "@/components/Breadcrumb/Breadcrumb";
 import { useTranslations } from "next-intl";
@@ -7,6 +7,23 @@ import CategorySection from "@/components/CategorySection";
 import { CategoryItem } from "@/components/CategorySection";
 // import Footer from "@/components/Footer/Footer";
 import React from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "会社概要 | 不用品回収エコグローバル",
+  description:
+    "エコグローバル株式会社の会社概要、経営理念、事業内容、所在地などをご紹介します。不用品回収、リサイクル事業を通じて、環境に配慮したサービスを提供しています。",
+  keywords:
+    "エコグローバル, 会社概要, 不用品回収, リサイクル, 経営理念, 事業内容",
+  openGraph: {
+    title: "会社概要 | 不用品回収エコグローバル",
+    description:
+      "エコグローバル株式会社の会社概要、経営理念、事業内容、所在地などをご紹介します。",
+    siteName: "不用品回収エコグローバル",
+    locale: "ja_JP",
+    type: "website",
+  },
+};
 
 export type BreadcrumbItem = {
   label: string;
