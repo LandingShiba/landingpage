@@ -1,3 +1,5 @@
+"use client";
+
 import ActionButton from "./ActionButton";
 import ContactInfo from "./ContactInfo";
 import Logo from "./Logo";

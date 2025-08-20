@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import CategorySection from "@/components/CategorySection";
 import { CategoryItem } from "@/components/CategorySection";
-import Footer from "@/components/Footer/Footer";
+// import Footer from "@/components/Footer/Footer";
 import React from "react";
 
 export type BreadcrumbItem = {
@@ -211,7 +211,7 @@ export default function Company(): React.ReactElement {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }

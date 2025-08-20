@@ -8,6 +8,8 @@ import { notFound } from "next/navigation";
 import { type Metadata } from "next";
 import { routing } from "@/i18n/routing";
 import LocaleWrapper from "@/components/LocaleWrapper";
+import InnerHeader from "@/components/Header/InnerHeader";
+import Footer from "@/components/Footer/Footer";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -52,8 +54,16 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <NextIntlClientProvider messages={messages}>
-      <LocaleWrapper locale={locale}>{children}</LocaleWrapper>
-    </NextIntlClientProvider>
+    <>
+      <NextIntlClientProvider messages={messages}>
+        <LocaleWrapper locale={locale}>
+          <div className="h-[48px] md:h-[100px]">
+            <InnerHeader />
+          </div>
+          {children}
+          <Footer />
+        </LocaleWrapper>
+      </NextIntlClientProvider>
+    </>
   );
 }

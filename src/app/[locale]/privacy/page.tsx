@@ -4,7 +4,6 @@ import Breadcrumb from "@/components/Breadcrumb/Breadcrumb";
 import ListTittleTerm from "@/components/Table/ListTittleTerm";
 import ListTerm from "@/components/Table/ListTerm";
 import { ToTopButton } from "@/components/ToTopButton";
-import Footer from "@/components/Footer/Footer";
 import { useTranslations } from "next-intl";
 import { BreadcrumbItem } from "../company/page";
 
@@ -47,7 +46,7 @@ export default function PrivacyPage() {
 
       <ToTopButton />
 
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }

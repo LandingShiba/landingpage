@@ -10,7 +10,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
   return (
     <footer className={`w-full bg-[#303030] py-16 ${className || ""}`}>
       <div className="max-w-7xl max-[321]:max-w-[321px] mx-auto px-6 lg:px-8">
-        <div className="flex flex-col lg:flex-row justify-center items-center gap-16 lg:gap-32">
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-4 md:gap-16 lg:gap-32">
           {/* Left Column - Company Information */}
           <div className="flex flex-col gap-10">
             {/* Logo and Company Name */}
@@ -19,7 +19,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
                 不用品回収エコグローバル
               </h2>
               <div className="flex justify-center lg:justify-start">
-                <div className="w-[351px] h-[135px]">
+                <div className="w-[351px] h-[135px] hidden md:block">
                   <Image
                     src="/images/footer/logo_ngang.png"
                     alt="Logo"
@@ -28,31 +28,48 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
                     className="w-full h-full"
                   />
                 </div>
+
+                <div className="flex items-center justify-center md:hidden w-[238px] h-[158px] relative">
+                  <Image
+                    src="/logo_mb.png"
+                    alt="Logo"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
               </div>
             </div>
 
             {/* Contact Information */}
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-3 md:gap-5">
               {/* Address */}
               <div className="flex items-center gap-3">
-                <div className="w-[30px] h-[30px] flex-shrink-0">
+                <div className="w-[22px] h-[30px] flex-shrink-0 hidden md:block">
                   <Image
                     src="/images/footer/location-icon.svg"
                     alt="Location"
                     width={22}
                     height={30}
-                    className="w-auto h-full"
+                    className="w-full h-full object-contain"
                   />
                 </div>
-                <span className="text-white font-medium text-xl leading-tight">
+                <div className="w-[16px] h-[16px] flex-shrink-0 md:hidden">
+                  <Image
+                    src="/images/footer/location-icon.svg"
+                    alt="Location"
+                    width={16}
+                    height={16}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <span className="text-white font-medium text-[12px] md:text-xl leading-tight">
                   〒271-0062　千葉県松戸市栄町6丁目473番地の12号
                 </span>
               </div>
 
-
               {/* Phone */}
               <div className="flex items-center gap-4">
-                <div className="w-[30px] h-[30px] flex-shrink-0">
+                <div className="w-[30px] h-[30px] flex-shrink-0 hidden md:block">
                   <Image
                     src="/images/footer/phone-icon.svg"
                     alt="Phone"
@@ -61,7 +78,16 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
                     className="w-full h-full"
                   />
                 </div>
-                <span className="text-white font-medium text-xl leading-tight">
+                <div className="w-[16px] h-[16px] flex-shrink-0 md:hidden">
+                  <Image
+                    src="/images/footer/phone-icon.svg"
+                    alt="Phone"
+                    width={16}
+                    height={16}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <span className="text-white font-medium text-[12px] md:text-xl leading-tight">
                   0477-234-143
                 </span>
               </div>
