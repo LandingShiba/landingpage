@@ -21,7 +21,7 @@ const ReasonsSection: React.FC = () => {
       id: 1,
       title: "回収料金がリーズナブル",
       description:
-        "アース千葉は格安料金で不用品・粗大ゴミ回収に対応！引越しゴミなど大量の廃品処分も安心してお任せください！",
+        "エコグローバルは格安料金で不用品・粗大ゴミ回収に対応！引越しゴミなど大量の廃品処分も安心してお任せください！",
       image: "/images/reason/image_6.png",
       imageAlt: "Affordable pricing illustration",
     },
@@ -37,7 +37,7 @@ const ReasonsSection: React.FC = () => {
       id: 3,
       title: "見積もり無料",
       description:
-        "アース千葉ではお見積もりを無料で承ります。回収可能な不用品の種類や引き取り日程などの疑問点もご相談ください。",
+        "エコグローバルではお見積もりを無料で承ります。回収可能な不用品の種類や引き取り日程などの疑問点もご相談ください。",
       image: "/images/reason/image_4.png",
       imageAlt: "Free estimate illustration",
     },
@@ -53,7 +53,7 @@ const ReasonsSection: React.FC = () => {
       id: 5,
       title: "少量から\n家まるごとまでOK",
       description:
-        "アース千葉では廃品・粗大ゴミの量を問わず対応します。不用品1点から家具・家電を含む大量の廃棄品までお任せを。",
+        "エコグローバルでは廃品・粗大ゴミの量を問わず対応します。不用品1点から家具・家電を含む大量の廃棄品までお任せを。",
       image: "/images/reason/image_8.png",
       imageAlt: "Flexible volume service illustration",
     },
@@ -61,7 +61,7 @@ const ReasonsSection: React.FC = () => {
       id: 6,
       title: "見積もり後の\n追加料金なし",
       description:
-        "アース千葉はご契約成立後にお客様に許可を得ず作業・料金を追加することは一切ありません。安心してお任せください。",
+        "エコグローバルはご契約成立後にお客様に許可を得ず作業・料金を追加することは一切ありません。安心してお任せください。",
       image: "/images/reason/image_4.png",
       imageAlt: "No hidden fees illustration",
     },
@@ -140,7 +140,7 @@ const ReasonsSection: React.FC = () => {
           <div className="flex items-center justify-center transform ">
             <div className="flex flex-col items-center">
               <span className="text-white font-bold text-[26px] font-['Montserrat'] leading-[1.219]">
-                不用品回収アース千葉
+                不用品回収エコグローバル
               </span>
               <span className="text-[#222222] font-bold text-[26px] font-['Montserrat'] leading-[1.219]">
                 にお任せください！？
@@ -196,8 +196,9 @@ const ReasonsSection: React.FC = () => {
             )}
           >
             {/* Main title */}
-            <div className="pt-2 md:pt-16 mb-4 ">
-              {/* First row - アース千葉が */}
+            <div className="pt-2 md:pt-16 mb-4">
+              {/* First row - エコグローバルが */}
+
               <div className="flex items-center justify-center gap-[7.4px] md:gap-4 mb-[7.4px] md:mb-4">
                 <div className="w-[30.9px] h-[29.5px] md:w-[59px] md:h-[57px] flex items-center justify-center transform rotate-12">
                   <Image
@@ -207,7 +208,7 @@ const ReasonsSection: React.FC = () => {
                   />
                 </div>
                 <h2 className="text-black font-bold text-[26px] md:text-[70px] leading-[1.219] font-['Montserrat']">
-                  アース千葉が
+                  エコグローバルが
                 </h2>
                 <div className="w-[30.9px] h-[29.5px] md:w-[59px] md:h-[57px] flex items-center justify-center transform -rotate-12">
                   <Image
@@ -321,7 +322,7 @@ const ReasonsSection: React.FC = () => {
                     自社スタッフ
                   </h3>
                   <p className="text-black font-medium text-[12px] leading-[1.219] text-left font-['Montserrat']">
-                    回収作業はすべてアース千葉のスタッフが行いますので、仲介料が発生する心配はいりません。千葉県、松戸市内の現場に伺い、家具・家電のような搬出が困難な品も回収します。
+                    回収作業はすべてエコグローバルのスタッフが行いますので、仲介料が発生する心配はいりません。千葉県、松戸市内の現場に伺い、家具・家電のような搬出が困難な品も回収します。
                   </p>
                 </div>
               </div>
@@ -367,7 +368,7 @@ const ReasonsSection: React.FC = () => {
                       自社スタッフ
                     </h3>
                     <p className="text-black font-medium text-[30px] leading-normal text-left font-['Montserrat'] max-w-[585px]">
-                      回収作業はすべてアース千葉のスタッフが行いますので、仲介料が発生する心配はいりません。千葉県、松戸市内の現場に伺い、家具・家電のような搬出が困難な品も回収します。
+                      回収作業はすべてエコグローバルのスタッフが行いますので、仲介料が発生する心配はいりません。千葉県、松戸市内の現場に伺い、家具・家電のような搬出が困難な品も回収します。
                     </p>
                   </div>
                 </div>

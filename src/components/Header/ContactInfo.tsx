@@ -54,7 +54,7 @@ export default function ContactInfo() {
                     </div>
                   </div>
                   <div className="font-['Roboto'] font-bold leading-none relative shrink-0 text-black text-[37px] text-left text-nowrap">
-                    0120-526-843
+                    0477-234-143
                   </div>
                 </div>
               </div>
