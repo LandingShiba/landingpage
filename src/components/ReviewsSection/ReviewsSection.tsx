@@ -99,9 +99,10 @@ const ReviewsSection: React.FC = () => {
 
   return (
     <section
+      id="testimonials"
       ref={containerRef}
       className={cn(
-        "bg-[#E9FFD6] py-8 md:py-12 lg:py-16 relative transition-all duration-1000 ease-out overflow-x-hidden",
+        "bg-[#E9FFD6] py-8 md:py-12 lg:py-16 relative transition-all duration-1000 ease-out overflow-x-hidden scroll-mt-[150px]",
         containerInView
           ? "opacity-100 transform translate-y-0"
           : "opacity-0 transform translate-y-[20px]"

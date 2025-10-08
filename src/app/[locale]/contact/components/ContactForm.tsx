@@ -352,7 +352,7 @@ const ContactForm = () => {
       {/* Privacy Policy Agreement */}
       <div className="mb-6 text-center">
         <p className="text-lg">
-          「<span className="font-bold text-[#00ADF2]">個人情報の取り扱い</span>
+          「<span className="font-bold text-[#00A842]">個人情報の取り扱い</span>
           」 に同意のうえ、ボタンを押してください。
         </p>
       </div>
@@ -376,7 +376,7 @@ const ContactForm = () => {
           type="submit"
           disabled={isSubmitting}
           className={`${
-            isSubmitting ? "bg-gray-400" : "bg-[#1976D2] hover:bg-blue-700"
+            isSubmitting ? "bg-gray-400" : "bg-[#00A842] hover:bg-[#00A842]"
           } text-white font-bold py-3 px-8 rounded shadow-md uppercase tracking-wider flex items-center`}
         >
           {isSubmitting ? (

@@ -27,23 +27,27 @@ const ServiceCardSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section id="pricing" className="py-16 bg-gray-50 scroll-mt-[150px]">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold mb-4 text-center">サービスの種類</h2>
-        <p className="text-xl text-gray-600 mb-12 text-center">
+        <h2 className="text-4xl font-bold mb-4 text-center animate-fade-in-up">サービスの種類</h2>
+        <p className="text-xl text-gray-600 mb-12 text-center animate-fade-in-up delay-200">
           お客様のニーズに合わせた多様なサービスをご用意しております
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:w-[1100px] mx-auto md:gap-8">
           {services.map((service, index) => (
-            <div key={index} className="flex justify-center">
+            <div 
+              key={index} 
+              className="flex justify-center animate-fade-in-up"
+              style={{ animationDelay: `${0.3 + index * 0.2}s` }}
+            >
               <ServiceCard
                 title={service.title}
                 subtitle={service.subtitle}
                 vehicleType={service.vehicleType}
                 price={service.price}
                 discountPrice={service.discountPrice}
-                className="w-full max-w-[180px] md:max-w-[420px] h-[300px] md:h-[648px]"
+                className="w-full max-w-[180px] md:max-w-[420px] h-[300px] md:h-[648px] hover:scale-105 transition-transform duration-300"
               />
             </div>
           ))}

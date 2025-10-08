@@ -103,7 +103,7 @@ const FAQ: React.FC = () => {
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [faqData]);
 
   const toggleExpanded = (id: string) => {
     setExpandedItems((prev) => {

@@ -10,6 +10,7 @@ import { routing } from "@/i18n/routing";
 import LocaleWrapper from "@/components/LocaleWrapper";
 import InnerHeader from "@/components/Header/InnerHeader";
 import Footer from "@/components/Footer/Footer";
+import MenuNav from "@/components/menu-nav/MenuNav";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -59,6 +60,9 @@ export default async function LocaleLayout({
         <LocaleWrapper locale={locale}>
           <div className="h-[48px] md:h-[100px]">
             <InnerHeader />
+          </div>
+          <div className="md:block hidden">
+            <MenuNav />
           </div>
           {children}
           <Footer />

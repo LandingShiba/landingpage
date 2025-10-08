@@ -9,6 +9,8 @@ import Footer from "@/components/Footer/Footer";
 // import FAQ from "@/components/FAQ";
 // import Footer from "@/components/Footer/Footer";
 import HeroSection from "@/components/Hero/HeroSection";
+// import MenuNav from "@/components/menu-nav/MenuNav";
+// import ProblemsSection from "@/components/ProblemsSection/ProblemsSection";
 // import ProblemsSection from "@/components/ProblemsSection/ProblemsSection";
 import { ProcessFlowExample } from "@/components/ProcessFlow";
 import { ReasonsSection } from "@/components/ReasonsSection";
@@ -47,11 +49,13 @@ const dataCaseStudies = [
 export default function Home() {
   return (
     <main className="bg-white min-h-screen">
-      <HeroSection />
 
+      <HeroSection />
       <div className="max-w-7xl mx-auto px-4 md:py-24 py-0">
         <Voucher className="mx-auto" />
       </div>
+      
+      {/* 00A842 */}
 
       <ServiceCardSection />
 

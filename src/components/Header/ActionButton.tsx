@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface ActionButtonProps {
@@ -61,31 +62,34 @@ export default function ActionButton({ type }: ActionButtonProps) {
           className="absolute top-2 translate-x-[-50%]"
           style={{ left: "calc(50% + 0.5px)" }}
         >
-          <div className="box-border content-stretch flex flex-row gap-3.5 items-center justify-start p-0 relative">
-            {icon}
-            <div className="relative shrink-0 w-[135px]">
-              <div className="box-border content-stretch flex flex-col gap-1.5 items-start justify-start p-0 relative w-[135px]">
-                <div className="bg-[#ffffff] relative rounded-md shrink-0 w-full">
-                  <div className="flex flex-row items-center justify-center relative size-full">
-                    <div className="box-border content-stretch flex flex-row gap-2.5 items-center justify-center px-1.5 py-1 relative w-full">
-                      <div
-                        className={`font-['Inter:Bold',_sans-serif] font-bold leading-[0] not-italic relative shrink-0 text-[12px] text-left text-nowrap ${textColor}`}
-                      >
-                        <p className="block leading-[normal] whitespace-pre">
-                          24時間365日対応
-                        </p>
+          <Link href={'/'}>
+            <div className="box-border content-stretch flex flex-row gap-3.5 items-center justify-start p-0 relative">
+              {icon}
+              <div className="relative shrink-0 w-[135px]">
+                <div className="box-border content-stretch flex flex-col gap-1.5 items-start justify-start p-0 relative w-[135px]">
+                  <div className="bg-[#ffffff] relative rounded-md shrink-0 w-full">
+                    <div className="flex flex-row items-center justify-center relative size-full">
+                      <div className="box-border content-stretch flex flex-row gap-2.5 items-center justify-center px-1.5 py-1 relative w-full">
+                        <div
+                          className={`font-['Inter:Bold',_sans-serif] font-bold leading-[0] not-italic relative shrink-0 text-[12px] text-left text-nowrap ${textColor}`}
+                        >
+                          <p className="block leading-[normal] whitespace-pre">
+                            24時間365日対応
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div className="font-['Inter:Semi_Bold',_sans-serif] font-semibold leading-[0] not-italic relative shrink-0 text-[#ffffff] text-[14px] text-left text-nowrap">
-                  <p className="block leading-[normal] whitespace-pre">
-                    {text}
-                  </p>
+                  <div className="font-['Inter:Semi_Bold',_sans-serif] font-semibold leading-[0] not-italic relative shrink-0 text-[#ffffff] text-[14px] text-left text-nowrap">
+                    <p className="block leading-[normal] whitespace-pre">
+                      {text}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+
+          </Link>
         </div>
       </div>
     </div>
