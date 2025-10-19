@@ -28,6 +28,14 @@ export async function generateMetadata({
     title: t("title"),
     description: t("description"),
     keywords: t("keywords"),
+    alternates: {
+      canonical: "/",
+      languages: {
+        ja: "/ja",
+        vi: "/vi",
+        en: "/en",
+      },
+    },
   };
 }
 

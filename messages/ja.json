@@ -2,7 +2,7 @@
   "metadata": {
     "title": "SHIBAデリバリー | 安心・安全な宅配サービス",
     "description": "SHIBAデリバリーは、あなたの大切な荷物を安全・迅速にお届けします。最短即日配達、24時間365日対応。",
-    "keywords": "宅配サービス, 即日配達, 安全配送, デリバリー, SHIBA"
+    "keywords": "宅配サービス, 即日配達, 安全配送, デリバリー, SHIBA, 不用品回収, 粗大ゴミ回収, 不用品"
   },
   "navigation": {
     "home": "ホーム",
@@ -299,16 +299,16 @@
         }
       ]
     },
-    "companyLocation":{
-      "title":"会社所在地",
+    "companyLocation": {
+      "title": "会社所在地",
       "categories": [
         {
-          "title":"所在地",
-          "content":"〒271-0062 千葉県松戸市栄町6丁目473番地の12号"
+          "title": "所在地",
+          "content": "〒271-0062 千葉県松戸市栄町6丁目473番地の12号"
         },
         {
-          "title":"TEL",
-          "content":"0477-234-143"
+          "title": "TEL",
+          "content": "0477-234-143"
         }
       ]
     }
