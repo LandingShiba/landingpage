@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Logo() {
   return (
@@ -21,13 +22,15 @@ export default function Logo() {
           </p>
         </div>
         <div className="absolute h-[27.256px] left-[3.455px] top-0 w-[234.171px]">
-          <Image
-            alt="logo text"
-            src="/logo-text.svg"
-            width={234}
-            height={27}
-            className="block max-w-none size-full"
-          />
+          <Link href={'/'}>
+            <Image
+              alt="logo text"
+              src="/logo-text.svg"
+              width={234}
+              height={27}
+              className="block max-w-none size-full"
+            />
+          </Link>
         </div>
       </div>
     </div>

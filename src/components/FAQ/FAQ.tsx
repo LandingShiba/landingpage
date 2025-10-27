@@ -126,7 +126,7 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <div className="w-full bg-white py-5 md:py-20">
+    <div className="w-full bg-white py-5 md:py-20" id="faq">
       <div className="max-w-[1300px] mx-auto px-4">
         {/* Header Section */}
         <div
