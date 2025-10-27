@@ -80,8 +80,8 @@ const ReasonsSection: React.FC = () => {
               height={129}
               className="w-full h-full object-cover"
             />
-            <div className="absolute top-[2.9px] left-[8.8px] md:top-[15px] md:left-[31px]">
-              <span className="text-white font-bold text-[18.6px] md:text-[60px] font-['Montserrat'] leading-[1.219]">
+            <div className="absolute top-[2.9px] left-[8.8px] md:top-[15px] md:left-[20px]">
+              <span className="text-white font-bold text-[18.6px] md:text-[50px] font-['Montserrat'] leading-[1.219]">
                 {reason.id}
               </span>
             </div>

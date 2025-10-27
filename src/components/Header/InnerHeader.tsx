@@ -137,8 +137,25 @@ export default function InnerHeader() {
               </li>
               <li>
                 <Link
-                  href="/faq"
+                  href="/#faq"
                   className="block py-2 text-lg font-medium text-gray-800 hover:text-[#00A842]"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsSidebarOpen(false);
+                    const faqElement = document.getElementById('faq');
+                    if (faqElement) {
+                      faqElement.classList.add('scroll-highlight');
+                      
+                      window.scrollTo({
+                        top: faqElement.offsetTop - 100,
+                        behavior: 'smooth'
+                      });
+                      
+                      setTimeout(() => {
+                        faqElement.classList.remove('scroll-highlight');
+                      }, 2000);
+                    }
+                  }}
                 >
                   よくある質問
                 </Link>
@@ -161,8 +178,10 @@ export default function InnerHeader() {
               メールでお問い合わせ
             </Link>
             <Link
-              href="/line"
+              href="https://line.me/R/ti/p/0477234143"
               className="block w-full py-2 px-4 bg-[#06C755] text-white text-center rounded-lg font-medium hover:bg-[#05a748]"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               LINEでお問い合わせ
             </Link>
@@ -177,6 +196,34 @@ export default function InnerHeader() {
           onClick={toggleSidebar}
         ></div>
       )}
+    
+      {/* Add CSS for scroll highlight effect */}
+      <style jsx global>{`
+        @keyframes scrollHighlight {
+          0% {
+            box-shadow: 0 0 0 0 rgba(0, 168, 66, 0);
+          }
+          25% {
+            box-shadow: 0 0 0 15px rgba(0, 168, 66, 0.4);
+          }
+          50% {
+            box-shadow: 0 0 0 10px rgba(0, 168, 66, 0.2);
+          }
+          75% {
+            box-shadow: 0 0 0 15px rgba(0, 168, 66, 0.1);
+          }
+          100% {
+            box-shadow: 0 0 0 0 rgba(0, 168, 66, 0);
+          }
+        }
+        
+        .scroll-highlight {
+          animation: scrollHighlight 2s ease-out;
+          border-radius: 8px;
+          position: relative;
+          z-index: 1;
+        }
+      `}</style>
     </>
   );
 }

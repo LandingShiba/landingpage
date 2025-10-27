@@ -62,7 +62,11 @@ export default function ActionButton({ type }: ActionButtonProps) {
           className="absolute top-2 translate-x-[-50%]"
           style={{ left: "calc(50% + 0.5px)" }}
         >
-          <Link href={'/'}>
+          <Link 
+            href={isMail ? '/contact' : 'https://line.me/R/ti/p/0477234143'}
+            target={isMail ? undefined : "_blank"}
+            rel={isMail ? undefined : "noopener noreferrer"}
+          >
             <div className="box-border content-stretch flex flex-row gap-3.5 items-center justify-start p-0 relative">
               {icon}
               <div className="relative shrink-0 w-[135px]">
@@ -88,7 +92,6 @@ export default function ActionButton({ type }: ActionButtonProps) {
                 </div>
               </div>
             </div>
-
           </Link>
         </div>
       </div>

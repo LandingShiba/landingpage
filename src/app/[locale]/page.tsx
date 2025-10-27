@@ -3,15 +3,9 @@
 import CaseStudiesSection from "@/components/CaseStudiesSection/CaseStudiesSection";
 import ComparisonTable from "@/components/ComparisonTable/ComparisonTable";
 import FAQ from "@/components/FAQ";
-import Footer from "@/components/Footer/Footer";
-// import { CaseStudiesSection } from "@/components/CaseStudiesSection";
-// import ComparisonTable from "@/components/ComparisonTable/ComparisonTable";
-// import FAQ from "@/components/FAQ";
-// import Footer from "@/components/Footer/Footer";
+
 import HeroSection from "@/components/Hero/HeroSection";
-// import MenuNav from "@/components/menu-nav/MenuNav";
-// import ProblemsSection from "@/components/ProblemsSection/ProblemsSection";
-// import ProblemsSection from "@/components/ProblemsSection/ProblemsSection";
+
 import { ProcessFlowExample } from "@/components/ProcessFlow";
 import { ReasonsSection } from "@/components/ReasonsSection";
 import { RecoverableItems } from "@/components/Recoverable";
@@ -20,17 +14,6 @@ import { ServiceCardSection } from "@/components/service-card";
 import { ToTopButton } from "@/components/ToTopButton";
 import Voucher from "@/components/Voucher/Voucher";
 
-// import HeroSection from "@/components/Hero/HeroSection";
-// import ProblemsSection from "@/components/ProblemsSection/ProblemsSection";
-// import { ProcessFlowExample } from "@/components/ProcessFlow";
-// import { ReasonsSection } from "@/components/ReasonsSection";
-// import { RecoverableItems } from "@/components/Recoverable";
-// import { RecyclingSectionExample } from "@/components/RecyclingSection";
-// import { ReviewsSection } from "@/components/ReviewsSection";
-// import { ToTopButton } from "@/components/ToTopButton";
-// import Voucher from "@/components/Voucher/Voucher";
-// import MenuNav from "@/components/menu-nav/MenuNav";
-// import { ServiceCardSection } from "@/components/service-card";
 
 const dataCaseStudies = [
   {
