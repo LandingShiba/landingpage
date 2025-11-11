@@ -35,6 +35,16 @@ export default function Home() {
 
       <HeroSection />
       <div className="max-w-7xl mx-auto px-4 md:py-24 py-0">
+        <div className="prose max-w-none hidden">
+          <p>
+            エコ・グローバルは千葉県・東京都を中心に、引越しサービス、宅配サービス、不用品回収を専門とする総合業者です。
+            お客様の大切な荷物を安全・迅速にお届けし、不要になった家具・家電の回収から粗大ゴミの処分まで幅広く対応しております。
+          </p>
+          <p>
+            即日対応可能で、24時間365日お電話を受け付けております。無料見積もりも実施しておりますので、
+            お気軽にご相談ください。千葉市、船橋市、松戸市、市川市をはじめ、東京23区全域でサービスを提供しています。
+          </p>
+        </div>
         <Voucher className="mx-auto" />
       </div>
       
