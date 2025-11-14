@@ -4,16 +4,16 @@ import React from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "不用品回収「エコグローバル」の作業事例 | エコグローバル",
+  title: "不用品回収「エコ・グローバル」の作業事例 | エコ・グローバル",
   description:
-    "エコグローバルの実際の作業事例をご紹介します。遺品整理、引越し、不用品回収など、様々なケースに対応した実績をご覧いただけます。",
-  keywords: "不用品回収, 作業事例, エコグローバル, 遺品整理, 引越し, 片付け",
+    "エコ・グローバルの実際の作業事例をご紹介します。遺品整理、引越し、不用品回収など、様々なケースに対応した実績をご覧いただけます。",
+  keywords: "不用品回収, 作業事例, エコ・グローバル, 遺品整理, 引越し, 片付け",
   openGraph: {
-    title: "不用品回収「エコグローバル」の作業事例",
+    title: "不用品回収「エコ・グローバル」の作業事例",
     description:
-      "エコグローバルの実際の作業事例をご紹介します。遺品整理、引越し、不用品回収など、様々なケースに対応した実績をご覧いただけます。",
+      "エコ・グローバルの実際の作業事例をご紹介します。遺品整理、引越し、不用品回収など、様々なケースに対応した実績をご覧いただけます。",
     // url: "https://ecoglobal.jp/work",
-    siteName: "不用品回収エコグローバル",
+    siteName: "不用品回収エコ・グローバル",
     locale: "ja_JP",
     type: "website",
   },
@@ -60,7 +60,7 @@ const dataCaseStudies = [
 const Work = () => {
   return (
     <div className="bg-white">
-      <BannerSection title="不用品回収「エコグローバル」の作業事例" />
+      <BannerSection title="不用品回収「エコ・グローバル」の作業事例" />
 
       <CaseStudiesSection isWorkPage={true} dataCaseStudies={dataCaseStudies} />
     </div>

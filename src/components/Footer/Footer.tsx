@@ -16,7 +16,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
             {/* Logo and Company Name */}
             <div className="flex flex-col gap-4">
               <h2 className="hidden md:block text-white font-bold text-4xl leading-tight font-montserrat text-center lg:text-left">
-                不用品回収エコグローバル
+                不用品回収エコ・グローバル
               </h2>
               <div className="flex justify-center lg:justify-start">
                 <div className="w-[351px] h-[135px] hidden md:block">
@@ -123,7 +123,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
         {/* Copyright */}
         <div className="mt-10 text-center">
           <p className="text-white text-xl font-medium">
-            Copyright © 不用品回収エコグローバル All Rights Reserved.
+            Copyright © 不用品回収エコ・グローバル All Rights Reserved.
           </p>
         </div>
       </div>

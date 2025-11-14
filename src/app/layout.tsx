@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: "https://ecoglobal-fuyouhin.co.jp/",
-    siteName: "不用品回収エコグローバル",
+    siteName: "不用品回収エコ・グローバル",
     locale: "ja_JP",
     type: "website",
   },
@@ -53,7 +53,7 @@ export default function RootLayout({ children }: Props) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "不用品回収エコグローバル",
+              name: "不用品回収エコ・グローバル",
               url: "https://ecoglobal-fuyouhin.co.jp/",
               telephone: "+81-477-234-143",
               address: {

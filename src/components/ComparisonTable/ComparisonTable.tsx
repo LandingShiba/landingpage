@@ -81,7 +81,7 @@ export default function ComparisonTable() {
             こんなに違う！
           </h1>
           <h2 className="text-2xl md:text-3xl text-[26px] md:text-[70px] font-bold text-black font-[Montserrat]">
-            エコグローバルと他社のサービス比較
+            エコ・グローバルと他社のサービス比較
           </h2>
         </div>
 
@@ -90,7 +90,7 @@ export default function ComparisonTable() {
           {/* <div className="flex justify-center mb-4 relative">
             <div className="absolute top-0 left-0 right-0 h-[2px] bg-[#00a842]"></div>
             <div className="bg-[#00a842] text-white font-bold text-base py-2 px-6 text-center border-2 border-[#00a842] font-[Montserrat] rounded-t-md w-[120px] z-10">
-              エコグローバル
+              エコ・グローバル
             </div>
           </div> */}
 
@@ -125,7 +125,7 @@ export default function ComparisonTable() {
                     <div className="grid grid-cols-3 gap-3">
                       <div className="col-span-1 flex flex-col">
                         <div className="bg-[#00a842] text-white py-2 px-1 text-xs font-bold text-center mb-2 rounded-sm">
-                          エコグローバル
+                          エコ・グローバル
                         </div>
                         <div className="bg-white border border-[#00a842] rounded-sm p-2 flex-1 flex items-center justify-center">
                           <p className="text-[#00a842] text-xs font-bold text-center whitespace-pre-line">
@@ -166,10 +166,10 @@ export default function ComparisonTable() {
         {/* Desktop Comparison Table */}
         <div className="hidden md:block overflow-x-auto">
           <div className="relative">
-            {/* Elevated Header for エコグローバル - Desktop */}
+            {/* Elevated Header for エコ・グローバル - Desktop */}
             <div className="absolute left-[260px] -top-4.5 w-[370px] z-10">
               <div className="bg-[#00a842] text-white font-bold text-3xl py-6 px-6 text-center border-2 border-[#00a842] font-[Montserrat]">
-                エコグローバル
+                エコ・グローバル
               </div>
             </div>
 

@@ -23,7 +23,7 @@ export default function HeroSection() {
           <div className="flex flex-col gap-[11px]">
             <div className="flex items-end gap-4">
               <h2 className="text-[60px] font-bold text-[#3C3C3C] text-right leading-tight">
-                千葉の
+                東京・千葉の
               </h2>
               <h1 className="text-[100px] font-black text-[#155E0B] text-right leading-[1.16]">
                 不用品回収
@@ -41,7 +41,7 @@ export default function HeroSection() {
 
           <div className="flex items-end gap-4 mt-8">
             <h1 className="text-[78px] font-black text-[#006E27] leading-[1.45]">
-              エコグローバル
+              エコ・グローバル
             </h1>
             <h2 className="text-[60px] font-bold text-[#3C3C3C] leading-tight">
               におまかせ！
@@ -68,7 +68,7 @@ export default function HeroSection() {
           >
             <Image
               src="/images/banner/banner-character.png"
-              alt="Shiba character"
+              alt="東京・千葉の引越し・不用品回収サービス - エコ・グローバル"
               fill
               style={{ objectFit: "contain" }}
               priority
@@ -121,7 +121,7 @@ export default function HeroSection() {
           {/* Sub heading */}
           <div className="flex items-end gap-[6px] mt-[6px]">
             <h1 className="max-[321px]:text-[25px] text-[30px] font-black text-[#02662A] leading-[1.45]">
-              エコグローバル
+              エコ・グローバル
             </h1>
             <h2 className="max-[321px]:text-[16px] text-[20px] font-bold text-[#3C3C3C] leading-[1.45]">
               におまかせ！
