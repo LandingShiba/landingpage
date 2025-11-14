@@ -207,7 +207,7 @@ export default function Company(): React.ReactElement {
           {/* Section Company Location */}
           <div className="mt-[30px]">
             <CategorySection
-              headerTitle={t("company.companyOverview.title")}
+              headerTitle={t("company.companyLocation.title")}
               backgroundColor="#FFFFFF"
               headerTextColor="#000000"
               backgroundLabelColor="#FFFFFF"
