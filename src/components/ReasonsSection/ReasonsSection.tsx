@@ -169,7 +169,7 @@ const ReasonsSection: React.FC = () => {
         <div
           ref={decorativeRef}
           className={cn(
-            "hidden md:block absolute top-[92px] left-[185px] md:left-[300px] w-[374px] h-[481px] transition-all duration-1000 ease-out",
+            "hidden md:block absolute top-[92px] left-[185px] md:left-[210px] w-[374px] h-[481px] transition-all duration-1000 ease-out",
             decorativeInView
               ? "opacity-100 transform translate-x-0 scale-100"
               : "opacity-0 transform translate-x-[-50px] scale-95"
@@ -177,7 +177,7 @@ const ReasonsSection: React.FC = () => {
         >
           <Image
             src="/images/recycling/giang-giai.png"
-            alt="Background decoration"
+            alt="エコ・グローバルを選ぶ理由を紹介するイメージ"
             width={374}
             height={481}
             className="w-full h-full object-cover"
@@ -364,7 +364,7 @@ const ReasonsSection: React.FC = () => {
                     <div className="text-[#ea2227] font-bold text-[70px] leading-tight font-['Montserrat']">
                       100%
                     </div>
-                    <h3 className="text-[#539cd1] font-bold text-[40px] leading-tight text-center font-['Montserrat']">
+                    <h3 className="text-[#00a842] font-bold text-[40px] leading-tight text-center font-['Montserrat']">
                       自社スタッフ
                     </h3>
                     <p className="text-black font-medium text-[30px] leading-normal text-left font-['Montserrat'] max-w-[585px]">
