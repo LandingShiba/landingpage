@@ -1,6 +1,6 @@
 name: CI-CD Docker
 
-'on':
+on:
   push:
     branches:
       - main
@@ -11,7 +11,6 @@ env:
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -35,7 +34,6 @@ jobs:
   deploy:
     needs: build-and-push
     runs-on: ubuntu-latest
-
     steps:
       - name: Deploy to VPS via SSH
         env:
@@ -45,16 +43,16 @@ jobs:
           SSH_PORT: ${{ secrets.SSH_PORT }}
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
           DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
-          run: |
-            mkdir -p ~/.ssh
-            echo "$SSH_KEY" > ~/.ssh/id_rsa
-            chmod 600 ~/.ssh/id_rsa
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
 
-            ssh -p "$SSH_PORT" -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "echo Connected as \$(whoami), at \$(pwd)"
+          ssh -p "$SSH_PORT" -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "echo Connected as \$(whoami), at \$(pwd)"
 
-            ssh -p "$SSH_PORT" -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" << 'EOF'
-              cd /root/landingpage
-              docker login -u "$DOCKERHUB_USERNAME" -p "$DOCKERHUB_TOKEN"
-              chmod +x ./update-app.sh
-              ./update-app.sh
-            EOF
+          ssh -p "$SSH_PORT" -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" << 'EOF'
+            cd /root/landingpage
+            docker login -u "$DOCKERHUB_USERNAME" -p "$DOCKERHUB_TOKEN"
+            chmod +x ./update-app.sh
+            ./update-app.sh
+          EOF
