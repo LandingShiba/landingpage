@@ -5,7 +5,21 @@ import { appendToSheet } from '@/lib/googleSheets';
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
 
-async function sendTelegramNotification(data: any) {
+interface ContactFormData {
+  name: string;
+  postalCode1: string;
+  postalCode2: string;
+  address: string;
+  phone: string;
+  appointmentDates: string[];
+  items: string;
+  workDate: string;
+  packages: Record<string, boolean>;
+  email?: string;
+  other?: string;
+}
+
+async function sendTelegramNotification(data: ContactFormData) {
   if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
     console.warn('Telegram bot credentials not configured');
     return;
