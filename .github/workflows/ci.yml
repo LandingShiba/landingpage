@@ -14,9 +14,17 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'yarn'
 
-      - run: npm ci
-      - run: npm run lint
-      - run: npm run type-check
-      - run: npm run build
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Lint
+        run: yarn lint
+
+      - name: Type check
+        run: yarn type-check
+
+      - name: Build
+        run: yarn build
 
