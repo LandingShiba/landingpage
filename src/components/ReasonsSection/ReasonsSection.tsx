@@ -169,7 +169,7 @@ const ReasonsSection: React.FC = () => {
         <div
           ref={decorativeRef}
           className={cn(
-            "hidden md:block absolute top-[92px] left-[185px] md:left-[210px] w-[374px] h-[481px] transition-all duration-1000 ease-out",
+            "hidden md:block absolute top-[92px] left-[185px] md:left-[645px] w-[374px] h-[481px] transition-all duration-1000 ease-out",
             decorativeInView
               ? "opacity-100 transform translate-x-0 scale-100"
               : "opacity-0 transform translate-x-[-50px] scale-95"
