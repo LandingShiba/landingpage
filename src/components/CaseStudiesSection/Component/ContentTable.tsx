@@ -153,7 +153,7 @@ const ContentTable = ({
           <div className="relative">
             <div className="w-[360px] max-[376]:w-[325px] max-[321]:w-[280px] md:w-[380px] h-[259px] max-[376]:h-[225px] max-[321]:h-[195px] sm:h-[255px] md:h-[285px] bg-gray-200 rounded-xl border-[8px] border-[#d2d2d2] overflow-hidden shadow-2xl">
               <Image
-                src="/images/caseStudies/before.png"
+                src="/images/caseStudies/case1-before.jpg"
                 alt="S様邸 - Before cleanup"
                 className="w-full h-full object-cover border-2 border-[#d2d2d2]"
                 width={380}
@@ -192,7 +192,7 @@ const ContentTable = ({
           <div className="relative">
             <div className="w-[360px] max-[376]:w-[325px] max-[321]:w-[280px] md:w-[380px] h-[259px] max-[376]:h-[225px] max-[321]:h-[195px] sm:h-[255px] md:h-[285px] bg-[#00A842] rounded-2xl border-[8px] border-[#00A842] overflow-hidden shadow-2xl">
               <Image
-                src="/images/caseStudies/after.png"
+                src="/images/caseStudies/case1-after.jpg"
                 alt="S様邸 - After cleanup"
                 className="w-full h-full object-cover"
                 width={380}
