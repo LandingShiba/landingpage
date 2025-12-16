@@ -97,22 +97,22 @@ export default function HeroSection() {
         </div>
 
         {/* TEXT */}
-        <div className="absolute left-[57px] top-[32px] z-20">
+        <div className="absolute left-[20px] top-[32px] z-20 max-w-[calc(100%-40px)]">
           {/* Tiêu đề */}
           <div className="flex flex-col gap-[4px]">
             <div className="flex items-end gap-[6px]">
-              <h2 className="max-[321px]:text-[16px] text-[20px] font-bold text-[#3C3C3C] text-right leading-[1.45]">
+              <h2 className="max-[321px]:text-[14px] text-[18px] font-bold text-[#3C3C3C] text-right leading-[1.45] whitespace-nowrap">
                 千葉の
               </h2>
-              <h1 className="max-[321px]:text-[25px] text-[36px] font-black text-[#134374] text-right leading-[1.2]">
+              <h1 className="max-[321px]:text-[22px] text-[32px] font-black text-[#134374] text-right leading-[1.2] whitespace-nowrap">
                 不用品回収
               </h1>
             </div>
             <div className="flex items-end gap-[6px]">
-              <h1 className="max-[321px]:text-[25px] text-[36px] font-black text-[#134374] text-right leading-[1.2]">
+              <h1 className="max-[321px]:text-[22px] text-[32px] font-black text-[#134374] text-right leading-[1.2] whitespace-nowrap">
                 粗大ゴミ処分
               </h1>
-              <h2 className="max-[321px]:text-[16px] text-[20px] font-bold text-[#3C3C3C] text-left leading-[1.45]">
+              <h2 className="max-[321px]:text-[14px] text-[18px] font-bold text-[#3C3C3C] text-left leading-[1.45] whitespace-nowrap">
                 なら
               </h2>
             </div>
@@ -120,56 +120,44 @@ export default function HeroSection() {
 
           {/* Sub heading */}
           <div className="flex items-end gap-[6px] mt-[6px]">
-            <h1 className="max-[321px]:text-[25px] text-[30px] font-black text-[#02662A] leading-[1.45]">
+            <h1 className="max-[321px]:text-[22px] text-[28px] font-black text-[#02662A] leading-[1.45] whitespace-nowrap">
               エコ・グローバル
             </h1>
-            <h2 className="max-[321px]:text-[16px] text-[20px] font-bold text-[#3C3C3C] leading-[1.45]">
+            <h2 className="max-[321px]:text-[14px] text-[18px] font-bold text-[#3C3C3C] leading-[1.45] whitespace-nowrap">
               におまかせ！
             </h2>
           </div>
 
           {/* Service info */}
-          <div className="flex items-center gap-[12px] mt-[6px]">
-            <span className="max-[321px]:text-[14px] text-[18px] font-bold text-[#222222]">
+          <div className="flex items-center gap-[8px] mt-[6px]">
+            <span className="max-[321px]:text-[12px] text-[16px] font-bold text-[#222222]">
               相談
             </span>
-            <div className="w-0 h-[30px] border-l-[2px] border-[#02662A]" />
-            <span className="max-[321px]:text-[14px] text-[18px] font-bold text-[#222222]">
+            <div className="w-0 h-[24px] border-l-[2px] border-[#02662A]" />
+            <span className="max-[321px]:text-[12px] text-[16px] font-bold text-[#222222]">
               お見積り
             </span>
-            <div className="w-0 h-[30px] border-l-[2px] border-[#02662A]" />
-            <span className="max-[321px]:text-[14px] text-[18px] font-bold text-[#222222]">
+            <div className="w-0 h-[24px] border-l-[2px] border-[#02662A]" />
+            <span className="max-[321px]:text-[12px] text-[16px] font-bold text-[#222222]">
               出張費
             </span>
           </div>
         </div>
 
-        <div className="absolute left-1/2 bottom-0 max-[321px]:bottom-[-10px] max-[321px]:left-[175px] max-[321px]:translate-x-[10px] -translate-x-1/2 translate-y-[14px] max-[380]:pr-[95px] pr-[120px] z-40 flex gap-2 pointer-events-none">
+        <div className="absolute left-1/2 bottom-0 max-[321px]:bottom-[-10px] max-[321px]:left-[175px] max-[321px]:translate-x-[10px] -translate-x-1/2 translate-y-[14px] max-[380px]:pr-[95px] pr-[120px] z-40 flex gap-2 pointer-events-none">
           {/* Medal 1 */}
-          <div className="relative   w-[79px] h-[74px]">
+          <div className="relative w-[79px] h-[74px]">
             <MedalsSection text="最安値に挑戦" />
           </div>
           {/* Medal 2 */}
           <div className="relative w-[79px] h-[74px]">
-            <MedalsSection text="最安値に挑戦" />
+            <MedalsSection text="無料見積もり" />
           </div>
           {/* Medal 3 */}
           <div className="relative w-[79px] h-[74px]">
-            <MedalsSection text="最安値に挑戦" />
+            <MedalsSection text="迅速丁寧" />
           </div>
         </div>
-
-        {/* <div className="absolute -bottom-[65px] right-0 translate-x-[20%] z-30 pointer-events-none">
-          <div className="relative w-[200px] h-[200px]">
-            <Image
-              src="/images/macos/macos_3.png"
-              alt="Shiba character"
-              fill
-              className="object-contain"
-              priority
-            />
-          </div>
-        </div> */}
 
         <div className="absolute bottom-[-65px] max-[321px]:bottom-[-60px] max-[321px]:-right-2 right-0 translate-x-[clamp(12px,5vw,28px)] z-30 pointer-events-none">
           <div className="relative w-[clamp(120px,38vw,200px)] h-[clamp(150px,48vw,220px)]">

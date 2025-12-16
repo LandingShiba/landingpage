@@ -14,6 +14,24 @@ export default function InnerHeader() {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
+  const handleScrollToSection = (sectionId: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    setIsSidebarOpen(false);
+    const targetElement = document.getElementById(sectionId);
+    if (targetElement) {
+      targetElement.classList.add('scroll-highlight');
+
+      window.scrollTo({
+        top: targetElement.offsetTop - 100,
+        behavior: 'smooth'
+      });
+
+      setTimeout(() => {
+        targetElement.classList.remove('scroll-highlight');
+      }, 2000);
+    }
+  };
+
   return (
     <>
       {/* Desktop Header - Hidden on mobile */}
@@ -73,9 +91,8 @@ export default function InnerHeader() {
 
       {/* Mobile Sidebar */}
       <div
-        className={`fixed top-0 right-0 h-full w-[250px] bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
-          isSidebarOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed top-0 right-0 h-full w-[250px] bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${isSidebarOpen ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         <div className="p-4">
           <div className="flex justify-between items-center mb-8">
@@ -121,15 +138,25 @@ export default function InnerHeader() {
               </li>
               <li>
                 <Link
-                  href="/pricing"
+                  href="/#pricing"
                   className="block py-2 text-lg font-medium text-gray-800 hover:text-[#00A842]"
+                  onClick={handleScrollToSection('pricing')}
                 >
                   料金
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/examples"
+                  href="/testimonial"
+                  className="block py-2 text-lg font-medium text-gray-800 hover:text-[#00A842]"
+                  onClick={handleScrollToSection('testimonials')}
+                >
+                  お客様の声
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/case-study"
                   className="block py-2 text-lg font-medium text-gray-800 hover:text-[#00A842]"
                 >
                   事例
@@ -139,23 +166,7 @@ export default function InnerHeader() {
                 <Link
                   href="/#faq"
                   className="block py-2 text-lg font-medium text-gray-800 hover:text-[#00A842]"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setIsSidebarOpen(false);
-                    const faqElement = document.getElementById('faq');
-                    if (faqElement) {
-                      faqElement.classList.add('scroll-highlight');
-                      
-                      window.scrollTo({
-                        top: faqElement.offsetTop - 100,
-                        behavior: 'smooth'
-                      });
-                      
-                      setTimeout(() => {
-                        faqElement.classList.remove('scroll-highlight');
-                      }, 2000);
-                    }
-                  }}
+                  onClick={handleScrollToSection('faq')}
                 >
                   よくある質問
                 </Link>
@@ -196,7 +207,7 @@ export default function InnerHeader() {
           onClick={toggleSidebar}
         ></div>
       )}
-    
+
       {/* Add CSS for scroll highlight effect */}
       <style jsx global>{`
         @keyframes scrollHighlight {

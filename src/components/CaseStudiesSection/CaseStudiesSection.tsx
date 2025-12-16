@@ -74,19 +74,17 @@ const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({
   }, []);
   return (
     <section
-      className={`${
-        isWorkPage ? "bg-white" : "bg-[#E9FFD6]"
-      } py-4 md:py-16 px-4 relative overflow-hidden min-h-screen`}
+      className={`${isWorkPage ? "bg-white" : "bg-[#E9FFD6]"
+        } py-4 md:py-16 px-4 relative overflow-hidden min-h-screen`}
     >
       {/* Main Title */}
       <div
         ref={titleRef}
         data-element-id="title"
-        className={`text-center mb-4 md:mb-12 transition-all duration-1000 ease-out ${
-          visibleElements.has("title")
-            ? "opacity-100 translate-y-0"
-            : "opacity-0 translate-y-8"
-        }`}
+        className={`text-center mb-4 md:mb-12 transition-all duration-1000 ease-out ${visibleElements.has("title")
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-8"
+          }`}
       >
         <h2
           className="text-[26px] md:text-7xl font-bold text-[#202020]"
@@ -96,44 +94,21 @@ const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({
         </h2>
       </div>
 
-      {/* Mascot character at top right - positioned absolutely */}
-      <div
-        ref={mascotRef}
-        data-element-id="mascot"
-        className={`${
-          isWorkPage ? "hidden" : ""
-        } absolute top-10 right-5 md:right-100 w-[73px] md:w-[270px] h-[100px] md:h-[366px] z-5 transition-all duration-1000 ease-out ${
-          visibleElements.has("mascot")
-            ? "opacity-100 translate-x-0"
-            : "opacity-0 translate-x-12"
-        }`}
-      >
-        <Image
-          src="/images/macos/macos_2.png"
-          alt="Shiba mascot character"
-          className="w-full h-full object-contain drop-shadow-xl animate-float"
-          width={270}
-          height={366}
-        />
-      </div>
-
       <div className=" md:max-w-[1160px] mx-auto relative z-10">
         {/* Decorative packages in a horizontal row */}
         <div
           ref={packagesRef}
           data-element-id="packages"
-          className={` ${
-            isWorkPage ? "hidden" : ""
-          } flex justify-start ml-8 md:ml-0 gap-2 md:gap-6 mb-2 md:mb-14 overflow-x-auto transition-all duration-800 ease-out ${
-            visibleElements.has("packages")
+          className={` ${isWorkPage ? "hidden" : ""
+            } flex items-end justify-start ml-8 md:ml-0 gap-2 md:gap-4 lg:gap-6 mb-2  lg:mb-8 overflow-x-auto transition-all duration-800 ease-out ${visibleElements.has("packages")
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-12"
-          }`}
+            }`}
         >
           {[...Array(5)].map((_, index) => (
             <div
               key={index}
-              className="w-[40px] h-[40px] max-[321]:w-[30px] max-[321]:h-[30px] sm:w-[120px] sm:h-[100px] md:w-[146px] md:h-[120px] flex-shrink-0"
+              className="w-[40px] h-[40px] max-[321]:w-[30px] max-[321]:h-[30px] sm:w-[100px] sm:h-[83px] md:w-[100px] md:h-[100px] lg:w-[146px] lg:h-[100px] flex-shrink-0"
             >
               <Image
                 src="/images/caseStudies/packages/package-icon.png"
@@ -145,6 +120,25 @@ const CaseStudiesSection: React.FC<CaseStudiesSectionProps> = ({
             </div>
           ))}
         </div>
+
+        {/* Mascot character - absolute positioned */}
+        {!isWorkPage && (
+          <div
+            ref={mascotRef}
+            data-element-id="mascot"
+            className={`absolute top-[-25px] right-[20px] md:top-[-40px] md:right-[30px] lg:top-[-100px] lg:right-[40px] w-[60px] md:w-[120px] lg:w-[200px] h-[81px] md:h-[162px] lg:h-[270px] z-0 transition-all duration-1000 ease-out ${visibleElements.has("mascot")
+              ? "opacity-100 translate-x-0"
+              : "opacity-0 translate-x-12"
+              }`}
+          >
+            <Image
+              src="/images/macos/macos_2.png"
+              alt="Shiba mascot character"
+              className="w-full h-full object-contain drop-shadow-xl animate-float"
+              fill
+            />
+          </div>
+        )}
 
         {/* Content Table */}
         {dataCaseStudies.length > 0 &&
