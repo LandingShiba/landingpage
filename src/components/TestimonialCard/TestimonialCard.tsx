@@ -15,7 +15,7 @@ const TestimonialCard: React.FC = () => {
             serviceRating: 5,
             overallRating: 5,
             title: "同居生活を安心して始められそうです",
-            testimonialText: "青葉区の自宅で高齢の母と同居することになり、リビングを介護用に整えるため長年使っていたソファとマッサージチェアを処分しました。大きくて重い家具だったのでどうしようかと思っていましたが、ネコの手さんが運び出しまでしてくださり安心しました。搬出の際は壁や床に傷がつかないようしっかり配慮もしてくれて、安心して見ていられました。運び出しが終わると母が使う予定の部屋がすっかり広くなり、介護用ベッドを無理なく置けるようになりました。本人もこれなら動きやすいと喜んでおり、これからの生活に向けて一歩踏み出せた気持ちです。おかげで同居生活を安心して始められそうです。",
+            testimonialText: "青葉区の自宅で高齢の母と同居することになり、リビングを介護用に整えるため長年使っていたソファとマッサージチェアを処分しました。大きくて重い家具だったのでどうしようかと思っていましたが、エコ・グローバルさんが運び出しまでしてくださり安心しました。搬出の際は壁や床に傷がつかないようしっかり配慮もしてくれて、安心して見ていられました。運び出しが終わると母が使う予定の部屋がすっかり広くなり、介護用ベッドを無理なく置けるようになりました。本人もこれなら動きやすいと喜んでおり、これからの生活に向けて一歩踏み出せた気持ちです。おかげで同居生活を安心して始められそうです。",
             highlightedWords: ['青葉区', '安心', '介護用ベッド', '同居生活']
         },
         {
@@ -95,12 +95,12 @@ const TestimonialCard: React.FC = () => {
     };
 
     return (
-        <div style={{ padding: '40px 20px', background: '#14b8a6', minHeight: '100vh' }}>
+        <div style={{ padding: '40px 20px', background: '#f4f4f4', minHeight: '100vh' }}>
             <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 10px', textAlign: 'center' }}>
-                <span style={{ color: 'white', display: 'block', marginBottom: '8px', fontSize: '1.7rem', fontWeight: '600', letterSpacing: '0.05em', textDecoration: 'underline', textUnderlineOffset: '8px' }}>
+                <span style={{ color: 'black', display: 'block', marginBottom: '8px', fontSize: '1.7rem', fontWeight: '600', letterSpacing: '0.05em', textDecoration: 'underline', textUnderlineOffset: '8px' }}>
                     お客様から寄せられた
                 </span>
-                <h1 style={{ color: 'white', marginBottom: '48px', fontSize: '3rem', fontWeight: 'bold', letterSpacing: '0.05em', lineHeight: '1.4' }}>
+                <h1 style={{ color: 'black', marginBottom: '48px', fontSize: '3rem', fontWeight: 'bold', letterSpacing: '0.05em', lineHeight: '1.4' }}>
                     喜びの声をご紹介
                 </h1>
 
