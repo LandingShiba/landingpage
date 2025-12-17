@@ -27,7 +27,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             src="/images/service-card/service-card-bg.png"
             alt={title}
             fill
-            className="object-cover"
+            className="object-contain"
           />
         </div>
 
