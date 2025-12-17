@@ -34,6 +34,7 @@ export default function Home() {
     <main className="bg-white min-h-screen">
 
       <HeroSection />
+      
       <div className="max-w-7xl mx-auto px-4 md:py-24 py-0">
         <div className="prose max-w-none hidden">
           <p>

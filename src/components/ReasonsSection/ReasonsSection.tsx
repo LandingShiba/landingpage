@@ -69,10 +69,10 @@ const ReasonsSection: React.FC = () => {
 
   const ReasonCard: React.FC<{ reason: ReasonCard }> = ({ reason }) => {
     return (
-      <div className="bg-white rounded-[8.3px] md:rounded-[20px] shadow-[0px_3.32px_1.66px_0px_rgba(0,0,0,0.15)] md:shadow-[0px_8px_4px_0px_rgba(0,0,0,0.15)] relative overflow-hidden w-[172px] md:w-[420px]">
+      <div className="bg-white rounded-[8.3px] md:rounded-[10px] lg:rounded-[18px] xl:rounded-[20px] shadow-[0px_3.32px_1.66px_0px_rgba(0,0,0,0.15)] md:shadow-[0px_4px_2px_0px_rgba(0,0,0,0.15)] lg:shadow-[0px_6px_3px_0px_rgba(0,0,0,0.15)] xl:shadow-[0px_8px_4px_0px_rgba(0,0,0,0.15)] relative overflow-hidden w-[172px] md:w-[210px] lg:w-[380px] xl:w-[420px]">
         {/* Number badge */}
         <div className="absolute top-0 left-0 z-10">
-          <div className="w-[51.2px] h-[53.5px] md:w-[123.5px] md:h-[129px] relative">
+          <div className="w-[51.2px] h-[53.5px] md:w-[62px] md:h-[65px] lg:w-[112px] lg:h-[117px] xl:w-[123.5px] xl:h-[129px] relative">
             <Image
               src="/images/reason/Rectangle_67.png"
               alt="Number badge background"
@@ -80,8 +80,8 @@ const ReasonsSection: React.FC = () => {
               height={129}
               className="w-full h-full object-cover"
             />
-            <div className="absolute top-[2.9px] left-[8.8px] md:top-[15px] md:left-[20px]">
-              <span className="text-white font-bold text-[18.6px] md:text-[50px] font-['Montserrat'] leading-[1.219]">
+            <div className="absolute top-[2.9px] left-[8.8px] md:top-[7.5px] md:left-[10px] lg:top-[13.5px] lg:left-[18px] xl:top-[15px] xl:left-[20px]">
+              <span className="text-white font-bold text-[18.6px] md:text-[25px] lg:text-[45px] xl:text-[50px] font-['Montserrat'] leading-[1.219]">
                 {reason.id}
               </span>
             </div>
@@ -91,7 +91,7 @@ const ReasonsSection: React.FC = () => {
         {/* Card content */}
         <div className="flex flex-col">
           {/* Image section */}
-          <div className="h-[106px] md:h-[259px] w-full rounded-t-[8.3px] md:rounded-t-[20px]">
+          <div className="h-[106px] md:h-[130px] lg:h-[235px] xl:h-[259px] w-full rounded-t-[8.3px] md:rounded-t-[10px] lg:rounded-t-[18px] xl:rounded-t-[20px]">
             <Image
               src={reason.image}
               alt={reason.imageAlt}
@@ -102,15 +102,15 @@ const ReasonsSection: React.FC = () => {
           </div>
 
           {/* Content section */}
-          <div className="flex flex-col gap-[12px] md:gap-[5px] p-[8px] md:p-5 md:pt-[30px]">
+          <div className="flex flex-col gap-[12px] md:gap-[3px] lg:gap-[5px] p-[8px] md:p-[10px] md:pt-[15px] lg:p-[18px] lg:pt-[25px] xl:p-5 xl:pt-[30px]">
             {/* Title */}
-            <h3 className="text-[#00A842] font-bold text-[16px] md:text-[40px] leading-[1.219] text-center font-['Montserrat'] whitespace-pre-line">
+            <h3 className="text-[#00A842] font-bold text-[16px] md:text-[20px] lg:text-[36px] xl:text-[40px] leading-[1.219] text-center font-['Montserrat'] whitespace-pre-line">
               {reason.title}
             </h3>
 
             {/* Description */}
             <div className="flex items-center justify-center px-[8px] pb-[8px] md:pb-0 md:px-0">
-              <p className="text-black font-medium text-[12px] md:text-[30px] leading-[1.219] text-center font-['Montserrat']">
+              <p className="text-black font-medium text-[12px] md:text-[15px] lg:text-[27px] xl:text-[30px] leading-[1.219] text-center font-['Montserrat']">
                 {reason.description}
               </p>
             </div>
@@ -125,7 +125,7 @@ const ReasonsSection: React.FC = () => {
       {/* Full-width banner section at the top */}
       <div className="w-full relative">
         {/* Background image */}
-        <div className="h-[91px] md:h-[200px] w-full">
+        <div className="h-[91px] md:h-[100px] lg:h-[180px] xl:h-[200px] w-full">
           <Image
             src="/images/reason/BG.png"
             alt="Top banner background"
@@ -139,10 +139,10 @@ const ReasonsSection: React.FC = () => {
         <div className="absolute inset-0 flex items-center justify-center mb-[15px] md:hidden">
           <div className="flex items-center justify-center transform ">
             <div className="flex flex-col items-center">
-              <span className="text-white font-bold text-[26px] font-['Montserrat'] leading-[1.219]">
+              <span className="text-white font-bold text-[26px] md:text-[30px] lg:text-[54px] xl:text-[60px] font-['Montserrat'] leading-[1.219]">
                 不用品回収エコ・グローバル
               </span>
-              <span className="text-[#222222] font-bold text-[26px] font-['Montserrat'] leading-[1.219]">
+              <span className="text-[#222222] font-bold text-[26px] md:text-[30px] lg:text-[54px] xl:text-[60px] font-['Montserrat'] leading-[1.219]">
                 にお任せください！？
               </span>
             </div>
@@ -152,10 +152,10 @@ const ReasonsSection: React.FC = () => {
         <div className="absolute inset-0  items-center justify-center mb-[15px] hidden md:flex">
           <div className="flex items-center justify-center transform ">
             <div className="text-center mb-8">
-              <span className="text-white font-bold text-[60px] font-['Montserrat'] leading-[1.219]">
+              <span className="text-white font-bold text-[30px] md:text-[30px] lg:text-[54px] xl:text-[60px] font-['Montserrat'] leading-[1.219]">
                 不用品回収アース千葉
               </span>
-              <span className="text-[#222222] font-bold text-[60px] font-['Montserrat'] leading-[1.219]">
+              <span className="text-[#222222] font-bold text-[30px] md:text-[30px] lg:text-[54px] xl:text-[60px] font-['Montserrat'] leading-[1.219]">
                 にお任せください！？
               </span>
             </div>
@@ -164,12 +164,12 @@ const ReasonsSection: React.FC = () => {
       </div>
 
       {/* Main content section */}
-      <div className="md:py-16 relative">
+      <div className="md:py-8 lg:py-14 xl:py-16 relative">
         {/* Background decorative elements */}
         <div
           ref={decorativeRef}
           className={cn(
-            "hidden md:block absolute top-[92px] left-[185px] md:left-[645px] w-[374px] h-[481px] transition-all duration-1000 ease-out",
+            "hidden md:block absolute top-[92px] md:top-[50px] md:left-[100px] lg:top-[100px] xl:top-[100px] left-[185px] lg:left-[110px] xl:left-[430px] w-[187px] h-[240px] lg:w-[295px] lg:h-[380px] xl:w-[374px] xl:h-[481px] transition-all duration-1000 ease-out",
             decorativeInView
               ? "opacity-100 transform translate-x-0 scale-100"
               : "opacity-0 transform translate-x-[-50px] scale-95"
@@ -184,33 +184,33 @@ const ReasonsSection: React.FC = () => {
           />
         </div>
 
-        <div className="md:max-w-[1440px] mx-auto px-4 md:px-[70px] relative">
+        <div className="md:max-w-[1440px] mx-auto px-4 md:px-[35px] lg:px-[60px] xl:px-[70px] relative">
           {/* Header Section */}
           <div
             ref={headerRef}
             className={cn(
-              "text-right md:left-[130px] mb-[30px] md:mb-[50px] relative transition-all duration-800 ease-out mx-auto max-w-[354px] md:max-w-[800px]",
+              "text-right md:left-[65px] lg:left-[115px] xl:left-[130px] mb-[30px] md:mb-[25px] lg:mb-[45px] xl:mb-[50px] relative transition-all duration-800 ease-out mx-auto max-w-[354px] md:max-w-[400px] lg:max-w-[725px] xl:max-w-[800px]",
               headerInView
                 ? "opacity-100 transform translate-y-0"
                 : "opacity-0 transform translate-y-[-30px]"
             )}
           >
             {/* Main title */}
-            <div className="pt-2 md:pt-16 mb-4">
-              {/* First row - エコ・グローバルが */}
+            <div className="pt-2 md:pt-8 lg:pt-14 xl:pt-16 mb-4">
+              {/* First row - rf  */}
 
-              <div className="flex items-center justify-center gap-[7.4px] md:gap-4 mb-[7.4px] md:mb-4">
-                <div className="w-[30.9px] h-[29.5px] md:w-[59px] md:h-[57px] flex items-center justify-center transform rotate-12">
+              <div className="flex items-center justify-center gap-[7.4px] md:gap-2 lg:gap-3.5 xl:gap-4 mb-[7.4px] md:mb-2 lg:mb-3.5 xl:mb-4">
+                <div className="w-[30.9px] h-[29.5px] md:w-[30px] md:h-[29px] lg:w-[53px] lg:h-[51px] xl:w-[59px] xl:h-[57px] flex items-center justify-center transform rotate-12">
                   <Image
                     src="/images/recycling/decorative-triangle-left.svg"
                     alt="Decorative triangle"
                     fill
                   />
                 </div>
-                <h2 className="text-black font-bold text-[26px] md:text-[70px] leading-[1.219] font-['Montserrat']">
+                <h2 className="text-black font-bold text-[26px] md:text-[35px] lg:text-[63px] xl:text-[70px] leading-[1.219] font-['Montserrat']">
                   エコ・グローバルが
                 </h2>
-                <div className="w-[30.9px] h-[29.5px] md:w-[59px] md:h-[57px] flex items-center justify-center transform -rotate-12">
+                <div className="w-[30.9px] h-[29.5px] md:w-[30px] md:h-[29px] lg:w-[53px] lg:h-[51px] xl:w-[59px] xl:h-[57px] flex items-center justify-center transform -rotate-12">
                   <Image
                     src="/images/recycling/decorative-triangle-right.svg"
                     alt="Decorative triangle"
@@ -220,14 +220,14 @@ const ReasonsSection: React.FC = () => {
               </div>
 
               {/* Second row - 選ばれる7つの理由 */}
-              <div className="flex items-center justify-center gap-[19px] md:gap-2">
-                <h1 className="text-[#00A842] font-bold text-[32px] md:text-[80px] leading-[1.219] font-['Montserrat']">
+              <div className="flex items-center justify-center gap-[19px] md:gap-1 lg:gap-1.5 xl:gap-2">
+                <h1 className="text-[#00A842] font-bold text-[32px] md:text-[40px] lg:text-[72px] xl:text-[80px] leading-[1.219] font-['Montserrat']">
                   選ばれる
                 </h1>
-                <span className="text-[#ea2227] font-bold text-[50px] md:text-[120px] leading-[1.219] font-['Montserrat']">
+                <span className="text-[#ea2227] font-bold text-[50px] md:text-[60px] lg:text-[108px] xl:text-[120px] leading-[1.219] font-['Montserrat']">
                   7
                 </span>
-                <span className="text-[#00A842] font-bold text-[32px] md:text-[80px] leading-[1.219] font-['Montserrat']">
+                <span className="text-[#00A842] font-bold text-[32px] md:text-[40px] lg:text-[72px] xl:text-[80px] leading-[1.219] font-['Montserrat']">
                   つの理由
                 </span>
               </div>
@@ -328,7 +328,7 @@ const ReasonsSection: React.FC = () => {
               </div>
 
               {/* Desktop view */}
-              <div className="hidden md:block bg-white mt-10 rounded-[20px] shadow-[0px_8px_4px_0px_rgba(0,0,0,0.15)] relative overflow-hidden h-[419px] w-[1300px]">
+              <div className="hidden md:block bg-white mt-10 rounded-[10px] md:rounded-[10px] lg:rounded-[15px] xl:rounded-[20px] shadow-[0px_4px_2px_0px_rgba(0,0,0,0.15)] md:shadow-[0px_4px_2px_0px_rgba(0,0,0,0.15)] lg:shadow-[0px_6px_3px_0px_rgba(0,0,0,0.15)] xl:shadow-[0px_8px_4px_0px_rgba(0,0,0,0.15)] relative overflow-hidden h-[210px] md:h-[210px] lg:h-[377px] xl:h-[419px] w-[650px] md:w-[650px] lg:w-[1170px] xl:w-[1300px]">
                 {/* Number badge */}
                 <div className="absolute top-0 left-0 z-10 ">
                   <div className="w-[123.5px] h-[129px] relative">
@@ -349,7 +349,7 @@ const ReasonsSection: React.FC = () => {
 
                 <div className="flex h-full">
                   {/* Image section */}
-                  <div className="w-[560px] h-full">
+                  <div className="w-[280px] md:w-[280px] lg:w-[504px] xl:w-[560px] h-full">
                     <Image
                       src="/images/reason/reason-macos.png"
                       alt="100% in-house staff illustration"
@@ -360,14 +360,14 @@ const ReasonsSection: React.FC = () => {
                   </div>
 
                   {/* Content section */}
-                  <div className="flex-1 flex flex-col justify-center items-center px-[50px] gap-2.5">
-                    <div className="text-[#ea2227] font-bold text-[70px] leading-tight font-['Montserrat']">
+                  <div className="flex-1 flex flex-col justify-center items-center px-[25px] md:px-[25px] lg:px-[45px] xl:px-[50px] gap-1 md:gap-1 lg:gap-2 xl:gap-2">
+                    <div className="text-[#ea2227] font-bold text-[35px] md:text-[35px] lg:text-[63px] xl:text-[70px] leading-tight font-['Montserrat']">
                       100%
                     </div>
-                    <h3 className="text-[#00a842] font-bold text-[40px] leading-tight text-center font-['Montserrat']">
+                    <h3 className="text-[#00a842] font-bold text-[20px] md:text-[20px] lg:text-[36px] xl:text-[40px] leading-tight text-center font-['Montserrat']">
                       自社スタッフ
                     </h3>
-                    <p className="text-black font-medium text-[30px] leading-normal text-left font-['Montserrat'] max-w-[585px]">
+                    <p className="text-black font-medium text-[15px] md:text-[15px] lg:text-[27px] xl:text-[30px] leading-normal text-left font-['Montserrat'] max-w-[293px] md:max-w-[293px] lg:max-w-[527px] xl:max-w-[585px]">
                       回収作業はすべてエコ・グローバルのスタッフが行いますので、仲介料が発生する心配はいりません。千葉県、松戸市内の現場に伺い、家具・家電のような搬出が困難な品も回収します。
                     </p>
                   </div>

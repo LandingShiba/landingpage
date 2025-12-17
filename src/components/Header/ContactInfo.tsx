@@ -8,20 +8,20 @@ export default function ContactInfo() {
     <>
       {/* Desktop version - hidden on mobile */}
       <div className="hidden md:block relative shrink-0">
-        <div className="box-border flex flex-row gap-3 items-center justify-start p-0 relative">
-          <div className="pl-7 pr-2.5 py-1.5 bg-[#E60012] rounded-tl-[34px] rounded-bl-[34px] inline-flex flex-col justify-start items-start gap-0.5 overflow-hidden">
-            <div className="self-stretch justify-start text-white text-base font-bold font-['Roboto'] leading-tight">
+        <div className="box-border flex flex-row gap-2 md:gap-2 lg:gap-2.5 xl:gap-3 items-center justify-start p-0 relative">
+          <div className="pl-[14px] md:pl-[14px] lg:pl-[22px] xl:pl-7 pr-[5px] md:pr-[5px] lg:pr-[8px] xl:pr-2.5 py-[3px] md:py-[3px] lg:py-[5px] xl:py-1.5 bg-[#E60012] rounded-tl-[17px] md:rounded-tl-[17px] lg:rounded-tl-[27px] xl:rounded-tl-[34px] rounded-bl-[17px] md:rounded-bl-[17px] lg:rounded-bl-[27px] xl:rounded-bl-[34px] inline-flex flex-col justify-start items-start gap-[1px] md:gap-[1px] lg:gap-[1.5px] xl:gap-0.5 overflow-hidden">
+            <div className="self-stretch justify-start text-white text-[8px] md:text-[8px] lg:text-[13px] xl:text-base font-bold font-['Roboto'] leading-tight">
               {contactT("phone")}
             </div>
             <div className="self-stretch inline-flex justify-between items-center">
-              <div className="w-4 justify-start text-white text-sm font-bold font-['Roboto'] leading-none">
+              <div className="w-[8px] md:w-[8px] lg:w-[13px] xl:w-4 justify-start text-white text-[7px] md:text-[7px] lg:text-[11px] xl:text-sm font-bold font-['Roboto'] leading-none">
                 最大
               </div>
               <div className="justify-start flex items-baseline">
-                <span className="text-[#FFFF00] text-[38px] font-bold font-['Roboto_Condensed'] leading-none">
+                <span className="text-[#FFFF00] text-[19px] md:text-[19px] lg:text-[30px] xl:text-[38px] font-bold font-['Roboto_Condensed'] leading-none">
                   50%
                 </span>
-                <span className="text-[#FFFF00] text-[15px] font-bold font-['Roboto_Condensed'] ml-0.5 leading-none">
+                <span className="text-[#FFFF00] text-[7.5px] md:text-[7.5px] lg:text-[12px] xl:text-[15px] font-bold font-['Roboto_Condensed'] ml-0.5 leading-none">
                   割引
                 </span>
               </div>
@@ -29,12 +29,12 @@ export default function ContactInfo() {
           </div>
 
           <div className="relative shrink-0">
-            <div className="box-border flex flex-col gap-0.5 items-start justify-start p-0 relative">
-              <div className="relative shrink-0 w-[297px]">
+            <div className="box-border flex flex-col gap-[1px] md:gap-[1px] lg:gap-[1.5px] xl:gap-0.5 items-start justify-start p-0 relative">
+              <div className="relative shrink-0 w-[148px] md:w-[148px] lg:w-[237px] xl:w-[297px]">
                 <div className="box-border flex flex-row items-center justify-between p-0 relative w-full">
-                  <div className="relative shrink-0 w-[42px]">
-                    <div className="box-border flex flex-col gap-0.5 items-center justify-start p-0 relative w-[42px]">
-                      <div className="h-[26px] relative shrink-0 w-[42px] flex items-center justify-center">
+                  <div className="relative shrink-0 w-[21px] md:w-[21px] lg:w-[33px] xl:w-[42px]">
+                    <div className="box-border flex flex-col gap-[1px] md:gap-[1px] lg:gap-[1.5px] xl:gap-0.5 items-center justify-start p-0 relative w-[21px] md:w-[21px] lg:w-[33px] xl:w-[42px]">
+                      <div className="h-[13px] md:h-[13px] lg:h-[21px] xl:h-[26px] relative shrink-0 w-[21px] md:w-[21px] lg:w-[33px] xl:w-[42px] flex items-center justify-center">
                         <Image
                           alt="hotline"
                           src="/hotline.svg"
@@ -44,7 +44,7 @@ export default function ContactInfo() {
                         />
                       </div>
                       <div
-                        className="font-['Roboto'] font-bold min-w-full relative shrink-0 text-[#00A83C] text-[6px] text-center"
+                        className="font-['Roboto'] font-bold min-w-full relative shrink-0 text-[#00A83C] text-[3px] md:text-[3px] lg:text-[5px] xl:text-[6px] text-center"
                         style={{
                           width: "min-content",
                         }}
@@ -53,12 +53,12 @@ export default function ContactInfo() {
                       </div>
                     </div>
                   </div>
-                  <div className="font-['Roboto'] font-bold leading-none relative shrink-0 text-black text-[37px] text-left text-nowrap">
+                  <div className="font-['Roboto'] font-bold leading-none relative shrink-0 text-black text-[18.5px] md:text-[18.5px] lg:text-[29.5px] xl:text-[37px] text-left text-nowrap">
                     0477-234-143
                   </div>
                 </div>
               </div>
-              <div className="font-['Roboto'] font-bold leading-tight relative shrink-0 text-[#222222] text-[13px] text-left text-nowrap mt-0.5">
+              <div className="font-['Roboto'] font-bold leading-tight relative shrink-0 text-[#222222] text-[6.5px] md:text-[6.5px] lg:text-[10.5px] xl:text-[13px] text-left text-nowrap mt-[1px] md:mt-[1px] lg:mt-[1.5px] xl:mt-0.5">
                 ご相談お見積もり無料（24時間365日対応付中)
               </div>
             </div>

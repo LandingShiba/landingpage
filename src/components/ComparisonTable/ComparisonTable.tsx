@@ -73,14 +73,14 @@ export default function ComparisonTable() {
     },
   ];
   return (
-    <section className="w-full max-w-7xl mx-auto py-8 md:py-16 font-[Montserrat]">
-      <div className="max-w-6xl mx-auto p-3 md:p-6 bg-white">
+    <section className="w-full max-w-7xl mx-auto py-4 md:py-4 lg:py-12 xl:py-16 font-[Montserrat]">
+      <div className="max-w-6xl mx-auto p-1.5 md:p-1.5 lg:p-4 xl:p-1 bg-white">
         {/* Header */}
-        <div className="text-center mb-4 md:mb-8">
-          <h1 className="text-xl md:text-2xl text-[20px] md:text-[40px] font-bold mb-1 md:mb-2 text-black font-[Montserrat]">
+        <div className="text-center mb-2 md:mb-2 lg:mb-6 xl:mb-8">
+          <h1 className="text-[10px] md:text-[10px] lg:text-[32px] xl:text-[40px] font-bold mb-0.5 md:mb-0.5 lg:mb-1.5 xl:mb-2 text-black font-[Montserrat]">
             こんなに違う！
           </h1>
-          <h2 className="text-2xl md:text-3xl text-[26px] md:text-[70px] font-bold text-black font-[Montserrat]">
+          <h2 className="text-[13px] md:text-[13px] lg:text-[56px] xl:text-[70px] font-bold text-black font-[Montserrat]">
             エコ・グローバルと他社のサービス比較
           </h2>
         </div>
@@ -124,6 +124,17 @@ export default function ComparisonTable() {
                   <div className="p-4 bg-white border-t border-gray-100">
                     <div className="grid grid-cols-3 gap-3">
                       <div className="col-span-1 flex flex-col">
+                        <div className="bg-[#acabab] text-white py-2 px-1 text-xs font-bold text-center mb-2 rounded-sm">
+                          自治体
+                        </div>
+                        <div className="bg-white border border-gray-200 rounded-sm p-2 flex-1 flex items-center justify-center">
+                          <p className="text-[#acacac] text-xs text-center whitespace-pre-line">
+                            {item.government}
+                          </p>
+                        </div>
+                      </div>
+
+                      <div className="col-span-1 flex flex-col">
                         <div className="bg-[#00a842] text-white py-2 px-1 text-xs font-bold text-center mb-2 rounded-sm">
                           エコ・グローバル
                         </div>
@@ -144,17 +155,6 @@ export default function ComparisonTable() {
                           </p>
                         </div>
                       </div>
-
-                      <div className="col-span-1 flex flex-col">
-                        <div className="bg-[#acabab] text-white py-2 px-1 text-xs font-bold text-center mb-2 rounded-sm">
-                          自治体
-                        </div>
-                        <div className="bg-white border border-gray-200 rounded-sm p-2 flex-1 flex items-center justify-center">
-                          <p className="text-[#acacac] text-xs text-center whitespace-pre-line">
-                            {item.government}
-                          </p>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 )}
@@ -167,37 +167,41 @@ export default function ComparisonTable() {
         <div className="hidden md:block overflow-x-auto">
           <div className="relative">
             {/* Elevated Header for エコ・グローバル - Desktop */}
-            <div className="absolute left-[260px] -top-4.5 w-[370px] z-10">
-              <div className="bg-[#00a842] text-white font-bold text-3xl py-6 px-6 text-center border-2 border-[#00a842] font-[Montserrat]">
+            <div className="absolute left-[130px] md:left-[183px] lg:left-[208px] xl:left-[260px] -top-[9px] md:-top-[17px] lg:-top-[14px] xl:-top-4.5 w-[185px] md:w-[263px] lg:w-[296px] xl:w-[370px] z-10">
+              <div className="bg-[#00a842] text-white font-bold text-[15px] md:text-[15px] lg:text-2xl xl:text-3xl py-3 md:py-3 lg:py-5 xl:py-6 px-3 md:px-3 lg:px-5 xl:px-6 text-center border md:border lg:border-2 xl:border-2 border-[#00a842] font-[Montserrat]">
                 エコ・グローバル
               </div>
             </div>
 
-            <table className="w-full mt-6 table-fixed">
+            <table className="w-full mt-3 md:mt-3 lg:mt-5 xl:mt-6 table-fixed">
               <colgroup>
-                <col className="w-[70px] md:w-[260px]" />
-                <col className="w-[100px] md:w-[370px]" />
-                <col className="w-[69px] md:w-[256px]" />
+                <col className="w-[35px] md:w-[35px] lg:w-[208px] xl:w-[260px]" />
+                <col className="w-[50px] md:w-[50px] lg:w-[296px] xl:w-[370px]" />
+                <col className="w-[34.5px] md:w-[34.5px] lg:w-[205px] xl:w-[256px]" />
+                <col className="w-[34.5px] md:w-[34.5px] lg:w-[205px] xl:w-[256px]" />
               </colgroup>
 
               {/* Header Row */}
               <thead>
                 <tr>
-                  <th className="bg-[#acabab] text-white text-xs md:text-3xl font-bold py-1 md:py-4 px-2 md:px-6 border border-gray-300 text-center font-[Montserrat]">
-                    自治体
+                  <th className="bg-[#acabab] text-white text-[6px] md:text-[6px] lg:text-2xl xl:text-3xl font-bold py-0.5 md:py-3.5 lg:py-3 xl:py-4 px-1 md:px-1 lg:px-5 xl:px-6 border md:border lg:border-2 xl:border-2 border-gray-300 text-center font-[Montserrat]">
+                    
                   </th>
-                  <th className="bg-[#00a842] text-white font-bold py-1 md:py-2 px-2 md:px-6 border border-gray-300 text-center font-[Montserrat]">
+                  <th className="bg-[#00a842] text-white font-bold py-0.5 md:py-0.5 lg:py-1.5 xl:py-2 px-1 md:px-1 lg:px-5 xl:px-6 border md:border lg:border-2 xl:border-2 border-gray-300 text-center font-[Montserrat]">
                     {/* Empty space since header is above */}
                   </th>
-                  <th className="bg-[#acabab] text-white text-xs md:text-3xl font-bold py-1 md:py-4 px-2 md:px-6 text-center font-[Montserrat]">
+                  <th className="bg-[#acabab] text-white text-[6px] md:text-[6px] lg:text-2xl xl:text-3xl font-bold py-0.5 md:py-0.5 lg:py-3 xl:py-4 px-1 md:px-1 lg:px-5 xl:px-6 text-center font-[Montserrat]">
                     A社
+                  </th>
+                  <th className="bg-[#acabab] text-white text-[6px] md:text-[6px] lg:text-2xl xl:text-3xl font-bold py-0.5 md:py-0.5 lg:py-3 xl:py-4 px-1 md:px-1 lg:px-5 xl:px-6 border md:border lg:border-2 xl:border-2 border-gray-300 text-center font-[Montserrat]">
+                    自治体
                   </th>
                 </tr>
               </thead>
               <tbody>
                 {/* Response Time Row */}
                 <tr className="text-xs md:text-3xl">
-                  <td className="bg-[#e9ffd6] font-medium py-1 md:py-3 px-1 md:px-3 border-l-[0.5px] md:border-l-2 border-y-[0.5px] md:border-y-2 border-y-gray-300 text-center text-black font-[Montserrat]">
+                  <td className="bg-[#e9ffd6] font-medium py-0.5 md:py-0.5 lg:py-2 xl:py-3 px-0.5 md:px-0.5 lg:px-2 xl:px-3 border-l md:border-l lg:border-l-2 xl:border-l-2 border-y md:border-y lg:border-y-2 xl:border-y-2 border-y-gray-300 text-center text-black text-[6px] md:text-[6px] lg:text-2xl xl:text-3xl font-[Montserrat]">
                     対応可能時間
                   </td>
                   <td className="bg-white py-1 md:py-3 px-1 md:px-3 border-x-[#00A842] border-[0.5px] md:border-2 text-center font-bold text-[#00a842] text-xs md:text-3xl font-[Montserrat]">

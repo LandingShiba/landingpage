@@ -16,13 +16,14 @@ export default function MedalsSection({
           <Image
             src="/images/medels.svg"
             alt="Medals"
-            width={180}
-            height={180}
+            width={90}
+            height={90}
             priority
             style={{ position: "relative", zIndex: 30 }}
+            className="w-[90px] h-[90px] md:w-[90px] md:h-[90px] lg:w-[144px] lg:h-[144px] xl:w-[180px] xl:h-[180px]"
           />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-40 w-[80%]">
-            <p className="text-white font-black text-[22px] leading-tight text-center font-['Montserrat'] whitespace-pre-line break-words">
+            <p className="text-white font-black text-[11px] md:text-[11px] lg:text-[17.6px] xl:text-[22px] leading-tight text-center font-['Montserrat'] whitespace-pre-line break-words">
               {text}
             </p>
           </div>

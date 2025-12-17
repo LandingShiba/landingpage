@@ -102,34 +102,34 @@ const ReviewsSection: React.FC = () => {
       id="testimonials"
       ref={containerRef}
       className={cn(
-        "bg-[#E9FFD6] py-8 md:py-12 lg:py-16 relative transition-all duration-1000 ease-out overflow-x-hidden scroll-mt-[150px]",
+        "bg-[#E9FFD6] py-4 md:py-4 lg:py-10 xl:py-12 lg:py-12 xl:py-16 relative transition-all duration-1000 ease-out overflow-x-hidden scroll-mt-[150px]",
         containerInView
           ? "opacity-100 transform translate-y-0"
           : "opacity-0 transform translate-y-[20px]"
       )}
     >
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 lg:px-16 xl:px-[180px]">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-4 lg:px-12 xl:px-16 xl:px-[180px]">
         {/* Header Section */}
         <div
           ref={headerRef}
           className={cn(
-            "text-center mb-6 md:mb-8 lg:mb-10 transition-all duration-800 ease-out",
+            "text-center mb-3 md:mb-3 lg:mb-7 xl:mb-8 lg:mb-8 xl:mb-10 transition-all duration-800 ease-out",
             headerInView
               ? "opacity-100 transform translate-y-0"
               : "opacity-0 transform translate-y-[-30px]"
           )}
         >
-          <div className="mb-3 md:mb-5">
-            <p className="text-[#202020] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[40px] font-bold font-['Montserrat'] leading-normal mb-2 md:mb-5">
+          <div className="mb-1.5 md:mb-1.5 lg:mb-4 xl:mb-5">
+            <p className="text-[#202020] text-[12px] sm:text-[14px] md:text-[12px] lg:text-[32px] xl:text-[40px] font-bold font-['Montserrat'] leading-normal mb-1 md:mb-1 lg:mb-4 xl:mb-5">
               エコ・グローバルに寄せられた
             </p>
-            <h2 className="text-[36px] sm:text-[42px] md:text-[50px] lg:text-[60px] xl:text-[70px] font-bold font-['Montserrat'] leading-normal">
+            <h2 className="text-[18px] sm:text-[21px] md:text-[18px] lg:text-[48px] xl:text-[60px] xl:text-[70px] font-bold font-['Montserrat'] leading-normal">
               <span className="text-black">お客様の</span>
               <span className="text-[#02662A]">クチコミ</span>
               <span className="text-black">をご紹介</span>
             </h2>
           </div>
-          <p className="text-[#202020] text-[16px] sm:text-[18px] md:text-[20px] font-medium font-['Montserrat'] max-w-[817px] mx-auto leading-normal">
+          <p className="text-[#202020] text-[8px] sm:text-[9px] md:text-[8px] lg:text-[16px] xl:text-[20px] font-medium font-['Montserrat'] max-w-[817px] mx-auto leading-normal">
             弊社で不用品回収をご利用いただいたお客様からたくさんの口コミを頂いております。
           </p>
         </div>
@@ -138,7 +138,7 @@ const ReviewsSection: React.FC = () => {
         <div
           ref={testimonialsRef}
           className={cn(
-            "bg-[E9FFD6] rounded-[20px] sm:rounded-[30px] md:rounded-[40px] p-4 sm:p-6 md:p-8 lg:p-[50px] xl:p-[71px] transition-all duration-800 ease-out overflow-x-hidden",
+            "bg-[E9FFD6] rounded-[10px] sm:rounded-[15px] md:rounded-[10px] lg:rounded-[32px] xl:rounded-[40px] p-2 sm:p-3 md:p-2 lg:p-[40px] xl:p-[50px] xl:p-[71px] transition-all duration-800 ease-out overflow-x-hidden",
             testimonialsInView
               ? "opacity-100 transform translate-y-0"
               : "opacity-0 transform translate-y-[30px]"
@@ -165,7 +165,7 @@ const ReviewsSection: React.FC = () => {
                 {index < testimonials.length - 1 && (
                   <div
                     className={cn(
-                      "w-full my-6 md:my-8 lg:my-12 opacity-30 transition-all duration-800 ease-out",
+                      "w-full my-3 md:my-3 lg:my-10 xl:my-12 opacity-30 transition-all duration-800 ease-out",
                       testimonialsInView
                         ? "transform scale-x-100"
                         : "transform scale-x-0"
@@ -205,7 +205,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   return (
     <div
       className={cn(
-        "flex gap-3 sm:gap-4 md:gap-[34px] items-center transition-all duration-800 ease-out mb-6 md:mb-8 min-w-0",
+        "flex gap-1.5 sm:gap-2 md:gap-1.5 lg:gap-[27px] xl:gap-[34px] items-center transition-all duration-800 ease-out mb-3 md:mb-3 lg:mb-6 xl:mb-8 min-w-0",
         isReversed ? "flex-row-reverse" : "flex-row",
         isInView
           ? "opacity-100 transform translate-x-0 translate-y-0 scale-100"
@@ -222,7 +222,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
     >
       {/* Customer Avatar */}
       <div className="flex flex-col items-center gap-2.5 w-[80px] sm:w-[120px] md:w-[167px] shrink-0">
-        <div className="w-[80px] h-[80px] sm:w-[120px] sm:h-[120px] md:w-[167px] md:h-[167px] rounded-full overflow-hidden bg-gray-200 transition-all duration-300 ease-out hover:scale-110 hover:shadow-xl transform">
+        <div className="w-[40px] h-[40px] sm:w-[60px] sm:h-[60px] md:w-[40px] md:h-[40px] lg:w-[134px] lg:h-[134px] xl:w-[167px] xl:h-[167px] rounded-full overflow-hidden bg-gray-200 transition-all duration-300 ease-out hover:scale-110 hover:shadow-xl transform">
           <Image
             src={testimonial.avatar}
             alt={`${testimonial.name} avatar`}
@@ -238,7 +238,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
 
       {/* Speech Bubble */}
       <div className="flex-1 relative w-full min-w-0 break-words">
-        <div className="bg-white border-2 border-[#02662A] rounded-[15px] sm:rounded-[18px] md:rounded-[20px] p-3 sm:p-4 md:p-6 lg:p-[45px] relative shadow-sm transition-all duration-300 ease-out hover:shadow-lg hover:border-[#2b5d90] hover:scale-[1.02] transform">
+        <div className="bg-white border md:border lg:border-2 xl:border-2 border-[#02662A] rounded-[7.5px] sm:rounded-[9px] md:rounded-[7.5px] lg:rounded-[16px] xl:rounded-[20px] p-1.5 sm:p-2 md:p-1.5 lg:p-[36px] xl:p-[45px] relative shadow-sm transition-all duration-300 ease-out hover:shadow-lg hover:border-[#2b5d90] hover:scale-[1.02] transform">
           {/* Arrow pointing to avatar */}
           <div
             className={cn(
@@ -258,11 +258,11 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           />
 
           {/* Title */}
-          <div className="mb-2 sm:mb-3 md:mb-6">
-            <h3 className="text-[#00A842] text-[14px] sm:text-[16px] md:text-[20px] font-bold font-['Montserrat'] leading-normal mb-1 sm:mb-2">
+          <div className="mb-1 sm:mb-1.5 md:mb-1 lg:mb-5 xl:mb-6">
+            <h3 className="text-[#00A842] text-[7px] sm:text-[8px] md:text-[7px] lg:text-[16px] xl:text-[20px] font-bold font-['Montserrat'] leading-normal mb-0.5 sm:mb-0.5 md:mb-0.5 lg:mb-1.5 xl:mb-2">
               {testimonial.title}
             </h3>
-            <p className="text-black text-[12px] sm:text-[14px] md:text-[20px] font-medium font-['Montserrat']">
+            <p className="text-black text-[6px] sm:text-[7px] md:text-[6px] lg:text-[16px] xl:text-[20px] font-medium font-['Montserrat']">
               （{testimonial.name}・
               {testimonial.gender === "male" ? "男性" : "女性"}・
               {testimonial.age}）
@@ -312,7 +312,7 @@ const StaffResponse: React.FC<StaffResponseProps> = ({
     >
       {/* Staff Avatar */}
       <div className="flex flex-col items-center gap-2.5 w-[80px] sm:w-[120px] md:w-[167px] shrink-0">
-        <div className="w-[80px] h-[80px] sm:w-[120px] sm:h-[120px] md:w-[167px] md:h-[167px] rounded-full overflow-hidden bg-gray-100 transition-all duration-300 ease-out hover:scale-110 hover:shadow-xl transform">
+        <div className="w-[40px] h-[40px] sm:w-[60px] sm:h-[60px] md:w-[40px] md:h-[40px] lg:w-[134px] lg:h-[134px] xl:w-[167px] xl:h-[167px] rounded-full overflow-hidden bg-gray-100 transition-all duration-300 ease-out hover:scale-110 hover:shadow-xl transform">
           <Image
             src="/images/testimonials/avatar_female.png"
             alt="Staff avatar"
@@ -328,7 +328,7 @@ const StaffResponse: React.FC<StaffResponseProps> = ({
 
       {/* Response Speech Bubble */}
       <div className="flex-1 relative w-full">
-        <div className="bg-gray-100 rounded-[15px] sm:rounded-[18px] md:rounded-[20px] p-3 sm:p-4 md:p-6 lg:p-[45px] relative shadow-sm transition-all duration-300 ease-out hover:shadow-md hover:bg-gray-50 hover:scale-[1.01] transform">
+        <div className="bg-gray-100 rounded-[7.5px] sm:rounded-[9px] md:rounded-[7.5px] lg:rounded-[16px] xl:rounded-[20px] p-1.5 sm:p-2 md:p-1.5 lg:p-[36px] xl:p-[45px] relative shadow-sm transition-all duration-300 ease-out hover:shadow-md hover:bg-gray-50 hover:scale-[1.01] transform">
           {/* Arrow pointing to avatar */}
           <div
             className={cn(
