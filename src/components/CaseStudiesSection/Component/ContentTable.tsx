@@ -65,7 +65,7 @@ const ContentTable = ({
             {/* Information Table */}
             <div className="flex gap-0 shadow-2xl">
               {/* Column 1: 回収例 */}
-              <div className="w-[100px] max-[321]:w-[70px] md:w-[310px]">
+              <div className="w-[100px] max-[321]:w-[70px] md:w-[155px] lg:w-[248px] xl:w-[310px]">
                 <div className="bg-[#E9FFD6] border-2 border-[#acabab] h-[25px] max-[321]:h-[15px] md:h-20 flex items-center justify-center">
                   <span
                     className="text-[12px] max-[321]:text-[10px] md:text-2xl font-medium text-[#222222]"
@@ -89,7 +89,7 @@ const ContentTable = ({
               </div>
 
               {/* Column 2: 作業スタッフ */}
-              <div className="w-[100px] max-[321]:w-[70px] md:w-[310px]">
+              <div className="w-[100px] max-[321]:w-[70px] md:w-[155px] lg:w-[248px] xl:w-[310px]">
                 <div className="bg-[#E9FFD6] border-2 border-[#acabab] border-l-0 h-[25px] max-[321]:h-[15px] md:h-20 flex items-center justify-center">
                   <span
                     className="text-[12px] max-[321]:text-[10px] md:text-2xl font-medium text-[#222222]"
@@ -113,7 +113,7 @@ const ContentTable = ({
               </div>
 
               {/* Column 3: 料金 */}
-              <div className="w-[100px] max-[321]:w-[70px] md:w-[310px]">
+              <div className="w-[100px] max-[321]:w-[70px] md:w-[155px] lg:w-[248px] xl:w-[310px]">
                 <div className="bg-[#E9FFD6] border-2 border-[#acabab] border-l-0 h-[25px] max-[321]:h-[15px] md:h-20 flex items-center justify-center">
                   <span
                     className="text-[12px] max-[321]:text-[10px] md:text-2xl font-medium text-[#222222]"
@@ -151,7 +151,7 @@ const ContentTable = ({
         >
           {/* BEFORE Image */}
           <div className="relative">
-            <div className="w-[360px] max-[376]:w-[325px] max-[321]:w-[280px] md:w-[380px] h-[259px] max-[376]:h-[225px] max-[321]:h-[195px] sm:h-[255px] md:h-[285px] bg-gray-200 rounded-xl border-[8px] border-[#d2d2d2] overflow-hidden shadow-2xl">
+            <div className="w-[360px] max-[376]:w-[325px] max-[321]:w-[280px] md:w-[190px] lg:w-[304px] xl:w-[380px] h-[259px] max-[376]:h-[225px] max-[321]:h-[195px] sm:h-[255px] md:h-[142.5px] lg:h-[228px] xl:h-[285px] bg-gray-200 rounded-xl border-[4px] md:border-[4px] lg:border-[6px] xl:border-[8px] border-[#d2d2d2] overflow-hidden shadow-2xl">
               <Image
                 src="/images/caseStudies/case1-before.jpg"
                 alt="S様邸 - Before cleanup"
@@ -160,9 +160,9 @@ const ContentTable = ({
                 height={285}
               />
             </div>
-            <div className="absolute top-0 left-0 bg-[#d9d9d9] text-[#787878] px-3 sm:px-4 md:px-6 py-2 sm:py-3 rounded-br-xl sm:rounded-br-2xl rounded-tl-xl sm:rounded-tl-2xl">
+            <div className="absolute top-0 left-0 bg-[#d9d9d9] text-[#787878] px-1.5 sm:px-2 md:px-1.5 lg:px-5 xl:px-6 py-1 sm:py-1.5 md:py-1 lg:py-2.5 xl:py-3 rounded-br-xl sm:rounded-br-2xl rounded-tl-xl sm:rounded-tl-2xl">
               <span
-                className="text-lg sm:text-xl md:text-2xl font-bold"
+                className="text-[9px] sm:text-[10px] md:text-[9px] lg:text-xl xl:text-2xl font-bold"
                 style={{ fontFamily: "Montserrat, sans-serif" }}
               >
                 BEFORE
@@ -190,7 +190,7 @@ const ContentTable = ({
 
           {/* AFTER Image */}
           <div className="relative">
-            <div className="w-[360px] max-[376]:w-[325px] max-[321]:w-[280px] md:w-[380px] h-[259px] max-[376]:h-[225px] max-[321]:h-[195px] sm:h-[255px] md:h-[285px] bg-[#00A842] rounded-2xl border-[8px] border-[#00A842] overflow-hidden shadow-2xl">
+            <div className="w-[360px] max-[376]:w-[325px] max-[321]:w-[280px] md:w-[190px] lg:w-[304px] xl:w-[380px] h-[259px] max-[376]:h-[225px] max-[321]:h-[195px] sm:h-[255px] md:h-[142.5px] lg:h-[228px] xl:h-[285px] bg-[#00A842] rounded-2xl border-[4px] md:border-[4px] lg:border-[6px] xl:border-[8px] border-[#00A842] overflow-hidden shadow-2xl">
               <Image
                 src="/images/caseStudies/case1-after.jpg"
                 alt="S様邸 - After cleanup"
@@ -199,9 +199,9 @@ const ContentTable = ({
                 height={285}
               />
             </div>
-            <div className="absolute top-0 left-0 bg-[#00A842] text-white px-3 sm:px-4 md:px-6 py-2 sm:py-3 rounded-br-xl sm:rounded-br-2xl rounded-tl-xl sm:rounded-tl-2xl">
+            <div className="absolute top-0 left-0 bg-[#00A842] text-white px-1.5 sm:px-2 md:px-1.5 lg:px-5 xl:px-6 py-1 sm:py-1.5 md:py-1 lg:py-2.5 xl:py-3 rounded-br-xl sm:rounded-br-2xl rounded-tl-xl sm:rounded-tl-2xl">
               <span
-                className="text-lg sm:text-xl md:text-2xl font-bold"
+                className="text-[9px] sm:text-[10px] md:text-[9px] lg:text-xl xl:text-2xl font-bold"
                 style={{ fontFamily: "Montserrat, sans-serif" }}
               >
                 AFTER

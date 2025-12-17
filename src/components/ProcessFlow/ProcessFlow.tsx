@@ -69,7 +69,7 @@ const DesktopProcessStepCard: React.FC<{
       {/* Step Circle Badge */}
       <div
         className={cn(
-          "w-[200px] h-[200px] bg-white rounded-full border-8 border-[#7BAD4F] flex flex-col items-center justify-center z-10 flex-shrink-0 transition-all duration-500 ease-out",
+          "w-[100px] h-[100px] md:w-[100px] md:h-[100px] lg:w-[160px] lg:h-[160px] xl:w-[200px] xl:h-[200px] bg-white rounded-full border-4 md:border-4 lg:border-6 xl:border-8 border-[#7BAD4F] flex flex-col items-center justify-center z-10 flex-shrink-0 transition-all duration-500 ease-out",
           isInView
             ? "opacity-100 transform scale-100"
             : "opacity-0 transform scale-75"
@@ -78,10 +78,10 @@ const DesktopProcessStepCard: React.FC<{
           transitionDelay: isInView ? `${index * 200 + 100}ms` : "0ms",
         }}
       >
-        <span className="text-[#008144] font-bold text-[40px] leading-none font-['Montserrat']">
+        <span className="text-[#008144] font-bold text-[20px] md:text-[20px] lg:text-[32px] xl:text-[40px] leading-none font-['Montserrat']">
           Step
         </span>
-        <span className="text-black font-bold text-[70px] leading-none font-['Montserrat']">
+        <span className="text-black font-bold text-[35px] md:text-[35px] lg:text-[56px] xl:text-[70px] leading-none font-['Montserrat']">
           {step.stepNumber}
         </span>
       </div>
@@ -89,7 +89,7 @@ const DesktopProcessStepCard: React.FC<{
       {/* Content Card */}
       <div
         className={cn(
-          "bg-[#E9FFD6] h-[200px] flex-1 rounded-none rounded-r-[80px] -ml-[100px] pl-[142px] pr-[32px] flex flex-col justify-center transition-all duration-600 ease-out",
+          "bg-[#E9FFD6] h-[100px] md:h-[100px] lg:h-[160px] xl:h-[200px] flex-1 rounded-none rounded-r-[40px] md:rounded-r-[40px] lg:rounded-r-[64px] xl:rounded-r-[80px] -ml-[50px] md:-ml-[50px] lg:-ml-[80px] xl:-ml-[100px] pl-[71px] md:pl-[71px] lg:pl-[114px] xl:pl-[142px] pr-[16px] md:pr-[16px] lg:pr-[26px] xl:pr-[32px] flex flex-col justify-center transition-all duration-600 ease-out",
           isInView
             ? "opacity-100 transform translate-x-0"
             : "opacity-0 transform translate-x-[30px]"
@@ -98,10 +98,10 @@ const DesktopProcessStepCard: React.FC<{
           transitionDelay: isInView ? `${index * 200 + 200}ms` : "0ms",
         }}
       >
-        <h3 className="text-[#008144] font-bold text-[40px] leading-[1.2] mb-5 font-['Montserrat']">
+        <h3 className="text-[#008144] font-bold text-[20px] md:text-[20px] lg:text-[32px] xl:text-[40px] leading-[1.2] mb-2.5 md:mb-2.5 lg:mb-4 xl:mb-5 font-['Montserrat']">
           {step.title}
         </h3>
-        <p className="text-black font-medium text-[20px] leading-[1.2] font-['Montserrat']">
+        <p className="text-black font-medium text-[10px] md:text-[10px] lg:text-[16px] xl:text-[20px] leading-[1.2] font-['Montserrat']">
           {step.description}
         </p>
       </div>
@@ -207,7 +207,7 @@ const ProcessFlow: React.FC<ProcessFlowProps> = ({
   return (
     <div
       className={cn(
-        "w-full max-w-[1440px] mx-auto md:px-[74px] px-8 md:py-[70px] py-8 ",
+        "w-full max-w-[1440px] mx-auto md:px-[37px] lg:px-[59px] xl:px-[74px] px-8 md:py-[35px] lg:py-[56px] xl:py-[70px] py-8 ",
         className
       )}
     >
@@ -217,16 +217,16 @@ const ProcessFlow: React.FC<ProcessFlowProps> = ({
         <div
           ref={desktopHeaderRef}
           className={cn(
-            "flex flex-col items-center mb-[50px] max-w-[999px] mx-auto transition-all duration-800 ease-out",
+            "flex flex-col items-center mb-[25px] md:mb-[25px] lg:mb-[40px] xl:mb-[50px] max-w-[999px] mx-auto transition-all duration-800 ease-out",
             desktopHeaderInView
               ? "opacity-100 transform translate-y-0"
               : "opacity-0 transform translate-y-[-20px]"
           )}
         >
-          <div className="flex flex-col items-center gap-5 w-full">
+          <div className="flex flex-col items-center gap-2.5 md:gap-2.5 lg:gap-4 xl:gap-5 w-full">
             <h2
               className={cn(
-                "text-[#008144] font-bold text-[40px] leading-[1.2] text-center font-['Montserrat'] w-full transition-all duration-600 ease-out",
+                "text-[#008144] font-bold text-[20px] md:text-[20px] lg:text-[32px] xl:text-[40px] leading-[1.2] text-center font-['Montserrat'] w-full transition-all duration-600 ease-out",
                 desktopHeaderInView
                   ? "opacity-100 transform translate-y-0"
                   : "opacity-0 transform translate-y-[-10px]"
@@ -239,7 +239,7 @@ const ProcessFlow: React.FC<ProcessFlowProps> = ({
             </h2>
             <h1
               className={cn(
-                "text-black font-bold text-[70px] leading-[1.2] font-['Montserrat'] transition-all duration-600 ease-out",
+                "text-black font-bold text-[35px] md:text-[35px] lg:text-[56px] xl:text-[70px] leading-[1.2] font-['Montserrat'] transition-all duration-600 ease-out",
                 desktopHeaderInView
                   ? "opacity-100 transform translate-y-0"
                   : "opacity-0 transform translate-y-[-10px]"
@@ -297,7 +297,7 @@ const ProcessFlow: React.FC<ProcessFlowProps> = ({
       </div>
 
       {/* Steps Section */}
-      <div className="flex flex-col md:gap-[80px] gap-4 max-w-[1181px] mx-auto">
+      <div className="flex flex-col md:gap-[40px] lg:gap-[64px] xl:gap-[80px] gap-4 max-w-[1181px] mx-auto">
         {steps.map((step, index) => (
           <ProcessStepCard key={index} step={step} index={index} />
         ))}

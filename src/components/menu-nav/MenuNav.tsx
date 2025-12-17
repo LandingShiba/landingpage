@@ -3,11 +3,11 @@
 import Link from "next/link";
 
 const menuItems = [
-  { label: "料金", href: "#pricing", left: "109px" },
-  { label: "お客様の声", href: "/testimonial", left: "73px" },
-  { label: "事例", href: "/case-study", left: "109px" },
-  { label: "よくある質問", href: "#faq", left: "61px" },
-  { label: "会社概要", href: "/company", left: "85px" },
+  { label: "料金", href: "#pricing" },
+  { label: "お客様の声", href: "/testimonial" },
+  { label: "事例", href: "/case-study" },
+  { label: "よくある質問", href: "#faq" },
+  { label: "会社概要", href: "/company" },
 ];
 
 export default function MenuNav() {
@@ -66,15 +66,12 @@ export default function MenuNav() {
                 className="block"
                 onClick={(e) => handleClick(e, item.href)}
               >
-                <div className="w-72 h-28 relative cursor-pointer hover:bg-gray-50 transition-colors">
-                  <div className="w-72 h-20 left-0 top-[15px] absolute border-l border-r border-stone-300" />
+                <div className="w-[144px] md:w-[144px] lg:w-[230px] xl:w-72 h-[56px] md:h-[56px] lg:h-[90px] xl:h-28 relative cursor-pointer hover:bg-gray-50 transition-colors">
+                  <div className="w-[144px] md:w-[144px] lg:w-[230px] xl:w-72 h-[40px] md:h-[40px] lg:h-[64px] xl:h-20 left-0 top-[7.5px] md:top-[7.5px] lg:top-[12px] xl:top-[15px] absolute border-l border-r border-stone-300" />
                   <div
-                    className={`absolute text-center text-2xl font-bold font-['Roboto'] transition-all duration-300 ${item.href.startsWith('#') ? 'hover:text-[#00A842]' : 'text-black'
-                      }`}
-                    style={{
-                      left: item.left,
-                      top: "41px",
-                    }}
+                    className={`absolute text-center text-[12px] md:text-[12px] lg:text-[19px] xl:text-2xl font-bold font-['Roboto'] transition-all duration-300 top-[20.5px] md:top-[20.5px] lg:top-[33px] xl:top-[41px] left-1/2 -translate-x-1/2 ${
+                      item.href.startsWith('#') ? 'hover:text-[#00A842]' : 'text-black'
+                    }`}
                   >
                     {item.label}
                   </div>

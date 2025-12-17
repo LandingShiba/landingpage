@@ -66,7 +66,7 @@ export default async function LocaleLayout({
     <>
       <NextIntlClientProvider messages={messages}>
         <LocaleWrapper locale={locale}>
-          <div className="h-[48px] md:h-[100px]">
+          <div className="h-[48px] md:h-[50px] lg:h-[80px] xl:h-[100px]">
             <InnerHeader />
           </div>
           <div className="md:block hidden">

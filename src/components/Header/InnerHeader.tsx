@@ -14,31 +14,32 @@ export default function InnerHeader() {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  const handleScrollToSection = (sectionId: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    setIsSidebarOpen(false);
-    const targetElement = document.getElementById(sectionId);
-    if (targetElement) {
-      targetElement.classList.add('scroll-highlight');
+  const handleScrollToSection =
+    (sectionId: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+      e.preventDefault();
+      setIsSidebarOpen(false);
+      const targetElement = document.getElementById(sectionId);
+      if (targetElement) {
+        targetElement.classList.add("scroll-highlight");
 
-      window.scrollTo({
-        top: targetElement.offsetTop - 100,
-        behavior: 'smooth'
-      });
+        window.scrollTo({
+          top: targetElement.offsetTop - 100,
+          behavior: "smooth",
+        });
 
-      setTimeout(() => {
-        targetElement.classList.remove('scroll-highlight');
-      }, 2000);
-    }
-  };
+        setTimeout(() => {
+          targetElement.classList.remove("scroll-highlight");
+        }, 2000);
+      }
+    };
 
   return (
     <>
       {/* Desktop Header - Hidden on mobile */}
       <div className="hidden md:flex h-full items-center justify-center">
-        <div className="flex flex-wrap items-center justify-center gap-10">
+        <div className="flex flex-wrap items-center justify-center gap-5 md:gap-5 lg:gap-8 xl:gap-10">
           <Logo />
-          <div className="flex flex-wrap items-center justify-center gap-5">
+          <div className="flex flex-wrap items-center justify-center gap-3 md:gap-3 lg:gap-4 xl:gap-5">
             <ContactInfo />
             <ActionButton type="mail" />
             <ActionButton type="line" />
@@ -91,8 +92,9 @@ export default function InnerHeader() {
 
       {/* Mobile Sidebar */}
       <div
-        className={`fixed top-0 right-0 h-full w-[250px] bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${isSidebarOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+        className={`fixed top-0 right-0 h-full w-[250px] bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 ${
+          isSidebarOpen ? "translate-x-0" : "translate-x-full"
+        }`}
       >
         <div className="p-4">
           <div className="flex justify-between items-center mb-8">
@@ -122,25 +124,9 @@ export default function InnerHeader() {
             <ul className="space-y-4">
               <li>
                 <Link
-                  href="/"
+                  href="#pricing"
                   className="block py-2 text-lg font-medium text-gray-800 hover:text-[#00A842]"
-                >
-                  ホーム
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="block py-2 text-lg font-medium text-gray-800 hover:text-[#00A842]"
-                >
-                  サービス
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/#pricing"
-                  className="block py-2 text-lg font-medium text-gray-800 hover:text-[#00A842]"
-                  onClick={handleScrollToSection('pricing')}
+                  onClick={() => setIsSidebarOpen(false)}
                 >
                   料金
                 </Link>
@@ -149,7 +135,7 @@ export default function InnerHeader() {
                 <Link
                   href="/testimonial"
                   className="block py-2 text-lg font-medium text-gray-800 hover:text-[#00A842]"
-                  onClick={handleScrollToSection('testimonials')}
+                  onClick={() => setIsSidebarOpen(false)}
                 >
                   お客様の声
                 </Link>
@@ -158,25 +144,27 @@ export default function InnerHeader() {
                 <Link
                   href="/case-study"
                   className="block py-2 text-lg font-medium text-gray-800 hover:text-[#00A842]"
+                  onClick={() => setIsSidebarOpen(false)}
                 >
                   事例
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/#faq"
+                  href="#faq"
                   className="block py-2 text-lg font-medium text-gray-800 hover:text-[#00A842]"
-                  onClick={handleScrollToSection('faq')}
+                  onClick={() => setIsSidebarOpen(false)}
                 >
                   よくある質問
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/contact"
+                  href="/company"
                   className="block py-2 text-lg font-medium text-gray-800 hover:text-[#00A842]"
+                  onClick={() => setIsSidebarOpen(false)}
                 >
-                  お問い合わせ
+                  会社概要
                 </Link>
               </li>
             </ul>
@@ -203,7 +191,7 @@ export default function InnerHeader() {
       {/* Overlay when sidebar is open */}
       {isSidebarOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          className="fixed inset-0 bg-gray-900/10 z-40"
           onClick={toggleSidebar}
         ></div>
       )}
@@ -227,7 +215,7 @@ export default function InnerHeader() {
             box-shadow: 0 0 0 0 rgba(0, 168, 66, 0);
           }
         }
-        
+
         .scroll-highlight {
           animation: scrollHighlight 2s ease-out;
           border-radius: 8px;

@@ -6,7 +6,7 @@ export default function HeroSection() {
   return (
     <>
       {/* Desktop Hero - Hidden on mobile */}
-      <section className="hidden md:block relative bg-green-600/30 h-[780px]">
+      <section className="hidden md:block relative bg-green-600/30 h-[390px] md:h-[390px] lg:h-[624px] xl:h-[780px]">
         {/* Background images */}
         <div className="absolute inset-0">
           <Image
@@ -19,52 +19,52 @@ export default function HeroSection() {
         </div>
 
         {/* Main text content */}
-        <div className="absolute left-[100px] top-[60px] z-10">
-          <div className="flex flex-col gap-[11px]">
-            <div className="flex items-end gap-4">
-              <h2 className="text-[60px] font-bold text-[#3C3C3C] text-right leading-tight">
+        <div className="absolute left-[50px] md:left-[50px] lg:left-[80px] xl:left-[100px] top-[30px] md:top-[30px] lg:top-[48px] xl:top-[60px] z-10">
+          <div className="flex flex-col gap-[5.5px] md:gap-[5.5px] lg:gap-[9px] xl:gap-[11px]">
+            <div className="flex items-end gap-2 md:gap-2 lg:gap-3 xl:gap-4">
+              <h2 className="text-[30px] md:text-[30px] lg:text-[48px] xl:text-[60px] font-bold text-[#3C3C3C] text-right leading-tight">
                 東京・千葉の
               </h2>
-              <h1 className="text-[100px] font-black text-[#155E0B] text-right leading-[1.16]">
+              <h1 className="text-[50px] md:text-[50px] lg:text-[80px] xl:text-[100px] font-black text-[#155E0B] text-right leading-[1.16]">
                 不用品回収
               </h1>
             </div>
-            <div className="flex items-end gap-4">
-              <h1 className="text-[100px] font-black text-[#155E0B] text-right leading-[1.16]">
+            <div className="flex items-end gap-2 md:gap-2 lg:gap-3 xl:gap-4">
+              <h1 className="text-[50px] md:text-[50px] lg:text-[80px] xl:text-[100px] font-black text-[#155E0B] text-right leading-[1.16]">
                 粗大ゴミ処分
               </h1>
-              <h2 className="text-[60px] font-bold text-[#3C3C3C] text-left leading-tight">
+              <h2 className="text-[30px] md:text-[30px] lg:text-[48px] xl:text-[60px] font-bold text-[#3C3C3C] text-left leading-tight">
                 なら
               </h2>
             </div>
           </div>
 
-          <div className="flex items-end gap-4 mt-8">
-            <h1 className="text-[78px] font-black text-[#006E27] leading-[1.45]">
+          <div className="flex items-end gap-2 md:gap-2 lg:gap-3 xl:gap-4 mt-4 md:mt-4 lg:mt-6 xl:mt-8">
+            <h1 className="text-[39px] md:text-[39px] lg:text-[62px] xl:text-[78px] font-black text-[#006E27] leading-[1.45]">
               エコ・グローバル
             </h1>
-            <h2 className="text-[60px] font-bold text-[#3C3C3C] leading-tight">
+            <h2 className="text-[30px] md:text-[30px] lg:text-[48px] xl:text-[60px] font-bold text-[#3C3C3C] leading-tight">
               におまかせ！
             </h2>
           </div>
 
           {/* Service info */}
-          <div className="flex items-center gap-8 mt-8">
-            <span className="text-[50px] font-bold text-[#222222]">相談</span>
-            <div className="w-0 h-[80px] border-l-[6px] border-[#008144]"></div>
-            <span className="text-[50px] font-bold text-[#222222]">
+          <div className="flex items-center gap-4 md:gap-4 lg:gap-6 xl:gap-8 mt-4 md:mt-4 lg:mt-6 xl:mt-8">
+            <span className="text-[25px] md:text-[25px] lg:text-[40px] xl:text-[50px] font-bold text-[#222222]">相談</span>
+            <div className="w-0 h-[40px] md:h-[40px] lg:h-[64px] xl:h-[80px] border-l-[3px] md:border-l-[3px] lg:border-l-[5px] xl:border-l-[6px] border-[#008144]"></div>
+            <span className="text-[25px] md:text-[25px] lg:text-[40px] xl:text-[50px] font-bold text-[#222222]">
               お見積り
             </span>
-            <div className="w-0 h-[80px] border-l-[6px] border-[#008144]"></div>
-            <span className="text-[50px] font-bold text-[#222222]">出張費</span>
+            <div className="w-0 h-[40px] md:h-[40px] lg:h-[64px] xl:h-[80px] border-l-[3px] md:border-l-[3px] lg:border-l-[5px] xl:border-l-[6px] border-[#008144]"></div>
+            <span className="text-[25px] md:text-[25px] lg:text-[40px] xl:text-[50px] font-bold text-[#222222]">出張費</span>
           </div>
         </div>
 
         {/* Character image */}
-        <div className="absolute top-[235px] w-full flex justify-end">
+        <div className="absolute top-[117px] md:top-[117px] lg:top-[220px] xl:top-[310px] w-full flex justify-end">
           <div
-            style={{ width: "446px", height: "600px", position: "relative" }}
-            className="mr-0"
+            // style={{ width: "300px", height: "450px", position: "relative" }}
+            className="mr-0 md:w-[223px] md:h-[300px] lg:w-[357px] lg:h-[480px] xl:w-[440px] xl:h-[540px] relative"
           >
             <Image
               src="/images/banner/banner-character.png"
@@ -77,7 +77,7 @@ export default function HeroSection() {
         </div>
 
         {/* Medals */}
-        <div className="absolute left-[79px] bottom-[-30px] z-20 flex flex-row gap-12">
+        <div className="absolute left-[39px] md:left-[39px] lg:left-[63px] xl:left-[79px] bottom-[-15px] md:bottom-[-15px] lg:bottom-[-24px] xl:bottom-[-30px] z-20 flex flex-row gap-6 md:gap-6 lg:gap-10 xl:gap-12">
           <MedalsSection text="最安値に挑戦" />
           <MedalsSection text="無料見積もり" />
           <MedalsSection text={`迅速\n丁寧`} />

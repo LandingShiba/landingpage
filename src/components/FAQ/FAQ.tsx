@@ -126,27 +126,27 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <div className="w-full bg-white py-5 md:py-20" id="faq">
+    <div className="w-full bg-white py-2.5 md:py-2.5 lg:py-16 xl:py-20" id="faq">
       <div className="max-w-[1300px] mx-auto px-4">
         {/* Header Section */}
         <div
           ref={headerRef}
-          className={`flex flex-col text-center items-center justify-center gap-[14px] mb-5 md:mb-20 transition-all duration-1000 ease-out ${
+          className={`flex flex-col text-center items-center justify-center gap-[7px] md:gap-[7px] lg:gap-[11px] xl:gap-[14px] mb-2.5 md:mb-2.5 lg:mb-16 xl:mb-20 transition-all duration-1000 ease-out ${
             visibleElements.has("header")
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
           }`}
         >
-          <h2 className="text-black font-bold text-[26px] md:text-[70px] leading-[1.219] font-montserrat text-left w-full max-w-[910px]">
+          <h2 className="text-black text-center font-bold text-[13px] md:text-[20px] lg:text-[56px] xl:text-[70px] leading-[1.219] font-montserrat text-left w-full max-w-[910px]">
             千葉県の不用品回収について
           </h2>
-          <h1 className="text-[#00A842] font-bold text-[26px] md:text-[70px] leading-[1.219] font-montserrat text-center w-full max-w-[908px]">
+          <h1 className="text-[#00A842] font-bold text-[13px] md:text-[20px] lg:text-[56px] xl:text-[70px] leading-[1.219] font-montserrat text-center w-full max-w-[908px]">
             よくあるご質問
           </h1>
         </div>
 
         {/* FAQ Items */}
-        <div className="flex flex-col gap-[20px] md:gap-[50px] max-w-full">
+        <div className="flex flex-col gap-[10px] md:gap-[10px] lg:gap-[40px] xl:gap-[50px] max-w-full">
           {faqData.map((item, index) => (
             <div
               key={item.id}
@@ -160,15 +160,15 @@ const FAQ: React.FC = () => {
             >
               {/* Question Card */}
               <div
-                className="relative bg-[#00A842] rounded-[8px] md:rounded-[20px] h-[52.54px] md:h-[140px] cursor-pointer transition-all duration-300 hover:bg-[#00A842] hover:shadow-lg flex justify-between items-center px-[9px] md:px-4"
+                className="relative bg-[#00A842] rounded-[4px] md:rounded-[4px] lg:rounded-[16px] xl:rounded-[20px] h-[26.27px] md:h-[26.27px] lg:h-[112px] xl:h-[140px] cursor-pointer transition-all duration-300 hover:bg-[#00A842] hover:shadow-lg flex justify-between items-center px-[4.5px] md:px-[4.5px] lg:px-3 xl:px-4"
                 onClick={() => toggleExpanded(item.id)}
               >
                 {/* Left part with Q icon and question */}
-                <div className="flex items-center gap-[9px] md:gap-6">
+                <div className="flex items-center gap-[4.5px] md:gap-[4.5px] lg:gap-5 xl:gap-6">
                   {/* Q Icon with background */}
-                  <div className="relative w-[52.54px] h-[52.54px] md:w-[140px] md:h-[140px] flex-shrink-0">
+                  <div className="relative w-[26.27px] h-[26.27px] md:w-[26.27px] md:h-[26.27px] lg:w-[112px] lg:h-[112px] xl:w-[140px] xl:h-[140px] flex-shrink-0">
                     {/* Left accent bar - Rectangle with diagonal cut and rounded corners */}
-                    <div className="absolute -left-4 top-0 w-[52.54px] h-[52.54px] md:w-[160px] md:h-[140px]">
+                    <div className="absolute -left-4 top-0 w-[26.27px] h-[26.27px] md:w-[26.27px] md:h-[26.27px] lg:w-[128px] lg:h-[112px] xl:w-[160px] xl:h-[140px]">
                       <svg
                         width="100%"
                         height="100%"
@@ -183,20 +183,20 @@ const FAQ: React.FC = () => {
                         />
                       </svg>
                     </div>
-                    <div className="absolute inset-0 right-10 md:right-6 flex items-center justify-center text-white font-bold text-[26px] md:text-[70px] leading-[1.219] font-montserrat z-10">
+                    <div className="absolute inset-0 right-10 md:right-6 flex items-center justify-center text-white font-bold text-[13px] md:text-[13px] lg:text-[56px] xl:text-[70px] leading-[1.219] font-montserrat z-10">
                       Q
                     </div>
                   </div>
 
                   {/* Question Text */}
-                  <div className="text-white font-semibold text-[12px] md:text-[40px] leading-[1.219] font-montserrat">
+                  <div className="text-white font-semibold text-[6px] md:text-[6px] lg:text-[32px] xl:text-[40px] leading-[1.219] font-montserrat">
                     {item.question}
                   </div>
                 </div>
 
                 {/* Expand/Collapse Icon */}
                 <div
-                  className={`text-white font-medium text-[26px] md:text-[70px] leading-[1.219] font-montserrat transition-transform duration-300 ${
+                  className={`text-white font-medium text-[13px] md:text-[13px] lg:text-[56px] xl:text-[70px] leading-[1.219] font-montserrat transition-transform duration-300 ${
                     expandedItems.has(item.id) ? "rotate-45" : ""
                   }`}
                 >
@@ -206,12 +206,12 @@ const FAQ: React.FC = () => {
 
               {/* Answer Card - Expandable */}
               {expandedItems.has(item.id) && (
-                <div className="bg-white border border-[#E0E0E0] rounded-[8px] md:rounded-[20px] mt-2 p-4 md:p-8 shadow-lg animate-fade-in">
-                  <div className="flex items-start gap-2 md:gap-4">
-                    <div className="text-[#00A842] font-bold text-[20px] md:text-[40px] leading-[1.219] font-montserrat">
+                <div className="bg-white border border-[#E0E0E0] rounded-[4px] md:rounded-[4px] lg:rounded-[16px] xl:rounded-[20px] mt-2 p-2 md:p-2 lg:p-6 xl:p-8 shadow-lg animate-fade-in">
+                  <div className="flex items-start gap-1 md:gap-1 lg:gap-3 xl:gap-4">
+                    <div className="text-[#00A842] font-bold text-[10px] md:text-[10px] lg:text-[32px] xl:text-[40px] leading-[1.219] font-montserrat">
                       A
                     </div>
-                    <div className="text-[#333333] font-medium text-[14px] md:text-[32px] leading-[1.4] font-montserrat pt-1 md:pt-2">
+                    <div className="text-[#333333] font-medium text-[7px] md:text-[7px] lg:text-[26px] xl:text-[32px] leading-[1.4] font-montserrat pt-0.5 md:pt-0.5 lg:pt-1.5 xl:pt-2">
                       {item.answer}
                     </div>
                   </div>
