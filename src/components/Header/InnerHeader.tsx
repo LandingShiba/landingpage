@@ -14,24 +14,24 @@ export default function InnerHeader() {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  const handleScrollToSection =
-    (sectionId: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
-      e.preventDefault();
-      setIsSidebarOpen(false);
-      const targetElement = document.getElementById(sectionId);
-      if (targetElement) {
-        targetElement.classList.add("scroll-highlight");
+  // const handleScrollToSection =
+  //   (sectionId: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+  //     e.preventDefault();
+  //     setIsSidebarOpen(false);
+  //     const targetElement = document.getElementById(sectionId);
+  //     if (targetElement) {
+  //       targetElement.classList.add("scroll-highlight");
 
-        window.scrollTo({
-          top: targetElement.offsetTop - 100,
-          behavior: "smooth",
-        });
+  //       window.scrollTo({
+  //         top: targetElement.offsetTop - 100,
+  //         behavior: "smooth",
+  //       });
 
-        setTimeout(() => {
-          targetElement.classList.remove("scroll-highlight");
-        }, 2000);
-      }
-    };
+  //       setTimeout(() => {
+  //         targetElement.classList.remove("scroll-highlight");
+  //       }, 2000);
+  //     }
+  //   };
 
   return (
     <>
