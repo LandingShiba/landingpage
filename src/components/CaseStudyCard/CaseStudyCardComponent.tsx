@@ -35,7 +35,7 @@ const CaseStudyCardComponent: React.FC<CaseStudyCardProps> = ({
                 </div>
 
                 {/* AFTER Image */}
-                <div className="relative aspect-[4/4] md:aspect-[4/3] overflow-hidden rounded-xl md:rounded-2xl bg-[#4A9EDB]">
+                <div className="relative aspect-[4/4] md:aspect-[4/3] overflow-hidden rounded-xl md:rounded-2xl bg-[#14b8a6]">
                     <div className="absolute top-1 md:top-3 left-1/2 -translate-x-1/2 text-sm md:text-2xl font-bold text-white tracking-[0.1em] z-10">
                         AFTER
                     </div>
@@ -79,7 +79,7 @@ const CaseStudyCardComponent: React.FC<CaseStudyCardProps> = ({
 
             {/* Mascot Comment Section */}
             <div className="flex flex-col md:flex-row gap-6 md:gap-4 p-6 md:p-4 bg-white items-start">
-                <div className="flex-shrink-0 hidden md:block">
+                <div className="flex-shrink-0 hidden md:block w-[166px] h-[166px]">
                     <Image
                         src="/images/caseStudies/case-study.png"
                         alt="担当スタッフ"

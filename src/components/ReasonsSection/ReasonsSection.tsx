@@ -22,7 +22,7 @@ const ReasonsSection: React.FC = () => {
       title: "回収料金がリーズナブル",
       description:
         "エコ・グローバルは格安料金で不用品・粗大ゴミ回収に対応！引越しゴミなど大量の廃品処分も安心してお任せください！",
-      image: "/images/reason/image_6.png",
+      image: "/images/reason/reason-macos.png",
       imageAlt: "Affordable pricing illustration",
     },
     {
@@ -30,7 +30,7 @@ const ReasonsSection: React.FC = () => {
       title: "迅速・丁寧な\n高水準の作業対応",
       description:
         "回収する状況・不用品に合わせて適切な方法で対応しますので、千葉県内のマンション高層階からのご依頼もご安心を！",
-      image: "/images/reason/image_5.png",
+      image: "/images/reason/reason-macos.png",
       imageAlt: "Professional service illustration",
     },
     {
@@ -38,7 +38,7 @@ const ReasonsSection: React.FC = () => {
       title: "見積もり無料",
       description:
         "エコ・グローバルではお見積もりを無料で承ります。回収可能な不用品の種類や引き取り日程などの疑問点もご相談ください。",
-      image: "/images/reason/image_4.png",
+      image: "/images/reason/reason-macos.png",
       imageAlt: "Free estimate illustration",
     },
     {
@@ -46,7 +46,7 @@ const ReasonsSection: React.FC = () => {
       title: "高価買取",
       description:
         "品種を問わず幅広い品種を買取査定！熟練のスタッフが回収品の中に含まれた買取品も見逃さずに適正査定します！",
-      image: "/images/reason/image_7.png",
+      image: "/images/reason/reason-macos.png",
       imageAlt: "High-value purchase illustration",
     },
     {
@@ -54,7 +54,7 @@ const ReasonsSection: React.FC = () => {
       title: "少量から\n家まるごとまでOK",
       description:
         "エコ・グローバルでは廃品・粗大ゴミの量を問わず対応します。不用品1点から家具・家電を含む大量の廃棄品までお任せを。",
-      image: "/images/reason/image_8.png",
+      image: "/images/reason/reason-macos.png",
       imageAlt: "Flexible volume service illustration",
     },
     {
@@ -62,7 +62,7 @@ const ReasonsSection: React.FC = () => {
       title: "見積もり後の\n追加料金なし",
       description:
         "エコ・グローバルはご契約成立後にお客様に許可を得ず作業・料金を追加することは一切ありません。安心してお任せください。",
-      image: "/images/reason/image_4.png",
+      image: "/images/reason/reason-macos.png",
       imageAlt: "No hidden fees illustration",
     },
   ];
@@ -97,7 +97,7 @@ const ReasonsSection: React.FC = () => {
               alt={reason.imageAlt}
               width={420}
               height={259}
-              className="object-cover w-full h-full"
+              className="object-contain w-full h-full"
             />
           </div>
 
@@ -305,11 +305,11 @@ const ReasonsSection: React.FC = () => {
                 {/* Image section */}
                 <div className="w-full h-[153px]">
                   <Image
-                    src="/images/reason/image_10.png"
+                    src="/images/reason/reason-macos.png"
                     alt="100% in-house staff illustration"
                     width={360}
                     height={153}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 </div>
 
@@ -351,11 +351,11 @@ const ReasonsSection: React.FC = () => {
                   {/* Image section */}
                   <div className="w-[560px] h-full">
                     <Image
-                      src="/images/reason/image_10.png"
+                      src="/images/reason/reason-macos.png"
                       alt="100% in-house staff illustration"
                       width={560}
                       height={419}
-                      className="w-full h-full object-cover rounded-l-[20px]"
+                      className="w-full h-full object-contain rounded-l-[20px]"
                     />
                   </div>
 

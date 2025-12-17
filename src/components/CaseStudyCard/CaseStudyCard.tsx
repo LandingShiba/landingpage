@@ -5,12 +5,12 @@ import CaseStudyCardComponent from './CaseStudyCardComponent';
 
 const CaseStudyCard: React.FC = () => {
     const [currentPage, setCurrentPage] = useState(1);
-    const ITEMS_PER_PAGE = 10;
+    const ITEMS_PER_PAGE = 3;
 
     const baseCaseStudies = [
         {
-            beforeImage: "https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=800&h=600&fit=crop",
-            afterImage: "https://images.unsplash.com/photo-1556912173-3bb406ef7e77?w=800&h=600&fit=crop",
+            beforeImage: "/images/caseStudies/before.png",
+            afterImage: "/images/caseStudies/after.png",
             staffCount: "2名",
             workTime: "30分",
             items: "和タンス",
@@ -20,24 +20,57 @@ const CaseStudyCard: React.FC = () => {
             ]
         },
         {
-            beforeImage: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop",
-            afterImage: "https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=800&h=600&fit=crop",
+            beforeImage: "/images/caseStudies/case1-before.jpg",
+            afterImage: "/images/caseStudies/case1-after.jpg",
             staffCount: "3名",
             workTime: "45分",
             items: "ソファ、テーブル、椅子",
             description: "引っ越しに伴い、リビングの大型家具をまとめて処分させていただきました。ソファは3人掛けで重量もあり、階段での搬出には細心の注意を払いました。壁や床を傷つけないよう養生をしっかり行い、スムーズに作業を完了することができました。お客様からは「プロの仕事ですね」とお褒めの言葉をいただき、スタッフ一同励みになりました。"
         },
         {
-            beforeImage: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
-            afterImage: "https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800&h=600&fit=crop",
+            beforeImage: "/images/caseStudies/case2-before.jpg",
+            afterImage: "/images/caseStudies/case2-after.jpg",
             staffCount: "2名",
             workTime: "25分",
             items: "冷蔵庫、洗濯機",
             description: "買い替えに伴う家電の回収作業でした。冷蔵庫は大型で、玄関が狭かったため慎重に角度を調整しながら搬出しました。洗濯機も含め、リサイクル法に基づき適切に処理させていただきました。作業後はすっきりとしたスペースができ、新しい家電の設置準備が整いました。"
-        }
+        },
+        {
+            beforeImage: "/images/caseStudies/case3-before.jpg",
+            afterImage: "/images/caseStudies/case3-after.jpg",
+            staffCount: "2名",
+            workTime: "30分",
+            items: "和タンス",
+            description: [
+                "今回は、階段の踊り場に積まれた衣類や寝具などの整理をお手伝いしました。袋に詰めて少しずつ片付けを進めてこられたそうですが、「途中で手が止まってしまって」とのお話でした。限られたスペースの中での作業でしたが、慎重に運び出し、床や手すりを傷つけないよう注意を払いました。",
+                "最後に「これでやっと上り下りしやすくなった」と笑顔を見せてくださり、その言葉が何より嬉しく感じられました。"
+            ]
+        },
+        {
+            beforeImage: "/images/caseStudies/case4-before.jpg",
+            afterImage: "/images/caseStudies/case4-after.jpg",
+            staffCount: "2名",
+            workTime: "30分",
+            items: "和タンス",
+            description: [
+                "お嬢様が独立されてから、思い出の品や生活用品が少しずつ積み重なり、今では物置きとなったお部屋。おもちゃや衣類、段ボールの中からあふれる色とりどりの思い出を一つずつ確認しながら、手放すことを惜しみながらも、「もう一度ここをすっきりさせたい」という思いに寄り添い、作業を進めました。",
+                "片付けはものを減らすだけでなく、過去をそっと整理して次の時間を迎えることなのだなと感じました。"
+            ]
+        },
+        {
+            beforeImage: "/images/caseStudies/case5-before.jpg",
+            afterImage: "/images/caseStudies/case5-after.jpg",
+            staffCount: "2名",
+            workTime: "30分",
+            items: "和タンス",
+            description: [
+                "今回は、引っ越しに伴い不要になったマットレスや分解済みの家具、ラック、段ボールなどの回収を行いました。比較的軽い品が中心でしたが、短時間で安全に作業を完了致しました。",
+                "お客様からは「自分では手が回らず困っていたので本当に助かりました」とのお言葉をいただき、スタッフ一同励みになりました。慌ただしい引っ越しの最中でも、少しでも安心して新生活を迎えていただけるよう、今後も一つひとつの作業を丁寧に行ってまいります。"
+            ]
+        },
     ];
 
-    const caseStudies = Array.from({ length: 33 }, (_, i) => ({
+    const caseStudies = Array.from({ length: baseCaseStudies.length }, (_, i) => ({
         ...baseCaseStudies[i % baseCaseStudies.length],
         id: i + 1
     }));

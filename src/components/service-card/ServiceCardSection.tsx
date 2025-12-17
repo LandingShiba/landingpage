@@ -24,6 +24,24 @@ const ServiceCardSection: React.FC = () => {
       price: "25,000円",
       discountPrice: "15,000円～",
     },
+    {
+      title: "Lパック",
+      subtitle: "家族（普通）の引越しに最適",
+      vehicleType: "2t箱車(半)",
+      price: "50,000円",
+    },
+    {
+      title: "LLパック",
+      subtitle: "家族（大量）の引越しに最適",
+      vehicleType: "2t箱車",
+      price: "100,000円",
+    },
+    {
+      title: "その他",
+      subtitle: "ゴミ屋敷一軒まるごとの整理など",
+      vehicleType: "要相談",
+      price: "要相談",
+    }
   ];
 
   return (

@@ -32,7 +32,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         </div>
 
         {/* Cart image overlay */}
-        <div className="absolute right-[10px] md:right-[25px] top-[80px] md:top-[190px]">
+        {/* <div className="absolute right-[10px] md:right-[25px] top-[80px] md:top-[190px]">
           <Image
             src="/images/service-card/service-cart.png"
             alt="Service cart"
@@ -40,7 +40,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             height={70}
             className="w-[50px] h-auto md:w-[110px] md:h-[151px]"
           />
-        </div>
+        </div> */}
 
         {/* Vehicle type and price info */}
         <div className="mt-[30px] md:mt-[50px] flex flex-col gap-2 md:gap-5">
@@ -73,11 +73,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
 
             <div className="flex flex-col">
               {discountPrice && (
-                <span className="text-black font-medium text-sm md:text-3xl line-through italic">
+                <span className="text-black font-medium text-sm md:text-2xl line-through italic">
                   {price}
                 </span>
               )}
-              <span className="text-[#EA2227] font-bold text-base md:text-4xl">
+              <span className="text-[#EA2227] font-bold text-base md:text-3xl">
                 {discountPrice || price}
               </span>
             </div>
@@ -106,10 +106,10 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           className="object-cover"
         />
         <div className="relative z-10 flex flex-col items-center justify-center h-full px-[10px] md:px-[30px] gap-0.5 md:gap-2.5">
-          <h3 className="text-white font-semibold text-base md:text-4xl text-center">
+          <h3 className="text-white font-semibold text-base md:text-3xl text-center">
             {title}
           </h3>
-          <p className="text-white font-semibold text-[10px] md:text-2xl text-center">
+          <p className="text-white font-semibold text-[10px] md:text-lg text-center">
             {subtitle}
           </p>
         </div>
